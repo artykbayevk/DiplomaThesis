@@ -96,15 +96,11 @@ if TRAIN:
 					%(epoch+1, num_epochs, i+1, len(trainset)//batch_size, loss.data[0]))
 
 	# Save the Trained Model
-	torch.save(cnn.state_dict(), 'cnn.pkl')
+	torch.save(cnn.state_dict(), 'cnn.pt')
 
-cnn = torch.load('cnn.pkl')
-print(cnn)
-
-if not TEST:
+if TEST:
 	cnn = CNN(n_classes)
-	cnn = cnn.load_state_dict(torch.load('cnn.pkl'))
-
+	cnn.load_state_dict(torch.load('cnn.pt'))
 	cnn.eval()  # Change model to 'eval' mode (BN uses moving mean/var).
 	correct = 0
 	total = 0
