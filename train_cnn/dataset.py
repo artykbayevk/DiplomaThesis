@@ -16,10 +16,7 @@ warnings.filterwarnings("ignore")
 
 plt.ion()
 
-main_ann_path = '../data/fl27/crop_annotation.txt'
-images_path = '../data/fl27/resized'
-train_set_path = '../annotations/trainset.txt'
-test_set_path = '../annotations/testset.txt'
+
 
 
 class MyDataset(Dataset):
@@ -80,7 +77,10 @@ def draw_batch(dataloader, labels):
 			break
 
 
-def get_dataset():
+def get_dataset(main_ann_path,images_path,train_set_path,test_set_path):
+
+	
+
 	labels = tl.prepare_labels(main_ann_path)
 	
 	train_data = tl.prepare_num_dataset(main_ann_path, train_set_path)
@@ -91,12 +91,24 @@ def get_dataset():
 	trainset = MyDataset(train_data, images_path)
 	testset = MyDataset(test_data, images_path)
 
+	return trainset, testset
 
-	
+
+
+
+def main():
+	pass
+	# main_ann_path = '../data/fl27/crop_annotation.txt'
+	# images_path = '../data/fl27/resized'
+	# train_set_path = '../annotations/trainset.txt'
+	# test_set_path = '../annotations/testset.txt'
+	# trainset, testset = get_dataset(main_ann_path,images_path,train_set_path,test_set_path)
+
 	#Drawing some images from dataloader
-	dataLoader = DataLoader(trainset, batch_size=4,shuffle=True, num_workers=4)
-	draw_batch(dataLoader, labels)
-	print('Shapes: ',train_data.shape, test_data.shape)
+	
+	# dataLoader = DataLoader(trainset, batch_size=4,shuffle=True, num_workers=4)
+	# draw_batch(dataLoader, labels)
+	# print('Shapes: ',train_data.shape, test_data.shape)
 
 if __name__ == '__main__':
-	get_dataset()
+	main()
