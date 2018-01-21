@@ -10,13 +10,15 @@ from random import randint
 import warnings
 warnings.filterwarnings("ignore")
 
-input_ann_path = '../data/fl27/annotation.txt'
-input_data_path = '../data/fl27/images'
+main_dir = '../data/fl27'
 
-output_ann_path = '../data/fl27/crop_annotation.txt'
-output_data_path = '../data/fl27/cropped'
+input_ann_path = os.path.join(main_dir,'annotation.txt')
+input_data_path = os.path.join(main_dir,'images')
 
-resized_image_path = '../data/fl27/resized'
+output_ann_path = os.path.join(main_dir,'crop_annotation.txt')
+output_data_path = os.path.join(main_dir,'cropped')
+
+resized_image_path = os.path.join(main_dir,'resized')
 train_test_dir_path ='../annotations'
 
 
@@ -110,7 +112,7 @@ def main():
 	# resize_images_in_dir(output_data_path,resized_image_path)
 
 	# For creating train and test dataset annotations
-	train_test_split(output_ann_path, train_test_dir_path)
+	# train_test_split(output_ann_path, train_test_dir_path)
 
 
 if __name__ == '__main__':
