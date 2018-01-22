@@ -1,5 +1,5 @@
 import dataset as ds
-import torch 
+import torch
 import torch.nn as nn
 import torchvision.transforms as transforms
 from torch.autograd import Variable
@@ -15,7 +15,6 @@ trainset, testset = ds.get_dataset(main_ann_path,images_path,train_set_path,test
 print(len(trainset), len(testset))
 
 
-
 TRAIN = False
 TEST  = True
 
@@ -28,13 +27,14 @@ momentum = 0.9
 
 n_classes = 27
 
+
 # Data Loader (Input Pipeline)
 train_loader = torch.utils.data.DataLoader(dataset=trainset,
-	batch_size=batch_size, 
+	batch_size=batch_size,
 	shuffle=True)
 
 test_loader = torch.utils.data.DataLoader(dataset=testset,
-	batch_size=batch_size, 
+	batch_size=batch_size,
 	shuffle=False)
 
 
@@ -71,7 +71,6 @@ class CNN(nn.Module):
 		x = self.classifier(x)
 		return x
 
-
 cnn = CNN(n_classes)
 
 if TRAIN:
@@ -92,7 +91,7 @@ if TRAIN:
 			loss.backward()
 			optimizer.step()
 			if (i+1) % 10 == 0:
-				print ('Epoch [%d/%d], Iter [%d/%d] Loss: %.4f' 
+				print ('Epoch [%d/%d], Iter [%d/%d] Loss: %.4f'
 					%(epoch+1, num_epochs, i+1, len(trainset)//batch_size, loss.data[0]))
 
 	# Save the Trained Model

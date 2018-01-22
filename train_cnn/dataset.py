@@ -78,16 +78,11 @@ def draw_batch(dataloader, labels):
 
 
 def get_dataset(main_ann_path,images_path,train_set_path,test_set_path):
-
-	
-
 	labels = tl.prepare_labels(main_ann_path)
-	
+
 	train_data = tl.prepare_num_dataset(main_ann_path, train_set_path)
 	test_data = tl.prepare_num_dataset(main_ann_path, test_set_path)
-	
-	
-	
+
 	trainset = MyDataset(train_data, images_path)
 	testset = MyDataset(test_data, images_path)
 
@@ -105,7 +100,7 @@ def main():
 	# trainset, testset = get_dataset(main_ann_path,images_path,train_set_path,test_set_path)
 
 	#Drawing some images from dataloader
-	
+
 	# dataLoader = DataLoader(trainset, batch_size=4,shuffle=True, num_workers=4)
 	# draw_batch(dataLoader, labels)
 	# print('Shapes: ',train_data.shape, test_data.shape)
