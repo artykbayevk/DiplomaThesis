@@ -24,6 +24,7 @@ def get_images(path, count, default = True):
         return files[:count]
 
 def segment_images(imgs, out_dir):
+    print('Check this one')
     for img in imgs:
         image = io.imread(img)
         size = int((image.shape[0]*image.shape[1])*0.1)
