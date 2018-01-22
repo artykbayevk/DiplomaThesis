@@ -56,7 +56,7 @@ def create_crop(in_ann_path, in_img_path, out_ann_path, out_img_path):
 		cropped_class = ann[1]
 		try:
 			io.imsave(os.path.join(out_img_path, cropped_name), cropped)
-			note = "{} {} \n".format(cropped_name, cropped_class) 
+			note = "{} {} \n".format(cropped_name, cropped_class)
 			print(cropped_name, cropped_class)
 			out_ann.write(note)
 		except IndexError:
