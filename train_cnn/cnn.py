@@ -20,8 +20,8 @@ TEST  = False
 
 
 # Hyper Parameters
-num_epochs = 200
-batch_size = 40
+num_epochs = 50
+batch_size = 30
 learning_rate = 0.001
 momentum = 0.9
 
