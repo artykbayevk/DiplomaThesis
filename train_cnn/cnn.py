@@ -15,13 +15,13 @@ trainset, testset = ds.get_dataset(main_ann_path,images_path,train_set_path,test
 print(len(trainset), len(testset))
 
 
-TRAIN = False
-TEST  = True
+TRAIN = True
+TEST  = False
 
 
 # Hyper Parameters
-num_epochs = 1
-batch_size = 30
+num_epochs = 200
+batch_size = 40
 learning_rate = 0.001
 momentum = 0.9
 
@@ -74,7 +74,6 @@ class CNN(nn.Module):
 cnn = CNN(n_classes)
 
 if TRAIN:
-
 	# Loss and Optimizer
 	criterion = nn.CrossEntropyLoss()
 	optimizer = optim.SGD(cnn.parameters(), lr = learning_rate, momentum=momentum)
@@ -95,11 +94,11 @@ if TRAIN:
 					%(epoch+1, num_epochs, i+1, len(trainset)//batch_size, loss.data[0]))
 
 	# Save the Trained Model
-	torch.save(cnn.state_dict(), 'cnn.pt')
+	torch.save(cnn.state_dict(), 'cnn-2.pt')
 
 if TEST:
 	cnn = CNN(n_classes)
-	cnn.load_state_dict(torch.load('cnn.pt'))
+	cnn.load_state_dict(torch.load('cnn-2.pt'))
 	cnn.eval()  # Change model to 'eval' mode (BN uses moving mean/var).
 	correct = 0
 	total = 0
