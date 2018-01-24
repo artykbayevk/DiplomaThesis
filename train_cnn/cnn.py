@@ -15,8 +15,8 @@ trainset, testset = ds.get_dataset(main_ann_path,images_path,train_set_path,test
 print(len(trainset), len(testset))
 
 
-TRAIN = True
-TEST  = False
+TRAIN = False
+TEST  = True
 
 
 # Hyper Parameters
