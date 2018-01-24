@@ -50,6 +50,7 @@ def segment_images(imgs, out_dir, mode):
                     new_f_name = (img.split('/')[-1]).split('.')[0]+'_'+str(i)+'.jpg'
                     new_path = os.path.join(out_dir, new_folder, new_f_name)
                     try:
+                        print(seg)
                         io.imsave(new_path, seg)
                     except IndexError:
                         print('No axes')
@@ -62,11 +63,11 @@ def segment_images(imgs, out_dir, mode):
                 print('no segment')
 
 def main():
-    input_img_path = '../data/fl27/images'
-    output_img_path = '../data/fl27/segmented'
-    imgs = get_images(input_img_path, 4, False)
+    input_img_path = '/home/kamalkhan/Documents/DiplomaThesis/data/fl27/images'
+    output_img_path = '/home/kamalkhan/Documents/DiplomaThesis/data/fl27/segmented'
+    imgs = get_images(input_img_path, 6, False)
     segment_images(imgs, output_img_path, 1)
 
 if __name__ == '__main__':
-    # main()
-    pass
+    main()
+    # pass
