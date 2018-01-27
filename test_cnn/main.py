@@ -8,6 +8,7 @@ from torch import optim
 import matplotlib.pyplot as plt
 import tool as tl2
 from skimage import io
+from random import randint
 import warnings
 warnings.filterwarnings("ignore")
 
@@ -19,12 +20,14 @@ def predict_func(model, loader, main_labels):
         outputs = model(images)
         _, predicted = torch.max(outputs.data, 1)
         name_labels = []
-        for idx, prediction in zip(range(predicted.size()[0]), predicted):
-            name_labels.append(main_labels[prediction])
-        print(name_labels)
-        grid = utils.make_grid(sample[0])
-    	plt.imshow(grid.numpy().transpose((1, 2, 0)))
-        plt.show()
+        transofrmed = []
+        for in_img, prediction in zip(sample[0], predicted):
+            tmp = transforms.ToPILImage()
+            conv = tmp(in_img)
+            print(conv.size)
+            new_f_name = str(randint(0,100))+'_'+main_labels[prediction] + '.jpg'
+            io.imsave(new_f_name, conv)
+
 
 
 
