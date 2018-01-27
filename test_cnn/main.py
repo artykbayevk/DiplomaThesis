@@ -1,4 +1,5 @@
 import dataset as ds
+import os
 import model as cnn
 import torch
 import torch.nn as nn
@@ -8,10 +9,11 @@ from torch import optim
 import matplotlib.pyplot as plt
 import tool as tl2
 from skimage import io
-from random import randint
 import warnings
+import uuid
 warnings.filterwarnings("ignore")
 
+print(uuid.uuid4().hex)
 
 def predict_func(model, loader, main_labels):
     print('Predicting process...')
@@ -24,13 +26,10 @@ def predict_func(model, loader, main_labels):
         for in_img, prediction in zip(sample[0], predicted):
             tmp = transforms.ToPILImage()
             conv = tmp(in_img)
-            print(conv.size)
-            new_f_name = str(randint(0,100))+'_'+main_labels[prediction] + '.jpg'
-            io.imsave(new_f_name, conv)
-
-
-
-
+            path_out = '/home/kamalkhan/Documents/DiplomaThesis/data/fl27/segmented_resized/predicted'
+            f_name = main_labels[prediction] + '_' + str(uuid.uuid4().hex) + '.jpg'
+            path = os.path.join(path_out, f_name)
+            io.imsave(path, conv)
 def main():
     #Path for model
     model_path = '/home/kamalkhan/Documents/DiplomaThesis/train_cnn/cnn-2.pt'
