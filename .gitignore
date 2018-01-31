@@ -1,2 +1,4 @@
 *.pyc
 /data
+*.pt
+train_cnn/*.pyc

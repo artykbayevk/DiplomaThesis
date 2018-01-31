@@ -20,8 +20,8 @@ TEST  = True
 
 
 # Hyper Parameters
-num_epochs = 50
-batch_size = 30
+num_epochs = 1
+batch_size = 40
 learning_rate = 0.001
 momentum = 0.9
 
@@ -94,11 +94,11 @@ if TRAIN:
 					%(epoch+1, num_epochs, i+1, len(trainset)//batch_size, loss.data[0]))
 
 	# Save the Trained Model
-	torch.save(cnn.state_dict(), 'cnn-2.pt')
+	torch.save(cnn.state_dict(), 'cnn-for-Shera.pt')
 
 if TEST:
 	cnn = CNN(n_classes)
-	cnn.load_state_dict(torch.load('cnn-2.pt'))
+	cnn.load_state_dict(torch.load('cnn-for-Shera.pt'))
 	cnn.eval()  # Change model to 'eval' mode (BN uses moving mean/var).
 	correct = 0
 	total = 0
@@ -109,4 +109,4 @@ if TEST:
 		total += labels.size(0)
 		correct += (predicted == labels).sum()
 
-	print('Test Accuracy of the model on the 10000 test images: %d %%' % (100 * correct / total))
+	print('Test Accuracy of the model on the test images: %d %%' % (100 * correct / total))

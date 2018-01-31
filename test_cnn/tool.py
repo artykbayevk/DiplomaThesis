@@ -59,9 +59,9 @@ def prepare_annotation(ann_path, img_path):
 	f_writer.close()
 
 def prepare_test_img(path):
-	out_dir = '/home/kamalkhan/Documents/DiplomaThesis/data/fl27/segmented_resized/not_predicted'
+	out_dir = '../data/fl27/segmented_resized/not_predicted'
 	whole_folders = glob.glob(os.path.join(path,'*'))
 	for item in whole_folders:
 		resize_test_img(item, out_dir)
-	ann_path = '/home/kamalkhan/Documents/DiplomaThesis/annotations/segmentset.txt'
+	ann_path = '../annotations/segmentset.txt'
 	prepare_annotation(ann_path, out_dir)
