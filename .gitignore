@@ -1,4 +1,5 @@
 *.pyc
-/data
+**/data
 *.pt
 train_cnn/*.pyc
+.ipynb_checkpoints
