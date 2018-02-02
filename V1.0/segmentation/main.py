@@ -63,8 +63,8 @@ def segment_images(imgs, out_dir, mode):
                 print('no segment')
 
 def main():
-    input_img_path = '/home/kamalkhan/Documents/DiplomaThesis/data/fl27/images'
-    output_img_path = '/home/kamalkhan/Documents/DiplomaThesis/data/fl27/segmented'
+    input_img_path = '../data/fl27/images'
+    output_img_path = '../data/fl27/segmented'
     imgs = get_images(input_img_path, 6, False)
     segment_images(imgs, output_img_path, 1)
 

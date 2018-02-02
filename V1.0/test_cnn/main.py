@@ -13,7 +13,6 @@ import warnings
 import uuid
 warnings.filterwarnings("ignore")
 
-print(uuid.uuid4().hex)
 
 def predict_func(model, loader, main_labels):
     print('Predicting process...')
