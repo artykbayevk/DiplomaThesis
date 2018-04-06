@@ -1,0 +1,122 @@
+\documentclass[12pt,epsfig,times]{report}
+\usepackage{EMU_Thesis_ikeV2}
+\usepackage{graphicx,epsfig,times}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage{booktabs,slashbox}
+\usepackage{color}
+\usepackage{multirow}
+\usepackage{dcolumn}
+%%%%%%%%%%%%%%%%%%%%%
+\usepackage[inner=0.75in,outer=0.65in,top=0.5in,bottom=0.75in]{geometry}
+
+\title{Logo detection and recognition using CNN\vspace{-2cm}}
+
+\author{Artykbayev Kamalkhan Serzhanovich}
+
+\begin{document}
+\pagenumbering{roman}
+\makemstitle    % For M.S. theses
+% \makephdtitle  % For Ph.D. theses
+% \maketitle
+
+% \begin{center}
+% \newpage
+% \vspace*{10cm} \center{\textbf{}}
+% \end{center}
+
+\begin{abstract}
+\par
+\begin{center}
+\centering Artykbayev Kamalkhan Serzhanovich
+\end{center}
+
+\par
+\begin{center}
+    \centering B.A. Thesis, 2018
+\end{center}
+
+\par
+\begin{center}
+\centering Thesis supervisor: Senior Lecturer MSc. Konstantin Latuta
+\end{center}
+
+\par
+\noindent \textbf{Keywords}: Logo detection, Logo recognition, Computer Vision, Machine Learning, Convolution Neural Network, Classification, Recurrent Neural Network, Pattern Recognition, Object Recognition,Data augmentation
+
+\noindent Logo detection and recognition continues to be of great interest to the document retrieval community as it enables effective identification of the source of a document. This paper contributes the design of the system able to detect the logo of any product from the documents and images after that recognize it from the archive via the convolutional neural network. For detecting and recognize of logos implemented via convolutional neural network, which creates initial classification to determine the presence of the logo on the document or image.As regards to the former, a collection of logos was designed and implemented to train the classier, to identify and to extract the logo features which were eventually used for logo detection and recognition. The latter regards the detection of logos from an input image. In particular, the experimental study aimed to detect if the input image contains one or more logos and to decide which logos are contained.
+
+\end{abstract}
+
+\begin{acknowledgements}
+\vspace{-0.5cm}
+\noindent I thank  the merciful and all-knowing, for sparing my life in sound health and giving me the opportunity to accomplish this thesis.
+\vspace{-0.5cm}
+\par
+\noindent I wish to express my deepest gratitude to my supervisor Senior Lecturer MSc. Konstantin Latuta for his guidance, advice, criticism, encouragement and insight throughout the research.
+
+\vspace{-0.5cm}
+\par
+\noindent I am highly indebted to my parents for their encouragement, support and unlimited love.
+
+
+\vspace{-0.5cm}
+\par
+\noindent Finally, i wish to extend a special thanks to my colleagues for their valuable support and company. They really made my life a fabulous one.
+\end{acknowledgements}
+
+% \begin{center}
+% \newpage
+% \vspace*{9cm} \center{Dedicated to my parents}
+% \end{center}
+
+
+
+\tableofcontents
+% \listoffigures
+% \listoftables
+
+\begin{symbols}
+\sym{MSE}{Mean-square-error}
+\sym{CNN}{Convolutional neural network}
+\sym{RNN}{Recurrent Neural Network}
+\sym{CV}{Computer Vision}
+\sym{ML}{Machine Learning}
+\sym{LRT}{Learning Rate}
+\sym{Conv}{Convolutional layer}
+\sym{Pool}{Pooling layer}
+\sym{ReLU}{Rectified Linear Unit}
+\sym{Softmax}{Normalized Exponential Function}
+\sym{Sigm}{Special case of logistic function}
+
+% \sym{$\delta$}{Regularization parameter} \sym{$\varepsilon$}{Reweighting parameter} \sym{$\gamma$}{Control parameter} \sym{$\kappa$}{Adjusting parameter} \sym{$\lambda$}{Eigenvalue} \sym{$\mu$}{Step-size} \sym{$\wp$}{Correlation parameter} \sym{$\sigma ^2$}{Variance} \sym{$\textbf{I}$}{Identity matrix} \sym{$\textbf{Q}$}{control matrix} \sym{$N$}{Filter length}  \sym{$\textbf{R}$}{Autocorrelation matrix} \sym{$\textbf{w}$}{Tap weights vector} \sym{$\textbf{x}$}{Tap input vector} \sym{AEC}{Acoustic echo canceller} \sym{AWGN}{Additive white Gaussian noise} \sym{ACGN}{Additive correlated Gaussian noise}\sym{CS}{Compressive sensing} \sym{DSP}{Digital signal processing}  \sym{FIR}{Finite impulse response} \sym{IPNLMS}{Improved proportionate normalized least-mean-square} \sym{LMS}{Least-mean-square} \sym{MSE}{Mean-square-error}  \sym{MSD}{Mean square deviation} \sym{NLMS}{Normalized least-mean-square} \sym{NNCLMS}{Non-uniform norm constraint LMS} \sym{PNLMS}{Proportionate normalized least-mean-square} \sym{RZA-LMS}{Reweighted zero-attracting LMS}  \sym{SNR}{Signal-to-noise ratio} \sym{VSSLMS}{Variable step size LMS} \sym{ZA-LMS}{Zero-attracting LMS}
+\end{symbols}
+
+\chapter{INTRODUCTION}\label{ch1}
+\pagenumbering{arabic}
+\input{ch1}
+
+\chapter{PROBLEM STATEMENT AND THESIS ORGANIZATION}\label{ch2}
+\input{ch2}
+
+\chapter{REVIEW OF DEEP LEARNING AND PATTERN RECOGNITION ALGORITHMS}\label{ch3}
+\input{ch3}
+
+\chapter{PROPOSED METHOD}\label{ch4}
+\input{ch4}
+
+\chapter{SIMULATION RESULTS}\label{ch5}
+\input{ch5}
+
+\chapter{CONCLUSIONS AND FUTURE WORK}\label{ch6}
+\input{ch6}
+% if there is appendix
+%\newpage
+%\appendix \begin{centering} \large{{APPENDIX A}} \end{centering}
+%\input{Appendix}
+\begin{thebibliography}{9}
+\input{references}
+\end{thebibliography}
+
+\end{document}
+

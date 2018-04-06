@@ -1,0 +1,37 @@
+
+\section{Conclusion}\label{sec:6.1}
+\vspace{-0.5cm}
+\noindent In this thesis, Some of the challenges caused by undesired acoustic echoes that occur in communication devices are addressed. The research concentrates on the development of a new adaptive filtering algorithm that enables us to identify the sparse echo path of the acoustic
+room system. Some of the available sparse adaptive algorithms have been reviewed. A new $p$-norm constraint adaptive algorithm has been proposed. The convergence analysis of the proposed algorithm has been presented and its stability condition is derived.
+
+
+\vspace{-0.5cm}
+\par
+\noindent The performances of the proposed algorithm have been investigated through extensive simulation experiments and evaluated in terms of the convergence rate and MSD estimate.
+
+\vspace{-0.5cm}
+\par
+\noindent An acoustic echo path of fixed sparsity was simulated in AWGN and a better MSD estimate of the proposed algorithm compared to the best performer among the NLMS, PNLMS, IPNLMS, NNCLMS, ZA-LMS and RZA-LMS algorithms is obtained. Where as in the ACGN, it has been noticed that, even with highly correlated Gaussian noise, the proposed algorithm still much better than the other algorithms in terms of convergence rate and/or MSD. The NLMS, PNLMS and IPNLMS algorithms failed to provide good performance compared to NNCLMS, RZA-LMS and ZA-LMS algorithms. This is due to their lack of available parameters to effectively track sparse impulse responses.
+
+
+\vspace{-0.5cm}
+\par
+\noindent The proposed algorithm was furtherly investigated in identifying an unknown system having a variety of sparsity ratios (ranging from 75\%, 50\% and 25\% sparsity ratios). It has been shown to be performing  more robust than the NNCLMS, RZA-LMS and ZA-LMS algorithms in both AWGN and ACGN environments. This is due to the virtue of the variable step-size parameters in addition to $p$-norm constraint associated with the proposed algorithm.
+
+%{\color[rgb]{1,0,0} This text will appear red-colored}
+
+
+\newpage
+\vspace{-0.3cm}
+\section{Further work} \label{sec:6.2}\label{sec5.1}
+\vspace{-0.5cm}
+\noindent Despite the fact that the results of this work are adequate and satisfactory, there still other works which need to be conducted in the future
+in order improve the quality of this approach.  All our investigations on the performance of the proposed algorithm are limited to only two types of
+noise environments; AWGN and ACGN. Therefore, one of possible future works could be investigating its performance in other types of noise environments
+such as additive white impulsive noise, additive correlated impulsive noise, etc.
+Another area of investigation could be applying the proposed algorithm in other scenarios different from echo cancellation, such as channel equalization,
+adaptive beam forming, etc. In addition, the performance of the proposed algorithm may also be inspected using a longer length echo paths of about $1024$
+coefficients and greater.
+
+
+

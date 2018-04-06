@@ -1,0 +1,43 @@
+\section{Introduction}\label{sec:2.1}
+\vspace{-0.5cm}
+\noindent This chapter states the specific challenges that are mostly encountered in logo detection and logo recognition and our possible solution to overcome and solve some of challenges and problems. Below briefly explained the available methods and their consequence and then our most possible solutio.
+
+\vspace{-0.3cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Statement of the Problem}\label{sec:2.2}
+\vspace{-0.5cm}
+\noindent Among the various applications of adaptive filtering techniques, echo cancellation is well known to be the most tricky one. This is so because its explicit nature represent a lot of challenges for any adaptive filter. There are quite a lot of issues related to this crucial application, among which a few are as follows. First, it is well known that the echo paths can have excessive lengths in time, e.g., up to or even more than hundreds of milliseconds. For instance, in network echo cancellation, the usual lengths are in the range between 32 and 128 milliseconds, while in acoustic echo cancellation, these lengths can be even higher \cite{Duttweiler}. As a result, long length adaptive filters are  readily required (with hundreds or even thousands of coefficients), affecting the convergence rate of the adaptive algorithm. Alongside, the echo paths are time-variant systems, requiring efficient tracking abilities for the echo canceller. Second, the undesired echo signal is usually combined with the near-end signal; conceptually, the function of the adaptive filter here is to
+segregate this mixture and offer an estimate of the echo at its output along with an estimate of the near-end from the error signal. This is quite a difficult task since the near-end signal may include either or both the background noise and the near-end speech; this noise can also be variant and powerful while the near-end speech can be like a big disturbance. Also, the input of the adaptive filter is a times speech sequence, which is a time-varying and highly correlated signal that can affect the whole performance of adaptive algorithms. In addition, the echo path is sparse in nature, requiring adaptive algorithms with good sparsity exploitation properties.
+
+\vspace{-0.5cm}
+\par
+\noindent Over the paste decades, numerous types of adaptive filters have been used for echo cancellation. The normalized least-mean-square (NLMS) algorithm is one of the most popular among them, due to its numerical stability and moderate computational complexity. However, its use of a uniform step-size across all filter coefficients limits its convergence speed when estimating a sparse signal \cite{Li}. To overcome this problem, Duttweiller in \cite{Duttweiler} proposed a proportionate updating technique by assigning different step-sizes across filter taps independently to promote sparsity exploitation. Other approaches for sparsity exploitation apply subset selection scheme during the filtering process through statistical detection of active taps or sequential partial updating \cite{Xiang}, \cite{Kawamuri}. However, both of these approaches are somewhat tricky and computationally complex whose performances degrade  with the variation of sparseness level of the echo path. In addition, the aforementioned techniques fail to provide a satisfactory  performance in a high correlated environment.
+
+\vspace{-0.5cm}
+\par
+\noindent The problem of identifying sparse echo paths has gained increasing interest due to the recently introduced framework of Compressive Sensing (CS) \cite{Dohono}, \cite{Candes2}, \cite{Rey}. As a result, the LMS algorithm was modified to exploit sparsity property of a signal by employing $l_0$-norm or $l_1$-norm  constraint into the cost function of the standard LMS \cite{Gu1}, \cite{Etter1}, \cite{Gu2}, \cite{Jin}, \cite{Shi}. The norm constraints accelerate the convergence of small active taps for identification of sparse echo path. Unfortunately, the resulting modified LMS filters suffer from the norm constraint adaptation during filtering process and produce estimation bias for identifying systems with a variety of sparseness levels due to lack of adjustable factor. To limit the estimation bias and enable the quantitative adjustment of the norm constraint adaptation, a non-uniform norm constraint (NNCLMS) was proposed in \cite{Tong} which employs a $p$-norm like constraint to modify the cost function of LMS filter. The main challenge of this approach is its inability to maintain its performance when the input signal is highly correlated such as speech signal \cite{Johnson}. The variable step-size LMS (VSSLMS) was proposed by Harris et. al.  \cite{Harris} to stabilize the performance of the conventional LMS, but still has limited ability to exploit sparsity of the system due to its no use of sparsity characteristics \cite{Kwong}, \cite{Evans}.
+
+\vspace{-0.3cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Our Contributions}\label{sec:2.3}
+\vspace{-0.5cm}
+\noindent In this thesis, we propose a new approach of identifying a sparse echo path. The proposed approach will be shown to overcome some of the above mentioned limitations. The approach combines a VSSLMS and a $p$-norm constraint. The variable step-size portion stabilizes the sparse system when the input signal is correlated where as the $p$-norm constraint exploits the system's sparsity by imposing a zero attraction of the filter coefficients according to the relative value of each filter coefficient among all the entries which, in turn, leads to an improved performance when the system is sparse. It would be shown to have a superior performance compared to the conventional approaches. We also carry out the convergence analysis and establish a stability condition of the proposed algorithm. The performance of the proposed algorithm is compared with diverse $l_1$-norm and $p$-norm based sparse adaptive filters in AEC settings using two noise types; Additive White Gaussian Noise (AWGN) and Additive Correlated Gaussian Noise (ACGN) and using acoustic echo paths of length $N=256$ and $N=512$ respectively. Also, the performance of the proposed algorithm has been extensively investigated in other sparse systems with a variety of sparseness degree. Simulation results demonstrate that the proposed algorithm outperforms different $l_1$-norm and $p$-norm based sparse filters in a sparse system identification.
+
+\vspace{-0.3cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Thesis Organization}\label{sec:2.4}
+\vspace{-0.5cm}
+\noindent The structure of the thesis is organized as follows:
+
+\vspace{-0.8cm}
+\begin{itemize}
+  \item  In Chapter 3, a general review of the most important adaptive filters used for echo cancellation application is presented. %The chapter begins with the basic proportionate-type adaptive filters followed by $l_1$-norm and $p$-norm based sparse adaptive filters.
+\vspace{-0.3cm}
+  \item In Chapter 4, the proposed algorithm is presented. A review of the VSSLMS algorithm and a broad concept of the $p$-norm constraint are provided. The mean square convergence analysis and a stability criterion of the proposed algorithm are also carried out and presented.
+\vspace{-0.3cm}
+  \item In Chapter 5, an experimental study is provided in order to compare the performance of the proposed filter with other $l_1$-norm and $p$-norm based sparse adaptive filters  in the context of AEC.
+\vspace{-0.3cm}
+  \item In Chapter 6, conclusions and a discussion on possibilities for future work are provided.
+\end{itemize}
+
+\vspace{-0.5cm}

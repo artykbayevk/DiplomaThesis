@@ -1,0 +1,431 @@
+
+\section{Introduction}\label{sec:3.1}
+\vspace{-0.5cm}
+\noindent This chapter provides a brief review of the well known sparse adaptive filters used for echo cancellation. Firstly, we present the proportionate-based adaptive algorithms as background for estimating a sparse impulse response, we then subsequently discussed the zero attracting sparse adaptive filters used in the field due to their robustness and efficiency in performance. These filters operate based on $l_1$-norm optimization such as used in CS techniques \cite{Dohono} rather than proportionate updating based approach \cite{Duttweiler}.
+
+\vspace{-0.3cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Least Mean Square Algorithm}\label{sec:3.2}
+\vspace{-0.5cm}
+\noindent The LMS algorithm is basically the most popular algorithm commonly found in the literature of adaptive filtering due to the fact that it is easy to implement, easy to understand, and robust in various aspects. It is a stochastic gradient algorithm in which evaluation of a gradient vector is made possible by iteratively modifying a cost function. The objective of the LMS algorithm is to sequentially estimate the coefficients of the filter using the input-output relationship of the signal. With reference to Fig. \ref{fig8x}, the cost function $J(n)$ of the conventional LMS is defined as \cite{Haykins},  \cite{Reddy}:
+
+\vspace{-1.5cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{equation}
+J(n)=\frac{1}{2}e^2(n),\label{eq1b}
+\end{equation}
+
+\vspace{-0.8cm}
+\noindent where $e(n)$ is the instantaneous error given by:
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-1.5cm}
+\begin{equation}
+e(n)=d(n)-\textbf{w}^T(n)\textbf{x}(n).\label{eq2b}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-1.5cm}
+\noindent The minimum of the cost function can be obtained recursively using the gradient method \cite{Haykins}:
+
+\vspace{-0.3cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{eqnarray}
+\nonumber
+\textbf{w}(n+1)&=&\textbf{w}(n)-\mu\frac{\partial J(n)}{\partial\textbf{w}(n)}. \label{eq3b}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{-0.6cm}
+\noindent Hence the filter coefficient update for the LMS is then:
+\vspace{-0.6cm}
+\begin{eqnarray}
+\textbf{w}(n+1)&=&\textbf{w}(n)+\mu e(n)\textbf{x}(n),\label{eq4b}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{-0.8cm}
+\noindent where $\mu$ is the step-size parameter controlling the convergence and steady-state behavior of the LMS algorithm and is given by,
+
+\vspace{-1.5cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{equation}
+0\hspace{2pt}<\mu<\hspace{2pt}\frac{1}{\lambda_{max}(\textbf{R})}, \label{eq5b}
+\end{equation}
+
+\vspace{-0.8cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent where $\lambda_{max}$ is the maximum eigenvalue of $\textbf{R}$, and $\textbf{R}$ is the autocorrelation matrix of the input tap vector.
+Normally, there exist a compromise between the convergence rate and MSE value in LMS. Table \ref{table:1} gives the summary of the LMS algorithm.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%algorithm%%%%%%%%%%%%%%%%%%
+\begin{table}[ht]
+\caption{Summary of the LMS algorithm.}
+\vspace{0.5cm}
+\centering
+\begin{tabular}{ll}
+\hline
+\hline
+%&\multicolumn{2}{r}{\large{Initial }} \\ \hline
+ Filter Output  & $y(n)=\textbf{w}(n)^{T}\textbf{x}(n)$\\
+ Estimate Error  & $e(n)=d(n)-y(n)$\\
+ Tap-Weight Adaptation & $\textbf{w}(n+1)=\textbf{w}(n)+\mu e(n)\textbf{\textbf{x}}(n)$ \\
+ \hline
+ \end{tabular}
+\label{table:1} % is used to refer this table in the text
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.3cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Normalized LMS Algorithm}\label{sec:3.3}
+\vspace{-0.5cm}
+\noindent Despite the rampant usage of the LMS algorithm in many applications, selection of the step-size parameter $\mu$ posses a lot of challenges, especially, when the input signal $x(n)$ is highly correlated. As a result, the LMS algorithm suffers from a gradient noise amplification problem \cite{shukur}. Normalized LMS (NLMS) was proposed to address these challenges. In NLMS algorithm, the step-size $\mu$ is normalized by the energy of input-tap vector as:
+
+\vspace{-1.5cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{equation}
+\mu_{NLMS}=\frac{\mu}{\textbf{x}^T(n)\textbf{x}(n)}, \label{eq6b}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{-0.6cm}
+\noindent Substituting (\ref{eq6b}) in (\ref{eq4b}), then the update scheme for NLMS is \cite{Duttweiler}:
+
+\vspace{-1.5cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{equation}
+\textbf{w}(n+1)=\textbf{w}(n)+\frac{\mu e(n)\textbf{x}(n)}{\textbf{x}^{T}(n)\textbf{x}(n)+\delta}, \label{eq7b}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.6cm}
+\noindent where $\delta$ is a very small positive constant to avoid dividing by zero.
+
+
+\par
+\noindent However, for identification of long, sparse and dynamic acoustic echo path, NLMS algorithm has the disadvantages of slow convergence and poor tracking ability. However, the filter taps update for many of the adaptive algorithms can be generalized by the following set of equations \cite{Mandic}:
+
+\vspace{-1.5cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{eqnarray}
+\nonumber
+e(n)&=&d(n)-\textbf{w}^T(n)\textbf{x}(n)\\
+&=&[\textbf{w}_0^{T}-\textbf{w}^{T}(n)] \textbf{x}(n)+v(n), \label{eq8b}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.6cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{equation}
+\textbf{w}(n+1)=\textbf{w}(n)+\frac{\mu \textbf{Q}(n)e(n)\textbf{x}(n)}{\textbf{x}^{T}(n)\textbf{Q}(n)\textbf{x}(n)+\delta}, \label{eq9b}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-1cm}
+\begin{equation}
+  \textbf{Q}(n)=diag\left\{q_0(n),q_1(n),\ldots,q_{N-1}(n)\right\}, \label{eq10b}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent where $\textbf{w}_0$ is the optimum solution of the filter and $v(n)$ is the observation noise. $\textbf{Q}(n)$ is the diagonal step-size control matrix and is introduced here to determine the step-size of each filter tap and is dependent on the particular algorithm. Since the step-size for NLMS algorithm is uniform for all filter taps, then the diagonal matrix is identity in this case, which is given by:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{-1.5cm}
+\begin{equation}
+  \textbf{Q}(n)=\textbf{I}_{N\times\ N}, \label{eq11b}
+\end{equation}
+
+\vspace{-0.6cm}
+\noindent where $\textbf{I}_{N\times\ N}$ is an $N\times\ N$ identity matrix. Table \ref{table:2} gives the summary of the NLMS algorithm.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[ht]
+\caption{Summary of the NLMS algorithm.}
+\vspace{0.5cm}
+\centering
+\begin{tabular}{ll}
+\hline
+\hline
+%&\multicolumn{2}{r}{\large{Initial }} \\ \hline
+ Filter Output  & $y(n)=\textbf{w}(n)^{T}\textbf{x}(n)$\\
+ Estimate Error  & $e(n)=d(n)-y(n)$\\
+ Tap-Weight Adaptation & $\textbf{w}(n+1)=\textbf{w}(n)+\frac{\mu \textbf{Q}(n)e(n)\textbf{x}(n)}{\textbf{x}^{T}(n)\textbf{Q}(n)\textbf{x}(n)+\delta}$ \\
+ \hline
+ \end{tabular}
+\label{table:2} % is used to refer this table in the text
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.3cm}
+\section{Proportionate NLMS Algorithm}\label{sec:3.4}
+\vspace{-0.5cm}
+\noindent In order to achieve a fast tracking of the sparse echo path, the proportionate NLMS (PNLMS) algorithm was proposed in \cite{Duttweiler}, \cite{Etter}. In the PNLMS algorithm, each filter coefficient is updated independently of others by regulating the adaptation step-size in proportion to the value of the filter tap estimates. The PNLMS algorithm allocates higher step-sizes to taps with larger magnitudes using a control matrix $\textbf{Q}(n)$. For this case, the entries of the control matrix can be expressed as:
+
+\vspace{-1.5cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{equation}
+q_i(n)=\frac{k_{i}(n)}{\sum\limits_{i=0}^{N-1}k_{i}(n)}, \hspace{2pt}0\hspace{2pt}\leq i<\hspace{2pt}N-1, \label{eq12b}
+\end{equation}
+%%%%
+\noindent and,
+\vspace{-0.6cm}
+\begin{equation}
+k_i(n)=\max\left\{\rho\times\max\left\{\gamma,|\ w_0(n)|,\ldots,|\ w_{N-1}(n)|\right\},|\ w_i(n)|\right\},\\
+ \hspace{2pt}0\hspace{2pt}\leq i<\hspace{2pt}N-1, \label{eq13b}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent It has been indicated in \cite{Duttweiler} that the best choices for $\gamma$ and $\rho$ values are $0.01$ and $\frac{5}{N}$, respectively. The function of $\gamma$ is to prevent the taps from being inactive when they are very much smaller than the largest taps and the function of $\rho$ is to prevent $w_i(n)$ from being inactive during initialization stage. Also, the regularization parameter $\delta$ for PNLMS is taken as:
+\vspace{-0.6cm}
+ \begin{equation}
+ \delta_{PNLMS}=\delta_{NLMS},\label{eg14b}\vspace{-0.6cm}
+ \end{equation}
+
+ \noindent where $\delta_{PNLMS}=\sigma_x^2$ is the variance of the input sinal. And for $q_{i}=1, \forall  i$, the PNLMS algorithm becomes equivalent to NLMS algorithm. A summary of the PNLMS algorithm is given in Table \ref{table:3}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[ht]
+\caption{Summary of the PNLMS algorithm.}
+\vspace{0.5cm}
+\centering
+\begin{tabular}{ll}
+\hline
+\hline
+%&\multicolumn{2}{r}{\large{Initial }} \\ \hline
+ Filter Output  & $y(n)=\textbf{w}(n)^{T}\textbf{x}(n)$\\
+ Estimate Error  & $e(n)=d(n)-y(n)$\\
+ Tap-Weight Adaptation & $\textbf{w}(n+1)=\textbf{w}(n)+\frac{\mu \textbf{Q}(n)e(n)\textbf{x}(n)}{\textbf{x}^{T}(n)\textbf{Q}(n)\textbf{x}(n)+\delta}$ \\
+         & $ \textbf{Q}(n)=diag\left\{q_0(n),q_1(n),\ldots,q_{N-1}(n)\right\}$\\
+         &  $ q_i(n)=\frac{k_{i}(n)}{\sum\limits_{i=0}^{N-1}k_{i}(n)}$\\
+         & $ k_i(n)=\max\left\{\rho\times\max\left\{\gamma,|\ w_0(n)|,\ldots,|\ w_{N-1}(n)|\right\},|\ w_i(n)|\right\} $\\
+         & $\hspace{2pt}0\hspace{2pt}\leq i<\hspace{2pt}N-1$ \\
+\hline
+\end{tabular}
+\label{table:3}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.3cm}
+\section{The Improved PNLMS Algorithm}\label{sec:3.5}
+\vspace{-0.5cm}
+\noindent The PNLMS algorithm provides good performances such as fast initial convergence and well tracking ability when the  echo path is sparse. And when the echo path is densely sparse, it unluckily converges slowly even much more slower than the NLMS algorithm. This makes the proportionality rule very aggresive. To overcome this aggresiveness, the improved PNLMS (IPNLMS) algorithm combines the NLMS update and proportionate term in the same rule each controlled by a factor $\alpha$. Entries of the control matrix $\textbf{Q}(n)$  for this case are given by \cite{Brown},\cite{Deng}:
+
+\vspace{-1.5cm}
+\begin{equation}
+ q_i(n)=\frac{1-\alpha}{2N}+\frac{(1+\alpha)|\ w_i(n)|}{2\|\ \textbf{w}(n)\|_1+\varepsilon}, \hspace{2pt}0\hspace{2pt}\leq i<\hspace{2pt}N-1. \label{15b}
+ \end{equation}
+
+ \vspace{-0.3cm}
+\noindent where $\varepsilon$ is a small positive number to avoid dividing by zero, and $\|\cdot\|_1                                                               $ is the $l_1$-norm operator. It can be seen that the IPNLMS algorithm is the same as the NLMS algorithm when $\alpha=-1$ and PNLMS when $\alpha=1$. Results from \cite{Morgan} shows that the good choice for $\alpha=0,0.5,-0.7$ , is a favorable choice for most AEC applications. Table \ref{table:4} is the summary of the IPNLMS.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[ht]
+\caption{Summary of the IPNLMS algorithm.}
+\vspace{0.5cm}
+\centering
+\begin{tabular}{ll}
+\hline
+\hline
+%&\multicolumn{2}{r}{\large{Initial }} \\ \hline
+ Filter Output  & $y(n)=\textbf{w}(n)^{T}\textbf{x}(n)$\\
+ Estimate Error  & $e(n)=d(n)-y(n)$\\
+ Tap-Weight Adaptation & $\textbf{w}(n+1)=\textbf{w}(n)+\frac{\mu \textbf{Q}(n)e(n)\textbf{x}(n)}{\textbf{x}^{T}(n)\textbf{Q}(n)\textbf{x}(n)+\delta}$ \\
+                    & $ \textbf{Q}(n)=diag\left\{q_0(n),q_1(n),\ldots,q_{N-1}(n)\right\}$\\
+                    & $ q_i(n)=\frac{1-\alpha}{2N}+\frac{(1+\alpha)|\ w_i(n)|}{2\|\ \textbf{w}(n)\|_1+\varepsilon}$\\
+                    & $\hspace{2pt}0\hspace{2pt}\leq i<\hspace{2pt}N-1$ \\
+\hline
+\end{tabular}
+\label{table:4}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{-0.3cm}
+\section{Zero Attracting Sparse Adaptive filters}\label{sec:3.6}
+\vspace{-0.5cm}
+\noindent In many scenarios of acoustic echo cancellation, the sparse echo path exhibits a few number of active coefficients having large magnitudes among many negligible ones. This requires adaptive filters with ability to track those few active taps. In other situations, the impulse response may contain only a few nonzero values requiring adaptive filters with zero attracting properties, where the conventional LMS and NLMS algorithms can not provide a satisfactory performance. This problem was recently addressed by CS famework \cite{Dohono}, \cite{Candes2} where a modified LMS algorithm was derived by inserting either $l_0 $-norm \cite{Gu1}, \cite{Gu2} or $l_1$-norm \cite{Jin}, \cite{Shi} into the cost function of the standard LMS algorithm. This enables a zero attraction for all filter coefficients during the filtering process. This technique lead to the derivation of zero attracting LMS (ZA-LMS) algorithm \cite{Qing}, \cite{Hero}, \cite{Shukri}, \cite{Song3}, \cite{mujay1}. Also a reweighted ZA-LMS (RZA-LMS)  was subsequently derived similar to the ZA-LMS. With different reweighted zero attractors for different filter taps, RZA-LMS selectively induces filter taps to zero. This leads to a superior performance compared with the ZA-LMS algorithm.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.3cm}
+\subsection{Zero Attracting LMS Algorithm}\label{sec:3.6.1}
+\vspace{-0.5cm}
+\noindent  The Zero-Attracting LMS (ZA-LMS) algorithm exploits the sparsity of a system by introducing the $l_1$-norm of filter taps in the quadratic cost function of the LMS \cite{Hero}. ZA-LMS algorithm can be derived by inserting an $l_1$-norm constraint into (\ref{eq1b}) as:
+\vspace{-0.6cm}
+\begin{equation}
+J_1(n)=\frac{1}{2}e^2(n)+\gamma\|\textbf{w}(n)\|_1, \label{16b}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent where $\gamma$ is the control parameter that determines the degree of attractor of the $l_1$-norm for $\textbf{w}(n)$. The minimum of $J_{1}(n)$ can be sought recursively using the gradient method \cite{Haykins}:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.6cm}
+\begin{eqnarray}
+\nonumber
+\textbf{w}(n+1)&=&\textbf{w}(n)-\mu\frac{\partial J_1(n)}{\partial\textbf{w}(n)}\\
+&=&\textbf{w}(n)-\rho\mathrm{sgn}(\textbf{w}(n))+\mu e(n) \textbf{x}(n),\label{eq17b}\vspace{-0.6cm}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent where $\rho=\mu\gamma$ and $\mathrm{sgn}(\cdot)$ is a component-wise sign function defined as:
+\vspace{-0.6cm}
+\begin{equation}
+ sgn(x)=\left\{
+    \begin{array}{ll}
+      \frac{x}{|x|} & \mbox{if $x\neq0$} \\
+        0 & \mbox{if $x=0$},    \end{array} \right.\label{eq18b}\vspace{-0.6cm}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent Comparing (\ref{eq17b}) with the tap weight update of the conventional LMS (\ref{eq4b}), it can be seen that the ZA-LMS algorithm has the additional term $-\rho\mathrm{sgn}(\textbf{w}(n))$ which constantly attracts the filter coefficients to zero. This term is known as the zero-attractor \cite{Hero}, whose strength is controlled by $\rho$. It accelerates convergence when most of the system coefficients are zero, i.e., the system is sparse. Table \ref{table:5} gives the summary of the  ZA-LMS algorithm.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[ht]
+\caption{Summary of the ZA-LMS algorithm.}
+\vspace{0.5cm}
+\centering
+\begin{tabular}{ll}
+\hline
+\hline
+%&\multicolumn{2}{r}{\large{Initial }} \\ \hline
+ Filter Output  & $y(n)=\textbf{w}(n)^{T}\textbf{x}(n)$\\
+ Estimate Error  & $e(n)=d(n)-y(n)$\\
+ Tap-Weight Adaptation & $\textbf{w}(n+1)=\textbf{w}(n)-\rho\mathrm{sgn}(\textbf{w}(n))+\mu e(n) \textbf{x}(n)$ \\
+                  $$  & $sgn(x)=\left\{
+    \begin{array}{ll}
+      \frac{x}{|x|} & \mbox{if $x\neq0$} \\
+        0 & \mbox{if $x=0$}   \end{array} \right. $\\
+\hline
+\end{tabular}
+\label{table:5}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{-0.3cm}
+\subsection{Reweighted Zero Attracting LMS Algorithm}\label{sec:3.6.2}
+\vspace{-0.5cm}
+\noindent While the ZA-LMS algorithm uses the same zero-attractor to uniformly update all filter coefficients, the reweighted zero-attracting LMS (RZA-LMS) uses a distinct zero attractor for different filter coefficients. The reweighted zero attractors are obtained by adding a log-sum penalty of the coefficients vector to the cost function of the LMS algorithm. This is just an approximation of the $l_0$-norm penalty \cite{Candes1}. So the new cost function is defined by:
+\vspace{-0.3cm}
+\begin{equation}
+J_{2}(n)=\frac{1}{2}e^2(n)+\gamma^{\prime}\sum_{i=0}^{N-1}\log\left(1+\frac{|\textbf{w}_i|}{\zeta^{\prime}}\right),\label{eq:19b}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent where $\zeta^{\prime}$ and $\gamma^{\prime}$ are positive constants. Using the gradient method, the update equation of the RZA-LMS algorithm becomes:
+\vspace{-0.6cm}
+\begin{eqnarray}
+\nonumber
+\textbf{w}(n+1)&=&\textbf{w}(n)-\mu\frac{\partial J_{2}(n)}{\partial\textbf{w}(n)}\\
+&=&\textbf{w}(n)-\frac{\rho\mathrm{sgn}(\textbf{w}(n))}{1+\zeta|\textbf{w}(n)|}+\mu e(n) \textbf{x}(n). \label{20b}\vspace{-0.6cm}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent where $\rho=\mu\gamma^{\prime}/\zeta^{\prime}$ and $\zeta=1/\zeta^{\prime}$. A summary of the RZA-LMS algorithm is given in Table \ref{table:6}.
+
+\begin{table}[ht]
+\caption{Summary of the RZA-LMS algorithm.}
+\vspace{0.5cm}
+\centering
+\begin{tabular}{ll}
+\hline
+\hline
+%&\multicolumn{2}{r}{\large{Initial }} \\ \hline
+ Filter Output  & $y(n)=\textbf{w}(n)^{T}\textbf{x}(n)$\\
+ Estimate Error  & $e(n)=d(n)-y(n)$\\
+ Tap-Weight Adaptation & $\textbf{w}(n+1)=\textbf{w}(n)-\frac{\rho\mathrm{sgn}(\textbf{w}(n))}{1+\zeta|\textbf{w}(n)|}+\mu e(n) \textbf{x}(n)$ \\
+                  $$  & $sgn(x)=\left\{
+    \begin{array}{ll}
+      \frac{x}{|x|} & \mbox{if $x\neq0$} \\
+        0 & \mbox{if $x=0$}   \end{array} \right. $\\
+\hline
+\end{tabular}
+\label{table:6}
+\end{table}
+
+\noindent Despite the improvement brought by zero attracting LMS based algorithms, such approaches face some difficulties for identifying unknown systems associated with a variety of sparseness levels. They therefore have the effect of producing estimation bias  while achieving sparsity exploitation because of the difficulties of norm constraint adaption \cite{chart}. This is due to lack of adjustable factor that can adapt the norm constraint to the unknown system associated with different sparsity. As a result, the effectiveness of both the ZA-LMS and RZA-LMS algorithms significantly decreases with the variation of sparsity of the unknown system. To overcome this problem, a non-uniform norm constraint LMS (NNCLMS) algorithm was proposed in \cite{Tong}, which enables the norm constraint to seek a trade-off between the sparsity exploitation effect and the estimation bias it produces.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.3cm}
+\subsection{Non-Uniform Norm Constraint LMS Algorithm}\label{sec:3.6.3}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.5cm}
+\noindent To limit the effect of estimation bias caused by norm constraint adaptation due to different sparsity of the unknown system, a classic $p$-norm like is employed to modify the cost function of the LMS filter. The classic $p$-norm like is split to form a non-uniform norm constraint that can be made more flexible for quantitative adjustment of the norm constraint adaptation. The NNCLMS algorithm is derived by first inserting the $p$-norm  constraint into the cost function of the LMS filter.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-1.5cm}
+\begin{eqnarray}
+J_{3}(n)&=&\frac{1}{2}e^2(n)+\gamma\|\textbf{w}(n)\|_p^p\\
+                 &=&\frac{1}{2}|d(n)-\textbf{x }^{T}(n)\textbf{w}(n)|^{2} + \gamma\|\textbf{w}(n)\|_p^p, \label{eq21b}
+ \end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent where $\gamma\|\textbf{w}(n)\|_p^p$ is the $p$-norm like constraint term, and $\gamma>0$ is the factor to balance the constraint term and estimation error \cite{chart}, \cite{rao}. The term $\|\textbf{w}(n)\|_p^p$ is called ``$p$-norm like" which is different from euclidean norm and defined as:
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.6cm}
+\begin{equation}
+|\textbf{w}(n)\|_p^p=\sum|w_i|^p, \hspace{10pt}0\hspace{2pt}\leq p\leq\hspace{2pt}1, \label{eq22b}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.6cm}
+\noindent that is,
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-1cm}
+\begin{equation}
+\lim_{p\to 0}\|\textbf{w}(n)\|_p^p=\|\textbf{w}(n)\|_{0},\label{eq23b}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-1.5cm}
+\begin{equation}
+\lim_{p\to 1}\|\textbf{w}(n)\|_p^p=\|\textbf{w}(n)\|_{1}=\sum_{i=1}^{n}|w_i|.\label{eq24b}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent Hence, (\ref{eq23b}) and (\ref{eq24b}) which means counting the number of non-zero coefficients. The optimization problem represented in (\ref{eq:19b}) could be solved by applying a gradient technique, the gradient of the cost function can be obtained with respect to $\textbf{w}(n)$ as:
+
+
+\vspace{-1.5cm}
+\begin{equation}
+\widehat{\boldsymbol\nabla}J_{3}(n)=\frac{1}{2}\frac{\partial |e(n)|^2}{\partial \textbf{w}}+ \lambda\frac{\partial \|\textbf{w}(n)\|_p^p}{\partial \textbf{w}},\label{eq25b}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.6cm}
+\noindent Therefore, the gradient recursion of filter coefficient vector is:
+
+\begin{eqnarray}
+\nonumber
+\hspace{-0.8cm}w_{i}(n+1)&=&w_{i}(n)-\mu\widehat{\boldsymbol\nabla}J_{3}(n)\\
+&=& w_{i}(n)+\mu e(n)x(n-i)- \frac{\kappa f\mathrm{sgn}[w_{i}(n)]}{1+\varepsilon|w_{i}(n)|^{1-p}}, \hspace{5pt}\forall\hspace{2pt} 0\hspace{2pt}\leq i<\hspace{2pt}N, \label{eq26b}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent where $f$ can be obtained as:
+\vspace{-0.6cm}
+\begin{equation}
+f=\frac{\mathrm{sgn}[\mathrm{E}\left[|w_{i}(n)|\right]-|w_{i}(n)|] + 1}{2},\hspace{5pt} \forall\hspace{2pt} 0\hspace{2pt}\leq i<\hspace{2pt}N. \label{eq27b}\vspace{-0.6cm}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent The last term in (\ref{eq26b}) imposes a non-uniform norm related to zero attraction on filter coefficients. Unlike $l_1$-norm zero attraction term, the impact of the non-uniform norm term is dependents on the value of each coefficient with respect to the expectation. The non-uniform zero-attractor is exerted to enhance the convergence of small coefficient, and disappear to remove the estimation bias caused by large coefficients, thus seeks a trade-off between these two types of impact on the performance of the algorithm. More details of the non-uniform $p$-norm vector will be explained in the next chapter. The main challenge of this filter is its inability to stabilize the sparse system when the input signal is highly correlated. The summary of the NNCLMS is provided in Table \ref{table:7}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[!htb]
+\caption{Summary of the NNCLMS algorithm.}
+\vspace{0.5cm}
+\centering
+\begin{tabular}{ll}
+\hline
+\hline
+%&\multicolumn{2}{r}{\large{Initial }} \\ \hline
+ Initialize  & $ \textbf{w}=zeros(N,1)$\\
+ initial values of  & $\kappa,\varepsilon, \mu , N $\\
+ for & $n=1,2,...$ do\\
+$$ & $e(n)=d(n)-\textbf{w}^{T}(n)\textbf{x}(n)$\\
+$$& $f=\frac{\mathrm{sgn}[\mathrm{E}\left[|w_{i}(n)|\right]-|w_{i}(n)|] + 1}{2},\hspace{5pt} \forall\hspace{2pt} 0\hspace{2pt}\leq i<\hspace{2pt}N,$\\
+$$ & $ w_{i}(n+1)= w_{i}(n)+\mu e(n)x(n-i)-\kappa f \frac{\mathrm{sgn}[w_{i}(n)]}{1+\varepsilon|w_{i}(n)|},$\\ \hline
+
+ \end{tabular}
+\label{table:7} % is used to refer this table in the text
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+

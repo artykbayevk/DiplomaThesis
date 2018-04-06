@@ -1,0 +1,442 @@
+
+\section{Introduction}\label{sec4.1}
+\vspace{-0.5cm}
+\noindent As has been previously shown that the NNCLMS algorithm alleviates the difficulties caused by norm constraint adaptation and offers a  superior performance compared to zero attracting algorithms due to its non-uniform $p$-norm like constraint adjustment. This is because the norm constraint adaptation is adjusted to cope up with non-linearity of the norm constraint during the filtering process and result in efficient tracking of a sparsity changing system. On the other hand, the NNCLMS algorithm suffers from stability challenges in a correlated environment due to the step-size of the LMS algorithm. Hence, we propose an alternative approach to identify such a sparse system by using a VSSLMS algorithm employing the $p$-norm like constraint. The variable step-size update would stabilize the system and the non-uniform $p$-norm constraint would overcome the difficulties of the norm constraint adaptation. The proposed approach would be shown to perform more efficient than the existing approaches.
+
+\vspace{-0.5cm}
+\par
+\noindent This chapter begins with a review of the VSSLMS algorithm followed by the derivation of the proposed algorithm. we, firstly,  broadly demonstrate how the concept $p$-norm vector is optimized to a non-uniform $p$-norm like constraint. We then carry out the mean square convergence analysis and establish the stability condition of the proposed algorithm.
+
+\vspace{-0.3cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Review of Variable Step-Size LMS Algorithm}\label{sec:4.2}
+\vspace{-0.5cm}
+\noindent The VSSLMS algorithm was derived from the conventional LMS algorithm with a variable step-size \cite{Harris}, \cite{Evans}. Recalling the cost function of the conventional LMS:
+\vspace{-0.1cm}
+\begin{equation}
+J(n)=\frac{1}{2}e^2(n),\label{eq2}\vspace{-0.1cm}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent where $e(n)$ is the instantaneous error and is given by,
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.1cm}
+\begin{equation}
+e(n)=y(n)-\textbf{w}^T(n)\textbf{x}(n).\label{eq3}\vspace{-0.1cm}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent The filter coefficient vector is then updated by \cite{sayed}:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.1cm}
+\begin{eqnarray}
+\nonumber
+\textbf{w}(n+1)&=&\textbf{w}(n)-\mu\frac{\partial J(n)}{\partial\textbf{w}(n)}\\
+&=&\textbf{w}(n)+\mu e(n)\textbf{x}(n),\label{eq4}\vspace{-0.1cm}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent where $\mu$ is the step-size which serves as the condition of the LMS algorithm given by,
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.1cm}
+\begin{equation}
+0\hspace{2pt}<\mu<\hspace{2pt}\frac{1}{\lambda_{max}(\textbf{R})},\label{eq5}\vspace{-0.1cm}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent where $\lambda_{max}$ is the maximum eigenvalue of $\textbf{R}$, and $\textbf{R}$ is the autocorrelation matrix of the input tap vector. Usually,
+there is a trade off between the convergence rate and MSE value in LMS algorithm. The VSSLMS algorithm uses a variable step-size, as proposed
+in \cite{Harris}, in order to avoid such a trade off, and is given by,
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.1cm}
+\begin{equation}
+\mu^{\prime}(n+1)=\alpha\mu^{\prime}(n)+\gamma e^2(n),\label{eq6}\vspace{-0.1cm}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent with $0\hspace{2pt}<\alpha<\hspace{2pt}1$ and $\gamma>0$, then
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.1cm}
+\begin{equation}
+ \mu(n)=\left\{
+    \begin{array}{ll}
+      \mu_{max} & \mbox{if $\mu^{\prime}(n+1)> \mu_{max}$} \\
+        \mu_{min} & \mbox{if $\mu^{\prime}(n+1)< \mu_{min}$} \\
+      \mu^{\prime}(n+1) & \mbox{otherwise},    \end{array} \right.\label{eq7}\vspace{-0.1cm}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent where $0<\mu_{min}<\mu_{max}$. Therefore, the step size is a positive value whose strength can be controlled by $\alpha$, $\gamma$ and the
+instantaneous error $e(n)$ as in (\ref{eq6}). In other words, if the instantaneous error is large, the step size will increase to  provide  faster
+tracking. If the prediction error decreases, the step size will be decreased to reduce the misadjustment and, hence, provides a small steady-state error.
+The perfection of the algorithm could be attained at $\mu_{max}$, $\mu_{max}$ is chosen in such a way to assure constrained MSE \cite{Kwong}, \cite{Shukri}, \cite{Mader}.
+
+\vspace{-0.3cm}
+\section{Proposed Algorithm}\label{sec:4.3}
+\vspace{-0.5cm}
+\noindent Despite the fact that the VSSLMS algorithm provides a good performance, its performance can be improved further by imposing the sparsity condition of the system. The proposed algorithm is derived by solving the optimization problem:
+\vspace{-0.1cm}
+\begin{equation}
+\textbf{w}(n)=\operatorname*{arg\,min}_{\hspace{5pt}\textbf{w}} J_{1,n}(\textbf{w}),\label{eq9}\vspace{-0.1cm}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent where $J_{1,n}(\textbf{w})$ is the modified cost function  in (\ref{eq2}) which is achieved by incorporating a $p$-norm penalty function as:
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.1cm}
+\begin{equation}
+J_{1,n}(\textbf{w})=\frac{1}{2}|e(n)|^2 +\lambda\|\textbf{w}(n)\|_p^p.\label{eq10}\vspace{-0.1cm}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent The last term in (\ref{eq10}) is a $p$-norm like constraint penalty, where $\lambda$ is a positive constant whose value is used to adjust the penalty function. This function has a definition which is different from the classic Euclidean norm \cite{Tong}, defined as:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.1cm}
+\begin{equation}
+\|\textbf{w}(n)\|_p^p=\sum_{i=1}^{n}|w_i|^p,\label{eq11}\vspace{-0.1cm}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent where $0\leq p\leq 1$ and we can deduce that:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.1cm}
+\begin{equation}
+\lim_{p\to 0}\|\textbf{w}(n)\|_p^p=\|\textbf{w}(n)\|_{0},\label{eq12}\vspace{-0.1cm}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent which counts the number of non-zero coefficients, and
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.1cm}
+\begin{equation}
+\lim_{p\to 1}\|\textbf{w}(n)\|_p^p=\|\textbf{w}(n)\|_{1}=\sum_{i=1}^{n}|w_i|.\label{eq13}\vspace{-0.1cm}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent Both (\ref{eq12}) and (\ref{eq13}) are utilized for proper solution and analysis of sparse system derived by the $l_0$ and $l_1$-norm algorithms
+ as stated in \cite{Hero}. Since the $p$-norm has been analyzed, next is to find a solution for the optimization problem in (\ref{eq9}) by using a gradient
+ minimization techniques, the gradient of the cost function with respect to the filter coefficient vector $\textbf{w}(n)$ is:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.1cm}
+\begin{equation}
+\widehat{\boldsymbol\nabla}J_{1,n}(\textbf{w})=\frac{1}{2}\frac{\partial |e(n)|^2}{\partial \textbf{w}}+\lambda\hspace{5pt}\frac{\partial \|\textbf{w}(n)\|_p^p}{\partial \textbf{w}},\label{eq14}\vspace{-0.1cm}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent whose solution is found to be
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.1cm}
+\begin{equation}
+\widehat{\boldsymbol\nabla}J_{1,n}(\textbf{w})=\textbf{w}(n)-\textbf{x}(n)e(n) + \lambda p\frac{ \mathrm{sgn}[\textbf{w}(n)]}{\|\textbf{w}(n)\|^{1-p}}.\label{eq15}\vspace{-0.1cm}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent Thus, from the gradient descent recursion,
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.1cm}
+\begin{eqnarray}
+\nonumber
+\hspace{-0.8cm}w_{i}(n+1)&=&w_{i}(n)-\mu(n)\widehat{\nabla}J_{1,n}(w_i)\\
+&=& w_{i}(n)+\mu(n)e(n)x(n-i)-\kappa(n)p \frac{\mathrm{sgn}[w_{i}(n)]}{\sigma+|w_{i}(n)|^{1-p}}, \hspace{5pt}\forall\hspace{2pt} 0\hspace{2pt}\leq i<\hspace{2pt}N, \label{eq16}\vspace{-0.1cm}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent where $\forall \hspace{2pt} 0\hspace{2pt}\leq i<\hspace{2pt}N$, $\mu(n)$ is the variable step-size of the algorithm given by (\ref{eq7}),
+$\kappa=\mu\lambda>0$ is an adjustable parameter controlling the stability of the system, $\sigma$ is a very small positive constant to avoid dividing
+by zero and $\mathrm{sgn}[w_{i}(n)]$ is a component-wise sign function.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.5cm}
+\noindent The introduction of the $p$-norm facilitates the optimization of the norm constraint, this can be achieved by adjusting the parameter $p$ as in (\ref{eq11}). This parameter has effect on both the estimation bias and  the intensity of the sparsity measure, hence the trade-off makes it difficult to achieve the best solution for the optimization problem.
+
+\vspace{-0.5cm}
+\par
+\noindent To address these problems, the  classic $p$-norm as in (\ref{eq9}) is riven into a non-uniform $p$-norm like \cite{Tong}. In this method, a different value
+of $p$ is assigned for each entry of $\textbf{w}(n)$ as:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.1cm}
+\begin{equation}
+\|\textbf{w}(n)\|_{p,N}^p=\sum_{i=1}^{N}|w_i|^{p_i},\label{eq17}\vspace{-0.1cm}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent where $0\hspace{2pt}\leq p_i\leq\hspace{2pt}1$ and the new cost function, which is subjected to (\ref{eq16}), can be deduced from the gradient
+descent recursion equation as,
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.1cm}
+\begin{equation}
+w_{i}(n+1)= w_{i}(n)+\mu(n) e(n)x(n-i)-\kappa(n) p_{i}\frac{\mathrm{sgn}[w_{i}(n)]}{\sigma+|w_{i}(n)|^{1-p_{i}}}.\label{eq18}\vspace{-0.1cm}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\noindent where $\forall\hspace{2pt} 0\hspace{2pt}\leq i<\hspace{2pt}N$, and the introduction of $\textbf{p}_{i}$ vector makes it feasible to control the effect of estimation bias and sparsity correction measure by assigning a different value of $p$ for every tap weight vector. The last part of (\ref{eq18}) suggests that a metric of the absolute value of $w_i(n)$ can be introduced to quantitatively classify the filter coefficients into small and large categories.
+
+\vspace{-0.5cm}
+\par
+\noindent  By considering the range of the expected value of the tap weight vector, the absolute value expectation can be defined as:
+\vspace{-0.1cm}
+\begin{equation}
+h_i(n)=\mathrm{E}\left[|w_{i}(n)|\right], \hspace{5pt}\forall\hspace{2pt} 0\hspace{2pt}\leq i<\hspace{2pt}N, \label{eq19}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent Since we are interested in the minimum possible value of $\textbf{p}$ rather than its index, and minimizing the term $\frac{p_{i}}{|w_{i}(n)|^{1-p_{i}}}$ in (\ref{eq18}) is equivalent to minimizing $p_{i}|w_{i}(n)|^{1-p_{i}}$, then the optimization of the large category for each entry of $\textbf{p}$ can be expressed as:
+
+
+%\noindent equation (\ref{eq20}) only employs the optimization of the large category for each entry of $\textbf{p}$ because we are interested in the minimum possible value of $\textbf{p}$ rather than its index.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-1cm}
+\begin{eqnarray}
+\min_{p_i}[p_{i}\hspace{1pt}|w_{i}(n)|^{p_{i}-1}]=0,  \hspace{5pt}     sub. \hspace{2pt} to: \hspace{3pt}   w_{i}(n)>h_i(n)],\label{eq20}\vspace{-0.6cm}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent and for the small category, $p_{i}$ is set to be unity so as to avoid imbalance between the extremely great or slight intensity caused by various
+values of small $w_i(n)$. Therefore, the comprehensive optimization of the non-uniform norm constraint will cause $p_i$ to take a value of either a
+$0$ or $1$ when $w_i(n)>h_i(n)$  or  $w_i(n)<h_i(n)$,  respectively. With these, the update equation becomes:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.1cm}
+\begin{equation}
+w_{i}(n+1)= w_{i}(n)+\mu(n)e(n)x(n-i)- \kappa(n) f\hspace{1pt} \mathrm{sgn}[w_{i}(n)],\hspace{5pt}\forall \hspace{2pt}0\hspace{2pt}\leq i<\hspace{2pt}N, \label{eq21}\vspace{-0.1cm}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent where $f_{i}$ can be obtained by:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.1cm}
+\begin{equation}
+f_{i}=\frac{\mathrm{sgn}[\mathrm{E}\left[|w_{i}(n)|\right]-|w_{i}(n)|] + 1}{2},\hspace{5pt} \forall\hspace{2pt} 0\hspace{2pt}\leq i<\hspace{2pt}N. \label{eq22}\vspace{-0.1cm}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent The second term in (\ref{eq21}) provides a variable step size update while the last term imposes a non-uniform norm constraint whose function attracts small filter coefficients to zero. Unlike other norm constraint algorithms, the norm exertion here depends on the value of individual coefficients  with respect to the expectation of the tap weight. Also, the zero-attractor of the non-uniform norm increases the convergence rate of small coefficients and eliminates the estimation bias caused by large coefficients, hence improves the performance of the algorithm \cite{mujay}. A summary of the proposed algorithm is given in  Table \ref{table:1p}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[ht]
+\caption{Summary of the proposed algorithm.}
+\vspace{0.5cm}
+\centering
+\begin{tabular}{ll}
+\hline
+\hline
+%&\multicolumn{2}{r}{\large{Initial }} \\ \hline
+ Initialize  & $ \textbf{w}=zeros(N,1)$\\
+ initial values of  & $\kappa(n),\varepsilon,\mu_{max},\mu_{min},\gamma,\alpha$\\
+ for & $n=1,2,...$ do\\
+$$ & $e(n)=d(n)-\textbf{w}^{T}(n)\textbf{x}(n)$\\
+$$ & $ w_{i}(n+1)= w_{i}(n)+\mu(n)e(n)x(n-i)-\kappa(n) f_{i}\frac{\mathrm{sgn}[w_{i}(n)]}{1+\varepsilon|w_{i}(n)|},$\\
+$$&$f_{i}=\frac{\mathrm{sgn}[\mathrm{E}\left[|w_{i}(n)|\right]-|w_{i}(n)|] + 1}{2},\hspace{5pt} \forall\hspace{2pt} 0\hspace{2pt}\leq i<\hspace{2pt}N,$\\
+where & $\mu^{\prime}(n+1)=\alpha\mu^{\prime}(n)+\gamma e^2(n)$,\\
+$$&$ \mu(n)=\left\{
+    \begin{array}{ll}
+      \mu_{max} & \mbox{if $\mu^{\prime}(n+1)> \mu_{max}$} \\
+        \mu_{min} & \mbox{if $\mu^{\prime}(n+1)< \mu_{min}$} \\
+      \mu^{\prime}(n+1) & \mbox{otherwise}.    \end{array} \right.\label{eq7}$\\ \hline
+\end{tabular}
+\label{table:1p} % is used to refer this table in the text
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.5cm}
+\par
+\noindent Moreover, the performance of the proposed algorithm can be improved further by reweighting the term introduced in (\ref{eq22}) which makes it completely behaves as a reweighted zero attractor \cite{Hero}. By this, the update equation of the proposed algorithm can be expressed as:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.1cm}
+\begin{equation}
+w_{i}(n+1)= w_{i}(n)+\mu(n)e(n)x(n-i)-\kappa f_{i}\frac{\mathrm{sgn}[w_{i}(n)]}{1+\varepsilon|w_{i}(n)|}, \hspace{5pt}\forall\hspace{2pt}0\hspace{2pt}\leq i<\hspace{2pt}N, \label{eq23}\vspace{-0.1cm}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent where $\varepsilon>0$ is an adjustable parameter whose value controls the reweighing factor. Table \ref{table:1p} provides a summary of the proposed algorithm.
+
+\vspace{-0.3cm}
+\section{Convergence Analysis of the Proposed Algorithm}\label{sec:4.4}
+\vspace{-0.5cm}
+\noindent This section presents the convergence analysis of the proposed algorithm and derivation of a stability criteria. The convergence analysis is aimed to  ensure that the algorithm satisfies the conditions needed for the application requirements. Now, lets begin by substituting (\ref{eq22}) in (\ref{eq23}),
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.1cm}
+\begin{eqnarray}
+\nonumber
+w_{i}(n+1)&=& w_{i}(n)+\mu(n)e(n)x(n-i)\\
+&-& \kappa \left(\frac{\mathrm{sgn}(\mathrm{E}\left[|w_{i}(n)|\right]-|w_{i}(n)|) + 1}{2(1+\varepsilon|w_{i}(n)|)}\right) \mathrm{sgn}\left[w_{i}(n)\right]. \label{eq25}\vspace{-0.1cm}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent Assuming that an i.i.d zero mean Gaussian input signal $x(n)$ corrupted by a zero-mean white noise $v(n)$, the filter misalignment vector can be defined as:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.2cm}
+\begin{equation}
+\delta \textbf{w}(n)= \textbf{w}(n)-\textbf{w}_{0} \label{eq26}\vspace{-0.2cm}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent where $\textbf{w}_{0}$ represents the unknown system coefficients vector.
+
+\vspace{-0.5cm}
+\par
+\noindent The mean and the auto-covariance matrix of $\delta\textbf{w}(n)$ can be written as,
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.1cm}
+\begin{equation}
+\boldsymbol \epsilon(n)=\mathrm{E}[\delta\textbf{w}(n)], \label{eq27}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-1.5cm}
+\begin{equation}
+\textbf{S}(n)=\mathrm{E}\left[\textbf{q}(n)\textbf{q}^{T}(n)\right], \label{eq28}\vspace{-0.1cm}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent where $\textbf{q}(n)$ is the zero-mean misalignment vector defined as:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.1cm}
+\begin{equation}
+\textbf{q}(n)=\delta \textbf{w}(n)-\mathrm{E}[\delta \textbf{w}(n)], \label{eq29}\vspace{-0.1cm}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent The instantaneous mean-square-deviation (MSD) can be defined as:
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \vspace{-0.1cm}
+\begin{eqnarray}
+\nonumber
+J(n)&=&\mathrm{E}[\|\delta \textbf{w}(n)\|_p^p]\\
+&=&\sum_{i=0}^{N-1}\Lambda_{i}(n), \label{eq30}\vspace{-0.1cm}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent where $\Lambda_{i}(n)$ denotes the $i^{th}$-tap MSD and is defined with respect to the $i^{th}$ element of $\delta\textbf{w}(n)$
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.1cm}
+\begin{eqnarray}
+\nonumber
+\Lambda_{i}(n)&=&\mathrm{E}[\delta_{i}^{2}(n)]\\
+&=& S_{ii}(n) + \epsilon_{i}^{2}(n); \hspace{5pt} i=0,\hspace{2pt}\ldots,\hspace{2pt} N-1 \label{eq31}\vspace{-0.1cm}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent where $S_{ii}(n)$ and $\epsilon_{i}(n)$ are the $i^{th}$ diagonal element and the $i^{th}$ element of the $S(n)$ and $\epsilon(n)$, respectively \cite{Salman}.
+\par \noindent Substituting $d(n)=\textbf{w}_0^{T}\textbf{x}(n) + v(n)$ and (\ref{eq3}) in (\ref{eq25}) gives
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.1cm}
+\begin{eqnarray}
+\nonumber
+w_{i}(n+1)&=&w_{i}(n)+\mu(n)[\textbf{x}^{T}(n)\textbf{w}_0 + v(n)-\textbf{x}^{T}(n)\textbf{w}(n)]x(n-i)\\
+&-& \kappa \left(\frac{\mathrm{sgn}(\mathrm{E}\left[|w_{i}(n)|\right]-|w_{i}(n)|) + 1}{2(1+\varepsilon|w_{i}(n)|)}\right)\mathrm{sgn}\left[w_{i}(n)\right], \label{eq32}\vspace{-0.1cm}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent equation (\ref{eq32}) can be rewritten in vector form as,
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.1cm}
+\begin{eqnarray}
+\nonumber
+\textbf{w}(n+1)&=& \textbf{w}(n)+\mu(n)\textbf{x}(n)\left[\textbf{x}^{T}(n)\textbf{w}_0 + v(n)-\textbf{x}^{T}(n)\textbf{w}(n)\right]\\
+\nonumber
+&-&\frac{\kappa}{2} \left(\left\{\mathrm{sgn}(\mathrm{E}\left[|\textbf{w}(n)|\right]-|\textbf{w}(n)|) +\textbf{1}\right\}\odot\mathrm{sgn}\left[\textbf{w}(n)\right]\right)\\
+&\oslash& \left(\textbf{1}+\varepsilon|\textbf{w}(n)|\right), \label{eq33}\vspace{-0.1cm}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent where $|\textbf{w}|$ is the element wise absolute of $\textbf{w}$, $\textbf{1}$ denotes a vector of ones of the same size of $\textbf{w}$, and $\odot$ and $\oslash$ denote element-by-element vector multiplication and division, respectively. Subtracting $\textbf{w}_0$ from both sides of (\ref{eq33}) and substituting (\ref{eq26}) yields
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.1cm}
+\begin{eqnarray}
+\nonumber
+\boldsymbol\delta(n+1)&=& \textbf{A}(n)\boldsymbol\delta(n) + \mu(n)\textbf{x}(n)v(n)-\frac{\kappa(n)}{2} (\left\{\mathrm{sgn}(\mathrm{E}\left[|\textbf{w}(n)|\right]-|\textbf{w}(n)|) +\textbf{1}\right\}\\
+&\odot&\mathrm{sgn}\left[\textbf{w}(n)\right])\oslash\left(\textbf{1}+\varepsilon|\textbf{w}(n)|\right), \label{eq34}\vspace{-0.1cm}
+\end{eqnarray}
+
+\vspace{-2cm}
+\begin{equation}
+\textbf{A}(n)=\textbf{I}_{N}-\mu(n)\textbf{x}(n)\textbf{x}^{T}(n),\label{eqa}\vspace{-0.1cm}
+\end{equation}
+
+\vspace{-0.7cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent where $\textbf{I}_{N}$ denotes the $N\times N$ identity matrix.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent Taking the expectation of (\ref{eq34}) and using the independence assumption \cite{ Mayyas}, \cite{Hill}, \cite{Claasen} results in
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.1cm}
+\begin{eqnarray}
+\nonumber
+\boldsymbol \epsilon(n+1)&=& [1-\mu(n)\sigma_{x}^{2}]\boldsymbol\epsilon(n)-\frac{\kappa(n)}{2}\mathrm{E}[ \left(\left\{\mathrm{sgn}(\mathrm{E}\left[|\textbf{w}(n)|\right]-|\textbf{w}(n)|) +\textbf{1}\right\}\right)\\
+&\odot&\mathrm{sgn}\left[\textbf{w}(n)\right])]\oslash \left(\textbf{1}+\varepsilon|\textbf{w}(n)|\right), \label{eq35}\vspace{-0.1cm}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent where $\sigma_{x}^{2}$ is the variance of $x(n)$. Now, subtracting (\ref{eq35}) from (\ref{eq34}) and substituting (\ref{eq27}) and (\ref{eq29}) gives,
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.1cm}
+\begin{equation}
+ \textbf{q}(n+1)=\textbf{A}(n)\textbf{q}(n)+\mu(n)\textbf{x}(n)v(n)+\frac{\kappa(n)}{2} \textbf{z}(n)\label{eq36}\vspace{-0.1cm}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent where
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.1cm}
+\begin{eqnarray}
+\nonumber
+\textbf{z}(n)&=& \mathrm{E}\left[\left(\mathrm{sgn}(\mathrm{E}\left[|\textbf{w}(n)|\right]-|\textbf{w}(n)|) +\textbf{1}\right)
+\oslash \left([\textbf{1}+\varepsilon|\textbf{w}(n)|]\right)\right]\odot\mathrm{sgn}\left[\textbf{w}(n)\right]\\
+&-&\left(\mathrm{sgn}(\mathrm{E}\left[|\textbf{w}(n)|\right]-|\textbf{w}(n)|) +\textbf{1}\right)
+\oslash \left([\textbf{1}+\varepsilon|\textbf{w}(n)|]\right)\odot\mathrm{sgn}\left[\textbf{w}(n)\right].\label{eqz}\vspace{-0.1cm}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent By (\ref{eq28}),
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.1cm}
+\begin{eqnarray}
+\nonumber
+\textbf{S}(n+1)&=& \mathrm{E}\left\{\textbf{q}(n+1)\textbf{q}^{T}(n+1)\right\}\\
+&=&\mathrm{E}\bigg\{\left[\textbf{A}(n)\textbf{q}(n)+\mu(n)\textbf{x}(n)v(n)+\frac{\kappa(n)}{2} \textbf{z}(n)\right]\\
+\nonumber
+&\times&\left[\textbf{A}(n)\textbf{q}(n)+\mu(n)\textbf{x}(n)v(n)+\frac{\kappa(n)}{2} \textbf{z}(n))\right]^{T}\bigg\}, \label{eq37}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\vspace{-1.2cm}
+\begin{eqnarray}
+\nonumber
+\textbf{S}(n+1) &=& \mathrm{E}\left\{\textbf{A}(n)\textbf{q}(n)\textbf{q}^{T}(n)\textbf{A}^{T}(n)\right\} +\mathrm{E}\left\{\textbf{A}(n)\textbf{q}(n)\mu(n)v(n)\textbf{x}^{T}(n)\right\}\\
+\nonumber
+&+&\frac{\kappa(n)}{2}\mathrm{E}\left\{\textbf{A}(n)\textbf{q}(n)\textbf{z}^{T}(n)\right\}+\mathrm{E}\left\{\mu(n)v(n)\textbf{x}(n)\textbf{q}^{T}(n)\textbf{A}^{T}(n)\right\}\\
+\nonumber
+&+& \mathrm{E}\left\{\mu^{2}v^{2}(n)\textbf{x}(n)\textbf{x}^{T}(n)\right\}+\frac{(n)}{2}\mathrm{E}\left\{\mu(n)v(n)\textbf{x}(n)\textbf{z}^{T}(n)\right\}\\
+\nonumber
+&+&\frac{\kappa(n)}{2}\mathrm{E}\left\{\textbf{z}(n)\textbf{q}^{T}(n)\textbf{A}^{T}(n)\right\}+\frac{\kappa(n)}{2}\mathrm{E}\left\{\mu(n)v^{T}(n)\textbf{z}(n)
+\textbf{x}^{T}(n)\right\}\\
+&+&\left(\frac{\kappa(n)}{2}\right)^{2}\mathrm{E}\left\{\textbf{z}(n)\textbf{z}^{T}(n)\right\}, \label{eq42}\vspace{-0.1cm}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\noindent To evaluate (\ref{eq42}), we use the fact that the fourth-order moment of a Gaussian variable is three times its variance squared \cite{kennedy}, and by the independence assumption \cite{Haykins} and symmetric behavior of the covariance matrix $\textbf{S}(n)$,
+
+
+\vspace{-1cm}
+\begin{eqnarray}
+\nonumber
+\mathrm{E}\left\{\textbf{A}(n)\textbf{q}(n)\textbf{q}^{T}(n)\textbf{A}^{T}(n)\right\}&=&\left(1-2\mu(n)\sigma_{x}^{2} +2\mu^{2}(n)\sigma_{x}^{4}\right)\textbf{S}(n)\\
+&+&\mu^{2}(n)\sigma_{x}^{4}\mathrm{tr}[\textbf{S}(n)]I_{N},\label{eq43}\vspace{-0.1cm}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent and
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#
+\vspace{-0.1cm}
+\begin{eqnarray}
+\nonumber
+\mathrm{E}\left\{\textbf{A}(n)\textbf{q}(n)\textbf{z}^{T}(n)\right\}&=&\mathrm{E}^{T}\left\{\textbf{z}(n)\textbf{q}^{T}(n)\textbf{A}^{T}(n)\right\}\\
+&=&(1-\mu(n)\sigma_{x}^{2})\mathrm{E}[\textbf{w}^{T}(n)\textbf{z}(n)].\label{eq44}\vspace{-0.1cm}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent  where $\mathrm{tr}[.]$ denotes the trace of a matrix. Now finding the trace of (\ref{eq42}) and by using the results of (\ref{eq43}) and (\ref{eq44}), we obtain
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.1cm}
+\begin{eqnarray}
+\nonumber
+\mathrm{tr}[\textbf{S}(n+1)]&=&\left(1-2\mathrm{E}\left\{\mu(n)\right\}\sigma_{x}^{2}+2\mathrm{E}\left\{\mu^{2}(n)\right\}\sigma_{x}^{4}\right)
+\mathrm{tr}[\textbf{S}(n)]\\
+&+&N\mathrm{E}\left\{\mu^{2}(n)\right\}\sigma_{x}^{4}\mathrm{tr}[\textbf{S}(n)]\\
+&+&N\mathrm{E}\left\{\mu^{2}(n)\right\}\sigma_{v}^{2}\sigma_{x}^{2}+\kappa(1-\mathrm{E}\left\{\mu(n)\right\}\sigma_{x}^{2})\mathrm{E}[\textbf{w}^T(n)\textbf{z}(n)],\label{eq45}\vspace{-0.1cm}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent where $\sigma_{v}$ denotes the variance of $v(n)$.
+
+\vspace{-0.5cm}
+\par
+\noindent From (\ref{eqz}) it is obvious that $\textbf{z}(n)$ is bounded, and hence, the term (\ref{eq45}) $\boldsymbol\epsilon(n)$ converges. Thus, the adaptive filter is stable if the following holds:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.1cm}
+\begin{equation}
+|1-2E\{\mu(n)\}\sigma^2_x+(N+2)E\{\mu^2(n)\}\sigma^4_x|<1. \label{eq46}\vspace{-0.1cm}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent As the algorithm converges ($n$ is sufficiently large), the error $e(n)\rightarrow0$, and hence by (\ref{eq6}), $\mu(n)$ becomes constant. In this case,  $E\{\mu^2(n)\}=E\{\mu(n)\}^2=\mu^2(n)$. Hence the above equation simplifies to
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.1cm}
+\begin{equation}
+ 0<\mu(\infty)<\frac{2}{(N+2)\sigma^2_x}. \label{eq47}\vspace{-0.1cm}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent This result shows that if $\mu$ satisfies (\ref{eq47}), the convergence of the proposed algorithm is guaranteed.
+
+
+
+
