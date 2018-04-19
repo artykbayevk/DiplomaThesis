@@ -1,52 +1,6 @@
 \contentsline {chapter}{ABSTRACT}{i}
 \contentsline {chapter}{ACKNOWLEDGEMENTS}{ii}
-\contentsline {chapter}{LIST OF SYMBOLS/ABBREVIATIONS}{v}
+\contentsline {chapter}{LIST OF SYMBOLS/ABBREVIATIONS}{iv}
 \contentsline {chapter}{\numberline {1.}INTRODUCTION}{1}
 \contentsline {section}{\numberline {1.1.} Overview}{1}
 \contentsline {section}{\numberline {1.2.} Related Work}{1}
-\contentsline {subsection}{\numberline {1.2.1.} Logo Detection Methods}{1}
-\contentsline {chapter}{\numberline {2.}PROBLEM STATEMENT AND THESIS ORGANIZATION}{2}
-\contentsline {section}{\numberline {2.1.} Introduction}{2}
-\contentsline {section}{\numberline {2.2.} Statement of the Problem}{2}
-\contentsline {section}{\numberline {2.3.} Our Contributions}{2}
-\contentsline {section}{\numberline {2.4.} Thesis Organization}{2}
-\contentsline {chapter}{\numberline {3.}REVIEW OF DEEP LEARNING AND PATTERN RECOGNITION ALGORITHMS}{3}
-\contentsline {section}{\numberline {3.1.} Introduction}{3}
-\contentsline {section}{\numberline {3.2.} Computer Vision and Pattern Recognition}{3}
-\contentsline {section}{\numberline {3.3.} Image Segmentation Methods}{3}
-\contentsline {subsection}{\numberline {3.3.1.} Thresholding}{3}
-\contentsline {subsection}{\numberline {3.3.2.} Clustering Methods}{3}
-\contentsline {subsection}{\numberline {3.3.3.} Compression-based methods}{3}
-\contentsline {subsection}{\numberline {3.3.4.} Histogram-based methods}{3}
-\contentsline {subsection}{\numberline {3.3.5.} Edge detection}{3}
-\contentsline {subsection}{\numberline {3.3.6.} Dual clustering method}{4}
-\contentsline {section}{\numberline {3.4.} Supervised Learning}{4}
-\contentsline {section}{\numberline {3.5.} Optimization}{4}
-\contentsline {section}{\numberline {3.6.} Backpropagation}{4}
-\contentsline {section}{\numberline {3.7.} Neural Networks}{4}
-\contentsline {subsection}{\numberline {3.7.1.} Vanilla Neural Networks}{4}
-\contentsline {subsection}{\numberline {3.7.2.} Convolutional Neural Networks}{4}
-\contentsline {subsection}{\numberline {3.7.3.} Recurrent Neural Networks}{4}
-\contentsline {subsection}{\numberline {3.7.4.} Capsules Neural Networks}{4}
-\contentsline {section}{\numberline {3.8.} Summary}{4}
-\contentsline {chapter}{\numberline {4.}PROPOSED METHOD}{5}
-\contentsline {section}{\numberline {4.1.} Introduction}{5}
-\contentsline {section}{\numberline {4.2.} Review of Pipeline}{5}
-\contentsline {subsection}{\numberline {4.2.1.} Object Segmentation Method}{5}
-\contentsline {subsection}{\numberline {4.2.2.} Logo Recognition Training Framework}{5}
-\contentsline {subsection}{\numberline {4.2.3.} Logo Recognition Testing Framework}{5}
-\contentsline {section}{\numberline {4.3.} Review of Logos Dataset}{5}
-\contentsline {section}{\numberline {4.4.} Concept of Technologies and Frameworks}{5}
-\contentsline {section}{\numberline {4.5.} Summary}{5}
-\contentsline {chapter}{\numberline {5.}SIMULATION RESULTS}{6}
-\contentsline {section}{\numberline {5.1.} Introduction}{6}
-\contentsline {section}{\numberline {5.2.} Logos Dataset Preparing}{6}
-\contentsline {section}{\numberline {5.3.} Checking Image Segmentation and Object Proposal}{6}
-\contentsline {section}{\numberline {5.4.} Experiments on Training CNN}{6}
-\contentsline {section}{\numberline {5.5.} Evaluating CNN Performance for Segmented Images}{6}
-\contentsline {section}{\numberline {5.6.} Application Creating}{6}
-\contentsline {section}{\numberline {5.7.} Summary}{6}
-\contentsline {chapter}{\numberline {6.}CONCLUSIONS AND FUTURE WORK}{7}
-\contentsline {section}{\numberline {6.1.} Conclusion}{7}
-\contentsline {section}{\numberline {6.2.} Further work}{8}
-\contentsline {chapter}{REFERENCES}{9}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.4.12)  19 APR 2018 15:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.4.12)  19 APR 2018 23:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -8,8 +8,8 @@ LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@chapter=\count80
@@ -221,19 +221,9 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 
 LaTeX Warning: Unused global option(s):
-    [epsfig,times].
+    [14pt,epsfig,times].
 
-(./Full_Thesis.aux
-
-LaTeX Warning: Label `sec:3.6' multiply defined.
-
-
-LaTeX Warning: Label `sec:4.3' multiply defined.
-
-
-LaTeX Warning: Label `sec:5.6' multiply defined.
-
-)
+(./Full_Thesis.aux)
 \openout1 = `Full_Thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
@@ -328,12 +318,12 @@ e
 * \topmargin=-73.135pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=12.0pt
+* \topskip=10.0pt
 * \footskip=30.0pt
-* \marginparwidth=44.0pt
-* \marginparsep=10.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
 * \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -350,93 +340,43 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 19.
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 28.
- [1
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [1
 
 ] [2
 
 ]
-(./Full_Thesis.toc [3
-
-])
+(./Full_Thesis.toc)
 \tf@toc=\write3
 \openout3 = `Full_Thesis.toc'.
 
- [4] [5
+ [3
+
+] [4
 
 
 ]
 Chapter 1.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 96.
-(./ch1.tex) [1
+(./ch1.tex [1
 
-]
-Chapter 2.
-(./ch2.tex
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 34.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
-File: omsptm.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 34.
-) [2
-
-]
-Chapter 3.
-(./ch3.tex [3
-
-]) [4]
-Chapter 4.
-(./ch4.tex) [5
-
-]
-Chapter 5.
-(./ch5.tex) [6
-
-]
-Chapter 6.
-(./ch6.tex [7
-
-]) [8] (./references.tex [9
-
-]
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ¨ in font ptmr7t!
-Missing character: There is no Å in font ptmr7t!
- [10] [11]
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ¨ in font ptmr7t!
-Missing character: There is no Å in font ptmr7t!
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ¨ in font ptmr7t!
-Missing character: There is no Å in font ptmr7t!
- [12] [13]) [14]
-(./Full_Thesis.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+]) [2] (./Full_Thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 3120 strings out of 493029
- 41810 string characters out of 6136234
- 117088 words of memory out of 5000000
- 6573 multiletter control sequences out of 15000+600000
- 14527 words of font info for 36 fonts, out of 8000000 for 9000
+ 2977 strings out of 493029
+ 40463 string characters out of 6136234
+ 114342 words of memory out of 5000000
+ 6452 multiletter control sequences out of 15000+600000
+ 12394 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,6n,23p,1181b,215s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
-utmr8a.pfb>
-Output written on Full_Thesis.pdf (20 pages, 78666 bytes).
+ 38i,5n,23p,1181b,150s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base
+/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on Full_Thesis.pdf (7 pages, 47755 bytes).
 PDF statistics:
- 90 PDF objects out of 1000 (max. 8388607)
- 62 compressed objects within 1 object stream
+ 41 PDF objects out of 1000 (max. 8388607)
+ 28 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

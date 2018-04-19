@@ -1,6 +1,6 @@
 \section{Overview} \label{sec:1.1}
 \vspace{-0.5cm}
-\par Object recognition and object detection are ones of the lasting and most important goals in the computer vision.Because of this problem in a wide range of applications. For example, in copyright detection, contextual advertise placement, vehicle logo for an intelligent AI-based traffic-control system and brand detecting in social media. As well as these algorithms have many applications in location recognition, advertisement, and marketing. Presently advertising is a very powerful tool for income and attracting of customers.For this reason, the analysis of the brand and mention on different resources are very important and primary tasks for business analysts.In order to captive, attractive their customers and make better decisions, companies needs for analyzing the presence of their logos in photos, videos and another type of contents. Logos help to evaluation of identity between something.[1604.06083] [1701.02620] [1711.09822]
+\par Object recognition and object detection are ones of the lasting and most important goals in the computer vision.Because of this problem in a extremely considerable range of usage. For example, in copyright detection, contextual advertise placement, vehicle logo for an intelligent AI-based traffic-control system and brand detecting in social media. As well as these algorithms have many applications in location recognition, advertisement, and marketing. Presently advertising is a very powerful tool for income and attracting of customers.For this reason, the analysis of the brand and mention on different resources are very important and primary tasks for business analysts.In order to captive, attractive their customers and make better decisions, companies needs for analyzing the presence of their logos in photos, videos and another type of contents. Logos help to evaluation of identity between something.[1604.06083] [1701.02620] [1711.09822]
 
 \vspace{-0.5cm}
 \par The logo mainly includes text and graphical symbols. In such cases, when the logo is in different parts of the image, the logo is inverted, the logo is distorted, as well as changed in size - recognition and definition of the logo is a very problematic and difficult task. For example, logos on their clothes, which are often deformed, which complicates its detection and recognition. [1511.02462]
@@ -12,11 +12,35 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Related Work}\label{sec:1.2}
 \vspace{-0.5cm}
-\noindent In literature, I can find many works on logo detection, logo extraction, logo classification , logo retrieval and logo recognition.
+\noindent In literature, I can find many works on logo detection, logo extraction, logo classification , logo retrieval and logo recognition.Research that has been done on for the last 20 years and that are related to logos have been done with datasets, which consist too small data. For example, "Flickr-Logos" dataset, which includes only 32 logos, which distributed to 5644 objects on 8240 images.Obviously available public datasets not enough for creating real-time detector machine. And this machine, will not be able to fully use its potential of detection with a neural network, due to the lack of data about other logos.[1511.02462]
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.3cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\par Most of recent applications of detection and recognition of object have been based mostly on Scale-Invariant Image features.Scale-invariant image features algorithm provide us transformations and representations to gradients of images. These gradients are invariant to affine type transformations and despite the conditions.Models that were made based on SIFT, basically make a better that part of the picture that is specifically different from the rest of the content.At the moment, although there is a plural number of methods for logo recognition, the performance, and power of Convolutional Neural Network is growing very strongly in the field of computer vision. After all, CNN solves many of the problems of the basic classical computer vision algorithms and includes a large range of uses in the recognition of images and objects. The structure of convolutional neural networks is very hierarchical and multilayered, as well as it is designed so that the pattern can be recognized only from the pixels themselves.[1604.06083]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.3cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\par In this [bianco2017deep] paper they propose a method of logo detection and recognition with using main deep learning algorithms.Their recognition and detection process have given with pipeline, which consists main 5 step. These steps: taking an image, doing object proposal, cropping to regions, passing through the trained convolutional neural network and making a prediction.This algorithm recognizes logos well even if they are not exactly localized in the image.The neural network was trained and tested on the "FlickrLogos-32" database.For improving result they trained CNN with very differently benefits. As an example, for avoiding overfitting they used class - balancing in every batch. Also, they confirm sample-weighting and add a new class  'no logo', which includes only images without any logos.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{-0.3cm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\par Also, this [1511.02462] paper presents a method that works perfectly with logo recognition, and returns the bounding box of the found logo. In particular, recognition of the logo has broad application and uses it in many areas. To protect people intellectual property, logo recognition is the most convenient and effective tool.As mentioned earlier, in the area of logo recognition and identification, most tools have a very small dataset.But researchers from this article had presented a large-scale database, which has 160 classes distributed among 130608 objects. This dataset is really huge and it is called "LOGO-net 160". For cropping the image into regions and search regions of interest(RoI) they used selective search algorithm, that efficient for this type of tasks. After features extraction with CNN, fully connected two layers divided into softmax predictor and bounding box regressor. This mathematical operations provided us classification of logo and it's position on image.
 
-\subsection{Logo Detection Methods}\label{sec:1.2.1}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.3cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\par Guys from this [1604.06083] paper demonstrate method for recognition, which based on Region-based Convolutional Networks.A distinctive feature of this approach to solving the problem is the recognition of multiple objects in the image.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{-0.5cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
