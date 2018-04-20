@@ -1,14 +1,20 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.4.12)  19 APR 2018 23:36
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.4.13)  20 APR 2018 00:15
+>>>>>>> refs/remotes/origin/master
 entering extended mode
- restricted \write18 enabled.
- %&-line parsing enabled.
-**Full_Thesis.tex
-(./Full_Thesis.tex
-LaTeX2e <2016/02/01>
-Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
-(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+**./Full_Thesis.tex
+(Full_Thesis.tex
+LaTeX2e <2017-04-15>
+Babel <3.15> and hyphenation patterns for 76 language(s) loaded.
+
+("C:\Users\kamalkhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\report.cl
+s"
 Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+
+("C:\Users\kamalkhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size10.cl
+o"
 File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -23,8 +29,7 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-)
-(./EMU_Thesis_ikeV2.sty
+) (EMU_Thesis_ikeV2.sty
 Thesis style for IGSR, Mevlana (Rumi) University, Version 1.0
 \insd=\skip43
 \dc=\skip44
@@ -40,90 +45,97 @@ Thesis style for IGSR, Mevlana (Rumi) University, Version 1.0
 \c@thsfootcnt=\count88
 \symtabi=\skip54
 \symtabii=\skip55
-) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+)
+("C:\Users\kamalkhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graph
+icx.sty"
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+("C:\Users\kamalkhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyva
+l.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
+("C:\Users\kamalkhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graph
+ics.sty"
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+("C:\Users\kamalkhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\trig.
+sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
-File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+("C:\Users\kamalkhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\g
+raphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 95.
+Package graphics Info: Driver file: pdftex.def on input line 99.
 
-(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
-File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
-)
-\Gread@gobject=\count89
+("C:\Users\kamalkhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-def\p
+dftex.def"
+File: pdftex.def 2017/12/07 v1.0i Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
-Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+("C:\Users\kamalkhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\epsfi
+g.sty"
+Package: epsfig 2017/06/25 v1.7b (e)psfig emulation (SPQR)
 \epsfxsize=\dimen105
 \epsfysize=\dimen106
 )
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/times.sty
+("C:\Users\kamalkhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\times.s
+ty"
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2016/03/03 v2.15a AMS math features
+("C:\Users\kamalkhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmat
+h.sty"
+Package: amsmath 2017/09/02 v2.17a AMS math features
 \@mathmargin=\skip56
 
 For additional information on amsmath, use the `?' option.
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+
+("C:\Users\kamalkhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amstex
+t.sty"
 Package: amstext 2000/06/29 v2.01 AMS text
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+("C:\Users\kamalkhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsgen
+.sty"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks15
 \ex@=\dimen107
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+("C:\Users\kamalkhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsbsy
+.sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen108
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
-Package: amsopn 1999/12/14 v2.01 operator names
+("C:\Users\kamalkhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsopn
+.sty"
+Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count90
-LaTeX Info: Redefining \frac on input line 199.
-\uproot@=\count91
-\leftroot@=\count92
-LaTeX Info: Redefining \overline on input line 297.
-\classnum@=\count93
-\DOTSCASE@=\count94
-LaTeX Info: Redefining \ldots on input line 394.
-LaTeX Info: Redefining \dots on input line 397.
-LaTeX Info: Redefining \cdots on input line 518.
+\inf@bad=\count89
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count90
+\leftroot@=\count91
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count92
+\DOTSCASE@=\count93
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
 \Mathstrutbox@=\box26
 \strutbox@=\box27
 \big@size=\dimen109
-LaTeX Font Info:    Redeclaring font encoding OML on input line 630.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
-\macc@depth=\count95
-\c@MaxMatrixCols=\count96
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count94
+\c@MaxMatrixCols=\count95
 \dotsspace@=\muskip10
-\c@parentequation=\count97
-\dspbrk@lvl=\count98
+\c@parentequation=\count96
+\dspbrk@lvl=\count97
 \tag@help=\toks16
-\row@=\count99
-\column@=\count100
-\maxfields@=\count101
+\row@=\count98
+\column@=\count99
+\maxfields@=\count100
 \andhelp@=\toks17
 \eqnshift@=\dimen110
 \alignsep@=\dimen111
@@ -135,14 +147,16 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
 \multlinegap=\skip57
 \multlinetaggap=\skip58
 \mathdisplay@stack=\toks19
-LaTeX Info: Redefining \[ on input line 2735.
-LaTeX Info: Redefining \] on input line 2736.
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/tools/enumerate.sty
+("C:\Users\kamalkhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\enumerat
+e.sty"
 Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 \@enLab=\toks20
 )
-(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+("C:\Users\kamalkhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\booktabs\bookt
+abs.sty"
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \heavyrulewidth=\dimen116
 \lightrulewidth=\dimen117
@@ -154,56 +168,69 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \cmidrulesep=\dimen123
 \cmidrulekern=\dimen124
 \defaultaddspace=\dimen125
-\@cmidla=\count102
-\@cmidlb=\count103
+\@cmidla=\count101
+\@cmidlb=\count102
 \@aboverulesep=\dimen126
 \@belowrulesep=\dimen127
-\@thisruleclass=\count104
-\@lastruleclass=\count105
+\@thisruleclass=\count103
+\@lastruleclass=\count104
 \@thisrulewidth=\dimen128
-) (./slashbox.sty
+) (slashbox.sty
 slashbox style by K.Yasuoka, May 1993.
 \@slashboxa=\box28
 \@slashboxb=\box29
 \@slashboxc=\box30
-\@slashboxwd=\count106
-\@slashboxht=\count107
+\@slashboxwd=\count105
+\@slashboxht=\count106
 \@slashsepl=\dimen129
 \@slashsepr=\dimen130
-) (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2016/01/03 v1.1b Standard LaTeX Color (DPC)
+)
+("C:\Users\kamalkhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\color
+.sty"
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
 
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
-File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+("C:\Users\kamalkhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\c
+olor.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package color Info: Driver file: pdftex.def on input line 143.
+Package color Info: Driver file: pdftex.def on input line 147.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+("C:\Users\kamalkhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\multirow\multi
+row.sty"
+Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
+\multirow@colwidth=\skip59
+\multirow@cntb=\count107
+\multirow@dima=\skip60
 \bigstrutjot=\dimen131
 )
-(/usr/share/texlive/texmf-dist/tex/latex/tools/dcolumn.sty
+("C:\Users\kamalkhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\dcolumn.
+sty"
 Package: dcolumn 2014/10/28 v1.06 decimal alignment package (DPC)
 
-(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
-Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
+("C:\Users\kamalkhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\array.st
+y"
+Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
 \col@sep=\dimen132
 \extrarowheight=\dimen133
 \NC@list=\toks21
-\extratabsurround=\skip59
-\backup@length=\skip60
+\extratabsurround=\skip61
+\backup@length=\skip62
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+("C:\Users\kamalkhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geome
+try.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is detected.
+("C:\Users\kamalkhan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifp
+df.sty"
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
-Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+("C:\Users\kamalkhan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifv
+tex.sty"
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+("C:\Users\kamalkhan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ifxetex\ifxe
+tex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count108
@@ -218,12 +245,14 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layouthoffset=\dimen140
 \Gm@layoutvoffset=\dimen141
 \Gm@dimlist=\toks22
-)
+
+("C:\Users\kamalkhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geome
+try.cfg"))
 
 LaTeX Warning: Unused global option(s):
     [14pt,epsfig,times].
 
-(./Full_Thesis.aux)
+(Full_Thesis.aux)
 \openout1 = `Full_Thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
@@ -239,10 +268,13 @@ LaTeX Font Info:    ... okay on input line 17.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 17.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+
+("C:\Users\kamalkhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.
+fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+("C:\Users\kamalkhan\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pd
+f.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count111
 \scratchdimen=\dimen142
@@ -255,50 +287,65 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 \MPnumerator=\count115
 \makeMPintoPDFobject=\count116
 \everyMPtoPDFconversion=\toks24
-) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
+("C:\Users\kamalkhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epsto
+pdf-base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+("C:\Users\kamalkhan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\inf
+warerr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:\Users\kamalkhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grfex
+t.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+("C:\Users\kamalkhan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvd
+efinekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+("C:\Users\kamalkhan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ltx
+cmds.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+("C:\Users\kamalkhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\kvopt
+ions.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+("C:\Users\kamalkhan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvs
+etkeys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+("C:\Users\kamalkhan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ete
+xcmds.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+("C:\Users\kamalkhan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifl
+uatex.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+("C:\Users\kamalkhan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\pdf
+texcmds.sty"
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
-
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
-))
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
 Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 452.
-
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -340,12 +387,12 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 19.
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [1
+{C:/Users/kamalkhan/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+[1
 
 ] [2
 
-]
-(./Full_Thesis.toc)
+] (Full_Thesis.toc)
 \tf@toc=\write3
 \openout3 = `Full_Thesis.toc'.
 
@@ -358,8 +405,22 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 Chapter 1.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 96.
-(./ch1.tex [1
+(ch1.tex [1
 
+] [2]) [3]
+Chapter 2.
+(ch2.tex
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 34.
+
+("C:\Users\kamalkhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\omsptm.
+fd"
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 34.
+) [4
+
+<<<<<<< HEAD
 ]) [2]
 Chapter 2.
 (./ch2.tex
@@ -395,6 +456,28 @@ Output written on Full_Thesis.pdf (8 pages, 64786 bytes).
 PDF statistics:
  52 PDF objects out of 1000 (max. 8388607)
  36 compressed objects within 1 object stream
+=======
+] (Full_Thesis.aux) ) 
+Here is how much of TeX's memory you used:
+ 3001 strings out of 493308
+ 43495 string characters out of 3127906
+ 111708 words of memory out of 3000000
+ 6481 multiletter control sequences out of 15000+200000
+ 12394 words of font info for 33 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 41i,5n,25p,1184b,150s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/kamalkhan/AppData/Local/Programs/MiKTeX 2.9/font
+s/enc/dvips/base/8r.enc}<C:/Users/kamalkhan/AppData/Local/Programs/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/kamalkhan/AppData/Local/Prog
+rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/kamalkhan/App
+Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Us
+ers/kamalkhan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pf
+b><C:/Users/kamalkhan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/u
+tmr8a.pfb>
+Output written on Full_Thesis.pdf (9 pages, 71022 bytes).
+PDF statistics:
+ 53 PDF objects out of 1000 (max. 8388607)
+>>>>>>> refs/remotes/origin/master
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
