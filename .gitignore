@@ -3,3 +3,7 @@
 *.pt
 train_cnn/*.pyc
 .ipynb_checkpoints
+*.aux
+*.log
+*.syntex.gz
+*.toc
