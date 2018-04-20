@@ -7,4 +7,4 @@
 \contentsline {chapter}{\numberline {2.}PROBLEM STATEMENT AND THESIS ORGANIZATION}{3}
 \contentsline {section}{\numberline {2.1.} Introduction}{3}
 \contentsline {section}{\numberline {2.2.} Statement of the Problem}{3}
-\contentsline {section}{\numberline {2.3.} Thesis Organization}{3}
+\contentsline {section}{\numberline {2.3.} Thesis Organization}{4}
