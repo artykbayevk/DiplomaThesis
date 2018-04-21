@@ -11,20 +11,20 @@
 \contentsline {chapter}{\numberline {3.}REVIEW OF DEEP LEARNING AND PATTERN RECOGNITION ALGORITHMS}{5}
 \contentsline {section}{\numberline {3.1.} Introduction}{5}
 \contentsline {section}{\numberline {3.2.} Computer Vision and Pattern Recognition}{5}
-\contentsline {section}{\numberline {3.3.} Exhaustive Search}{5}
-\contentsline {section}{\numberline {3.4.} Image Segmentation Methods}{5}
-\contentsline {subsection}{\numberline {3.4.1.} Thresholding}{5}
-\contentsline {subsection}{\numberline {3.4.2.} Clustering Methods}{5}
-\contentsline {subsection}{\numberline {3.4.3.} Compression-based methods}{5}
-\contentsline {subsection}{\numberline {3.4.4.} Histogram-based methods}{5}
-\contentsline {subsection}{\numberline {3.4.5.} Edge detection}{6}
-\contentsline {subsection}{\numberline {3.4.6.} Dual clustering method}{6}
-\contentsline {section}{\numberline {3.5.} Supervised Learning}{6}
-\contentsline {section}{\numberline {3.6.} Optimization}{6}
-\contentsline {section}{\numberline {3.7.} Backpropagation}{6}
-\contentsline {section}{\numberline {3.8.} Neural Networks}{6}
-\contentsline {subsection}{\numberline {3.8.1.} Vanilla Neural Networks}{6}
-\contentsline {subsection}{\numberline {3.8.2.} Convolutional Neural Networks}{6}
-\contentsline {subsection}{\numberline {3.8.3.} Recurrent Neural Networks}{6}
-\contentsline {subsection}{\numberline {3.8.4.} Capsules Neural Networks}{6}
-\contentsline {section}{\numberline {3.9.} Summary}{6}
+\contentsline {section}{\numberline {3.3.} Selective Search}{6}
+\contentsline {section}{\numberline {3.4.} Image Segmentation Methods}{6}
+\contentsline {subsection}{\numberline {3.4.1.} Thresholding}{7}
+\contentsline {subsection}{\numberline {3.4.2.} Clustering Methods}{7}
+\contentsline {subsection}{\numberline {3.4.3.} Compression-based methods}{7}
+\contentsline {subsection}{\numberline {3.4.4.} Histogram-based methods}{7}
+\contentsline {subsection}{\numberline {3.4.5.} Edge detection}{8}
+\contentsline {subsection}{\numberline {3.4.6.} Dual clustering method}{8}
+\contentsline {section}{\numberline {3.5.} Supervised Learning}{8}
+\contentsline {section}{\numberline {3.6.} Optimization}{8}
+\contentsline {section}{\numberline {3.7.} Backpropagation}{8}
+\contentsline {section}{\numberline {3.8.} Neural Networks}{8}
+\contentsline {subsection}{\numberline {3.8.1.} Vanilla Neural Networks}{8}
+\contentsline {subsection}{\numberline {3.8.2.} Convolutional Neural Networks}{8}
+\contentsline {subsection}{\numberline {3.8.3.} Recurrent Neural Networks}{8}
+\contentsline {subsection}{\numberline {3.8.4.} Capsules Neural Networks}{8}
+\contentsline {section}{\numberline {3.9.} Summary}{8}
