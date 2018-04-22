@@ -13,18 +13,18 @@
 \contentsline {section}{\numberline {3.2.} Computer Vision and Pattern Recognition}{5}
 \contentsline {section}{\numberline {3.3.} Selective Search}{6}
 \contentsline {section}{\numberline {3.4.} Image Segmentation Methods}{6}
-\contentsline {subsection}{\numberline {3.4.1.} Thresholding}{7}
-\contentsline {subsection}{\numberline {3.4.2.} Clustering Methods}{7}
-\contentsline {subsection}{\numberline {3.4.3.} Compression-based methods}{7}
-\contentsline {subsection}{\numberline {3.4.4.} Histogram-based methods}{7}
-\contentsline {subsection}{\numberline {3.4.5.} Edge detection}{8}
-\contentsline {subsection}{\numberline {3.4.6.} Dual clustering method}{8}
-\contentsline {section}{\numberline {3.5.} Supervised Learning}{8}
-\contentsline {section}{\numberline {3.6.} Optimization}{8}
-\contentsline {section}{\numberline {3.7.} Backpropagation}{8}
-\contentsline {section}{\numberline {3.8.} Neural Networks}{8}
-\contentsline {subsection}{\numberline {3.8.1.} Vanilla Neural Networks}{8}
-\contentsline {subsection}{\numberline {3.8.2.} Convolutional Neural Networks}{8}
-\contentsline {subsection}{\numberline {3.8.3.} Recurrent Neural Networks}{8}
-\contentsline {subsection}{\numberline {3.8.4.} Capsules Neural Networks}{8}
-\contentsline {section}{\numberline {3.9.} Summary}{8}
+\contentsline {subsection}{\numberline {3.4.1.} Thresholding}{8}
+\contentsline {subsection}{\numberline {3.4.2.} Clustering Methods}{9}
+\contentsline {subsection}{\numberline {3.4.3.} Edge detection}{10}
+\contentsline {subsection}{\numberline {3.4.4.} Histogram-based methods}{10}
+\contentsline {subsection}{\numberline {3.4.5.} Compression-based methods}{10}
+\contentsline {subsection}{\numberline {3.4.6.} Dual clustering method}{10}
+\contentsline {section}{\numberline {3.5.} Supervised Learning}{10}
+\contentsline {section}{\numberline {3.6.} Optimization}{11}
+\contentsline {section}{\numberline {3.7.} Backpropagation}{11}
+\contentsline {section}{\numberline {3.8.} Neural Networks}{11}
+\contentsline {subsection}{\numberline {3.8.1.} Vanilla Neural Networks}{11}
+\contentsline {subsection}{\numberline {3.8.2.} Convolutional Neural Networks}{11}
+\contentsline {subsection}{\numberline {3.8.3.} Recurrent Neural Networks}{11}
+\contentsline {subsection}{\numberline {3.8.4.} Capsules Neural Networks}{11}
+\contentsline {section}{\numberline {3.9.} Summary}{11}
