@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.4.13)  22 APR 2018 21:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.4.13)  23 APR 2018 01:39
 entering extended mode
 **./Full_Thesis.tex
 (Full_Thesis.tex
@@ -404,7 +404,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 ]
 Chapter 1.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 101.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 102.
 (ch1.tex [1
 
 ]) [2]
@@ -428,7 +428,7 @@ Chapter 3.
 
 LaTeX Warning: Command \i invalid in math mode on input line 56.
 
-[9] [10] [11] [12] [13]) [14] (Full_Thesis.aux)
+[9] [10] [11] [12] [13] [14]) [15] (Full_Thesis.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -436,11 +436,11 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  3027 strings out of 493308
  43799 string characters out of 3127906
- 112980 words of memory out of 3000000
+ 114980 words of memory out of 3000000
  6502 multiletter control sequences out of 15000+200000
  14078 words of font info for 35 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,11n,25p,3222b,244s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,11n,25p,3919b,244s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/kamalkhan/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r
 .enc}<C:/Users/kamalkhan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
 msfonts/cm/cmex10.pfb><C:/Users/kamalkhan/AppData/Local/Programs/MiKTeX 2.9/fon
@@ -456,9 +456,9 @@ Data/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/kamal
 khan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Use
 rs/kamalkhan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pf
 b>
-Output written on Full_Thesis.pdf (20 pages, 152218 bytes).
+Output written on Full_Thesis.pdf (21 pages, 156103 bytes).
 PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
+ 115 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

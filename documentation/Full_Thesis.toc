@@ -21,11 +21,11 @@
 \contentsline {subsection}{\numberline {3.4.6.} Dual clustering method}{12}
 \contentsline {subsection}{\numberline {3.4.7.} Region-growing methods}{13}
 \contentsline {section}{\numberline {3.5.} Supervised Learning}{13}
-\contentsline {section}{\numberline {3.6.} Optimization}{14}
-\contentsline {section}{\numberline {3.7.} Backpropagation}{14}
-\contentsline {section}{\numberline {3.8.} Neural Networks}{14}
-\contentsline {subsection}{\numberline {3.8.1.} Vanilla Neural Networks}{14}
-\contentsline {subsection}{\numberline {3.8.2.} Convolutional Neural Networks}{14}
-\contentsline {subsection}{\numberline {3.8.3.} Recurrent Neural Networks}{14}
-\contentsline {subsection}{\numberline {3.8.4.} Capsules Neural Networks}{14}
-\contentsline {section}{\numberline {3.9.} Summary}{14}
+\contentsline {section}{\numberline {3.6.} Optimization}{15}
+\contentsline {section}{\numberline {3.7.} Backpropagation}{15}
+\contentsline {section}{\numberline {3.8.} Neural Networks}{15}
+\contentsline {subsection}{\numberline {3.8.1.} Vanilla Neural Networks}{15}
+\contentsline {subsection}{\numberline {3.8.2.} Convolutional Neural Networks}{15}
+\contentsline {subsection}{\numberline {3.8.3.} Recurrent Neural Networks}{15}
+\contentsline {subsection}{\numberline {3.8.4.} Capsules Neural Networks}{15}
+\contentsline {section}{\numberline {3.9.} Summary}{15}
