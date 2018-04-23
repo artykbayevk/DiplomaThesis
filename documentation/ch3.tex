@@ -69,9 +69,45 @@ D = {\sum\limits_{k=1}^{\kappa}} {\sum\limits_{x_i \in{C_{\kappa}}}^{\i}}{\Vert 
 
 \subsection{Edge detection}\label{sec:3.4.3}
 \vspace{-0.5cm}
-\noindent Image edge performance greatly reduces the amount of data to be processed, but it retains the necessary information regarding the shapes of objects in place. This image explanation is easily incorporated into a large number of object recognition algorithms used in computer vision along with other image processing applications. The main property of edge detection method is its ability to remove fine edge line with a good orientation such as
-well, as well as more literature on edge detection has been available in the last three decades. On the other hand, there is no General performance directory to evaluate the performance of boundary detection methods. The performance of edge detection methods is always evaluated in person and depends on its application.Edge detection is the primary tool for image segmentation. Methods of determining the boundaries to transform the source image at the image edges due to the change of the grayscale in the image. In image processing, especially in computer vision, edge detection considers the localization of important variations in gray level images and the detection of the physical and geometric properties of scene objects. This is the fundamental process of defining and outlining the object and the boundaries between objects and the background in the image. Edge detection
-the most familiar approach to detect significant discontinuities in intensity values.
+\noindent The edge segmentation method has its own feature to work faster due to the lack of a large amount of information that needs to be processed somehow because this method uses only the detected edges, which store all the necessary information for this method.Because of the very easy and understandable implementation, it is included along with other segmentation algorithms for recognition of an object. It has good ability to work in big data processing.The main advantage of this method we can call the extraction of accurate edge lines, which in the future will help to create their own borders and segment the image. Also when removing it takes out edge with the desired orientation. But we can not say for sure that the performance and reliability of this method are good or bad, because of the formulation of problems and the benefits of the method, each researcher must judge himself, based on the results that shows this method.This working method transforms the original image into divided regions which are clearly separated by edges in which the grey tone prevails. The edges that are at work of the algorithm become the boundaries between the object and its background, but again only the researcher can judge what is the background and what is the desired object. The benefit and contribution to the computer vision of this method are simply colossal. Also, a feature of this method in the creation of localization in the image of dependence on the level of gray color in the certain region.What are these edges? This is basically a change from pixel to pixel intensity of any color depending on a certain direction. From the same edges are extracted the main objects that will be used in the future. Because of the importance of grey, exploring the gaps between them is very important. Breaks can represent points, lines, and edges as well. Since breaks are useful, and they have based the basic methods of segmentation at the edges. It is possible to allocate methods such as Roberts, Sobel and Kirsh edge detection methods.[1211csit20]
+
+
+\vspace{-0.5cm}
+\noindent For the definition process, we can know for sure that not all points in the gradient have nonzero values. But at this point, we can say that not all points are important to us.During the improvement process, special pixels are highlighted. Under the peculiarity, we can say about the gradient change and about the intensity in this region. Also, to restore the image and get rid of unnecessary noise, we can recreate the filtering process.For example, we can talk about its two most common methods like Sobel operator and Laplacian of Gaussian Operator.\textbf{Sobel Operator:}
+It goes through all gradients and highlights the rich and intense frequencies that pass through the object boundaries in the image.
+\begin{table}[!htb]
+	\caption{\textbf{Sobel Operator}}
+	\begin{minipage}{.5\linewidth}
+		\centering
+		\begin{tabular}{|l|l|l|} \hline
+			1 & 2 & 1 \\ \hline
+			0 & 0 & 0 \\ \hline
+			-1 & -2 & -1 \\ \hline
+		\end{tabular}
+	\end{minipage}%
+	\begin{minipage}{.5\linewidth}
+		\centering
+		\begin{tabular}{|l|l|l|} \hline
+			-1 & 0 & 1 \\ \hline
+			-2 & 0 & 2 \\ \hline
+			-1 & 0 & 1 \\ \hline
+		\end{tabular}
+	\end{minipage} 
+\end{table}
+
+\textbf{Laplacian of Gaussian Operator:}For use this method, you need to calculate the derivative of the second order and create a mask on the Laplacian distribution, which is listed below:
+\begin{table}[!htb]
+	\caption{\textbf{Laplacian of Gaussian Operator}}
+	\centering
+	\vspace{0.3cm}
+	\begin{tabular}{|l|l|l|} \hline
+		0 & -1 & 0 \\ \hline
+		-1 & 4 & -1 \\ \hline
+		0 & -1 & 0 \\ \hline
+	\end{tabular} 
+\end{table}
+
+\noindent The edge segmentation method has other methods, but all methods mainly work with masks that go through the entire image and converts it to the desired shape.[1210ijcsit14]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{-0.3cm}
@@ -79,7 +115,8 @@ the most familiar approach to detect significant discontinuities in intensity va
 
 \subsection{Histogram-based methods}\label{sec:3.4.4}
 \vspace{-0.5cm}
-\noindent  Soon
+\noindent Since the other segmentation methods require a full pass through the image, there is a method that works with histograms, and its speed is much faster than the rest. It involves the least time pass on the pixels of the entire image.This process involves grouping the space of an entire dimension, in which all similar objects behave the same way and are grouped into sets, in other words building their histogram. Segmentation in this process is carried out by comparing all the existing groups in the set in its area inside the image, in which all the related parts will look like a group. The intervals between histograms represent a change as hills, where colors shimmer from each other.  The peculiarity here is the gray color that will be distributed between the multi-modal histograms, and the regions will be defined by peaks. Then again you need to define a threshold that will determine what region we want. This motivates the need
+threshold value methods, focused on understanding and creating conclusions, in which the selected thresholds are closely related to the histogram and the quality of the region or area.[ch10]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{-0.3cm}
@@ -87,7 +124,12 @@ the most familiar approach to detect significant discontinuities in intensity va
 
 \subsection{Compression-based methods}\label{sec:3.4.5}
 \vspace{-0.5cm}
-\noindent Soon
+\noindent The compression process is a more advanced segmentation method, so it includes 2 main processes, it is segmenting the image, and further compressing it. A result is a huge number of regions that do not intersect each other, and their combination can lead to a return to the original position, which in some cases is convenient. After the segmentation has occurred, the compression process continues, which compresses all created segments to a specific state or size. Segmentation on the output gives different objects, such as smoothed parts of the image, text, individual images, graphics, and areas that overlap the rest. Smooth areas use a compression method that uses an arithmetic encoder that operates on the basis of contrast and color palettes. The text uses a different method that uses text encoding. Classic JPEG-based compression methods are used for the image.[compressionBased]
+
+\vspace{-0.5cm}
+\noindent The segmentation algorithm works together with intensity values. In intensity, it is important to keep in mind the similarity between pixels. Due to the fact that the object is taken as a whole, its edges can be saved intact, to continue to use. The image quality is also maintained. At the stage of compression, for each segment, its type is determined, and then the method by which it will be compressed is determined. For efficiency, segments are encoded into a specific format.
+Effective and reliable (adaptive) methods of image compression using remote sensing become more and more necessary both in quantity and in size images for archiving and transferring the purpose of the network is constantly growing. In addition, all remote sensing images have a huge amount frequency component. Therefore, it is important to reach a maximum the degree of compression while maintaining a reasonable the computational complexity of implementation and high the visual quality of the restored image and, possibly, only Segmentation based on image compression.Amount of segmentation compression methods of general and remote control are offered picture.An algorithm for lossless image compression is proposed, using the Segmentation of the size of the variable block. Duplication in the representation of a digital image can be divided into two categories: local and global. In this work, a lossless image compression scheme is used, using redundancy at the local and global levels ensures maximum compression efficiency. This algorithm segments the image into blocks of variable size and encodes them depending on the characteristics presented pixels inside the block. The execution of this algorithm is superior to other lossless compression schemes, such as Huffman, arithmetic, Lempel-Ziv, and JPEG. But the characteristics of estimating the distribution of the image and the resulting efficiency of compression are a very difficult task because of the huge amount of computation.[fulltext24632013]
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -96,8 +138,18 @@ the most familiar approach to detect significant discontinuities in intensity va
 
 \subsection{Dual clustering method}\label{sec:3.4.6}
 \vspace{-0.5cm}
-\noindent Soon
+\noindent This method represents a combination of other methods we are familiar with. It uses the three most important features of image segmentation. The image is taken, segmented using a histogram-based method, then their density and completeness are checked by clustering, and last but not least the boundaries of these segments are checked by the integrity of their gradients. The method is carried out by creating two spaces we need. The first is responsible for the intensity and brightness of the image. Next, in another space is the original image itself, which has a dual feature. As mentioned earlier, the first space checks the intensity and brightness distribution. Everything happens in the clustering process.[Vadim V. Maximov, Alex Pashintsev Gestalt and Image Understanding. GESTALT THEORY 2012, Vol. 34, No.2, 143-166.]
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.3cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Region-growing methods}\label{sec:3.4.6}
+\vspace{-0.5cm}
+\noindent The last in our list and also one of the most common segmentation methods is the method of regional growth. This method is based on searching for similar and consistent areas within the image. Also, during the search process, similar pixels are merged into a region, which includes similar areas of the image. The method is simple in that it simply merges all similar pixels together to form an area as a whole region.Due to the fact that this method shares a well-connected region, a region well is a clear boundary that provides an excellent segmentation. When the segmentation process is started, there is a search for and an increase in the criterion, which depends on several factors. Segmentation is due to separation and the creation of clear boundaries. Again, the disadvantage is too expensive a number of calculations during the process. Noise and unevenness can also affect the result of this method.[1707.02051]
+
+\vspace{-0.5cm}
+\noindent Methods based on the region rely on the assumption that all neighboring pixels in the same region have a similar value or a certain range. This leads to a class of algorithms known as an area whose growth the technique of "splitting and merging", perhaps the most famous. The general procedure is to compare specific one-pixel function for its neighbors. If the homogeneity criterion is satisfied, then the pixel assigned to the same class as one or more of its neighbors. Choice of the criterion of homogeneity critical for even moderate success, and in all cases the results are disappointed by the noise. The fourth type hybrid methods, which combine boundary and regional criteria. This class includes morphological Segmentation of the catchment area and a landing surface of variable order. The catchment method is usually applied to gradient image. This gradient image can be viewed as a topography with boundaries between regions ridges of hills. Segmentation is equivalent to filling the topography of the starting points of the boundaries of the region so that they are open to keeping water from different points of sowing from the meeting. Like the whole perverted method, the technique encounters difficulties with images in which the areas are both noisy, and blurred or fuzzy volume. In addition, this method is also very expensive to calculate. In this article, A segmentation method based on the method of growing the sown area is proposed, which is less sensitive to noisy image and quantitatively and avoid an explosion, leakage, segmentation, and segmentation problems.[1412.3958]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{-0.3cm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -107,8 +159,11 @@ the most familiar approach to detect significant discontinuities in intensity va
 
 \section{Supervised Learning}\label{sec:3.5}
 \vspace{-0.5cm}
-\noindent Soon
+\noindent The essence of supervised learning is to find algorithms that build hypotheses based on previously solved problems and you already know the range of conclusions that will be on the output. This method helps to solve the problem for the future and make a forecast for future data. In other words, the goal is to create a concise model that will be trained on these features and their labels. However, the model will be used to predict the data, where there are only signs, but there are no markings. But we know the exact range of these labels.Algorithms for supervised learning can be as classifiers, as regressors.The essence of supervised learning is to find algorithms that build hypotheses based on previously solved problems and you already know the range of conclusions that will be on the output. This method helps to solve the problem for the future and make a forecast for future data. In other words, the goal is to create a concise model that will be trained on these features and their labels. However, the model will be used to predict the data, where there are only signs, but there are no markings. But we know the exact range of these labels.Algorithms for supervised learning can be as classifiers, as regressors.Since the training is inductive, because this algorithm is trained from a certain set of rules, which are usually presented as datasets, or certain parameters are important in the conclusion of the forecast. In short, the task of this tutorial is to recreate an algorithm that is ready for new data instances and works correctly.An important factor in creating an entire training processor supervised learning, data selection and feature selection are paramount, as data can play a cruel joke with you. The process of working with data we can imagine as its pre-processing and transformation. Since only digits that do not contain noise, unnecessary data or just emptiness are needed to work with these algorithms. Removing this kind of data is an important aspect of training.The data can be generated using different machine learning methods. It can also be noted that in most cases a well-assembled dataset is more important than the algorithm used. It can also be too a huge number of signs, as it makes the learning process more difficult and time-consuming. For this reason, dimensionality reduction methods with minimal data loss in the dataset are also an important part of supervised learning.Typically, the feature selection process can be represented as the removal of unnecessary and redundant information, since the datasets are usually sparse. After all, with the usual data collecting data is collected regardless of their measure of need. Also, when we find dependencies, we can remove not strongly correlated features, or we can generate them on the basis of dependent features. This reduces redundancy and also contributes to good algorithm performance.The choice of the algorithm should be approached very carefully and subtly because fully convinced of the data, we can rely only on the algorithm itself.The simplest method of checking algorithms is its accuracy. But we also must not forget about other parameters like recall and precision. In the evaluation of the algorithm, we should consider all the indicators and settle on its previously set task.The simplest method of checking algorithms is its accuracy. But we also must not forget about other parameters like recall and precision. In the evaluation of the algorithm, we should consider all the indicators and settle on its previously set task. Since classification occupies an important part in the work of intelligent systems, its development and speed is an important prerogative. More advanced algorithms supervised learning are neural networks, Bayesian networks, etc. \textbf{Here will be one image about all parts of supervised learning} [sup3]
 
+
+\vspace{-0.5cm}
+\noindent Passable or hidden layers that do not include inputs and outputs are very effective in training, as they add a more complex shape, and the training of convex and non-convex shapes is carried out more easily and possible. Nonlinearities, usually not solvable, can be differentiated and brought into a more convenient form. As well as the relationships between all layers are a good work out this algorithm. Due to the rapid development of neural networks, complex and nonlinear problems in the problems began to be solved with the help of deep learning algorithms. The methods of neural networks are unique in that their error on any instance returns to the very beginning of the perceptron diffusing and changing the weight in the direction we need to improve the result.[sup2]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{-0.3cm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

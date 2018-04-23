@@ -16,15 +16,16 @@
 \contentsline {subsection}{\numberline {3.4.1.} Thresholding}{8}
 \contentsline {subsection}{\numberline {3.4.2.} Clustering Methods}{9}
 \contentsline {subsection}{\numberline {3.4.3.} Edge detection}{10}
-\contentsline {subsection}{\numberline {3.4.4.} Histogram-based methods}{10}
-\contentsline {subsection}{\numberline {3.4.5.} Compression-based methods}{10}
-\contentsline {subsection}{\numberline {3.4.6.} Dual clustering method}{10}
-\contentsline {section}{\numberline {3.5.} Supervised Learning}{10}
-\contentsline {section}{\numberline {3.6.} Optimization}{11}
-\contentsline {section}{\numberline {3.7.} Backpropagation}{11}
-\contentsline {section}{\numberline {3.8.} Neural Networks}{11}
-\contentsline {subsection}{\numberline {3.8.1.} Vanilla Neural Networks}{11}
-\contentsline {subsection}{\numberline {3.8.2.} Convolutional Neural Networks}{11}
-\contentsline {subsection}{\numberline {3.8.3.} Recurrent Neural Networks}{11}
-\contentsline {subsection}{\numberline {3.8.4.} Capsules Neural Networks}{11}
-\contentsline {section}{\numberline {3.9.} Summary}{11}
+\contentsline {subsection}{\numberline {3.4.4.} Histogram-based methods}{11}
+\contentsline {subsection}{\numberline {3.4.5.} Compression-based methods}{11}
+\contentsline {subsection}{\numberline {3.4.6.} Dual clustering method}{12}
+\contentsline {subsection}{\numberline {3.4.7.} Region-growing methods}{13}
+\contentsline {section}{\numberline {3.5.} Supervised Learning}{13}
+\contentsline {section}{\numberline {3.6.} Optimization}{15}
+\contentsline {section}{\numberline {3.7.} Backpropagation}{15}
+\contentsline {section}{\numberline {3.8.} Neural Networks}{15}
+\contentsline {subsection}{\numberline {3.8.1.} Vanilla Neural Networks}{15}
+\contentsline {subsection}{\numberline {3.8.2.} Convolutional Neural Networks}{15}
+\contentsline {subsection}{\numberline {3.8.3.} Recurrent Neural Networks}{15}
+\contentsline {subsection}{\numberline {3.8.4.} Capsules Neural Networks}{15}
+\contentsline {section}{\numberline {3.9.} Summary}{15}
