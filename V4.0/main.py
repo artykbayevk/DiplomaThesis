@@ -147,7 +147,7 @@ print("Train size {} items and test size {} items".format(
 print('Batch size: {}'.format(len(test_loader)))
 
 
-num_epochs = 500
+num_epochs = 600
 learning_rate = 0.001
 momentum = 0.9
 
@@ -225,9 +225,9 @@ for epoch in range(num_epochs):
 
         batch_time.update(time.time() - end)
         end = time.time()
-        if (i+1) % 10 == 0:
-            text = 'Epoch: [{0}][{1}/{2}]\t Time {batch_time.val:.3f} ({batch_time.avg:.3f})\t Data {data_time.val:.3f} ({data_time.avg:.3f})\t Loss {loss.val:.4f} ({loss.avg:.4f})\t Prec@1 {top1.val:.3f} ({top1.avg:.3f})\t Prec@5 {top5.val:.3f} ({top5.avg:.3f})\n'.format(
-                epoch, i, len(train_loader), batch_time=batch_time,
+        if (i+1) % 30 == 0:
+            text = 'Epoch: [{0}][{1}/{2}],Time {batch_time.val:.3f} ({batch_time.avg:.3f}), Data {data_time.val:.3f} ({data_time.avg:.3f}),Loss {loss.val:.4f} ({loss.avg:.4f}), Prec@1 {top1.val:.3f} ({top1.avg:.3f}), Prec@5 {top5.val:.3f} ({top5.avg:.3f})'.format(
+                epoch+1, i+1, len(train_loader), batch_time=batch_time,
                 data_time=data_time, loss=losses, top1=top1, top5=top5)
             f.write(str(epoch))
             print(text)
