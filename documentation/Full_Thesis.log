@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.4.13)  23 APR 2018 19:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.4.13)  25 APR 2018 00:15
 entering extended mode
 **./Full_Thesis.tex
 (Full_Thesis.tex
@@ -404,7 +404,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 ]
 Chapter 1.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 102.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 107.
 (ch1.tex [1
 
 ]) [2]
@@ -428,7 +428,22 @@ Chapter 3.
 
 LaTeX Warning: Command \i invalid in math mode on input line 56.
 
-[9] [10] [11] [12] [13] [14] [15]) [16] (Full_Thesis.aux)
+[9] [10] [11] [12] [13] [14]
+Missing character: There is no Ñ in font ptmr7t!
+Missing character: There is no Ž in font ptmr7t!
+ [15] [16]
+! Double subscript.
+l.197 ...{new} = \theta_{old} - \eta\nabla_\theta_
+                                                  {old}E(\theta)
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+[17] [18]
+Overfull \hbox (57.13164pt too wide) in paragraph at lines 260--261
+\OT1/ptm/m/n/12 data, which leads to poor learn-ing with a large num-ber of tra
+in-ing.[1609.04747][1801.03137][1801.09136][1803.02922] 
+ []
+
+[19] [20]) [21] (Full_Thesis.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -440,7 +455,7 @@ Here is how much of TeX's memory you used:
  6502 multiletter control sequences out of 15000+200000
  14078 words of font info for 35 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,11n,25p,3919b,244s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,17n,25p,3919b,244s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/kamalkhan/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r
 .enc}<C:/Users/kamalkhan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
 msfonts/cm/cmex10.pfb><C:/Users/kamalkhan/AppData/Local/Programs/MiKTeX 2.9/fon
@@ -456,9 +471,9 @@ Data/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/kamal
 khan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Use
 rs/kamalkhan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pf
 b>
-Output written on Full_Thesis.pdf (22 pages, 160801 bytes).
+Output written on Full_Thesis.pdf (27 pages, 188460 bytes).
 PDF statistics:
- 118 PDF objects out of 1000 (max. 8388607)
+ 134 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

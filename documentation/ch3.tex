@@ -167,21 +167,131 @@ Effective and reliable (adaptive) methods of image compression using remote sens
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{-0.3cm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+ 
+ 
+\vspace{-0.5cm}
+\noindent 
 
 
 
 \section{Optimization}\label{sec:3.6}
 \vspace{-0.5cm}
-\noindent In computing the function, and composes the important role played by its minimization or else calling optimization. This process is accounted for by minimization functions that reduce the error value in the main target function. It's just a mathematical function that depends on the internal parameters of the model used. Typically, you can retrieve these parameters when you create a dependency on the $Y(X)$ target value calculation from a set of parameters $X$ that will be used inside the prediction method. In a neural network, there are such concepts of weight $W(X)$ and their bias $(B)$, the role of which is to do calculations inside the neural network with input data, converting, minimizing and pulling them on the output layers. Since the neural network problem to learn to predict better, each iteration calculates what proportion of the error of the estimated answers from the present. And the task at this stage is to learn how to minimize this error. This process of minimization plays an extremely important role in the training of neural networks.Passable or hidden layers that do not include inputs and outputs are very effective in training, as they add a more complex shape, and the training of convex and non-convex shapes is carried out more easily and possible. Nonlinearities, usually not solvable, can be differentiated and brought into a more convenient form. As well as the relationships between all layers are a good work out this algorithm. Due to the rapid development of neural networks, complex and nonlinear problems in the problems began to be solved with the help of deep learning algorithms. The methods of neural networks are unique in that their error on any instance returns to the very beginning of the perceptron diffusing and changing the weight in the direction we need to improve the result.The preparation of the model should be approached very carefully, and take into account the parameters of the model, which effectively affects its construction as a regressor or classifier. The quality of the result and its forecast directly depend on the parameters and their value. To select the same parameters, you need to resort to a variety of versatile methods that will update and make the calculation of the corresponding optimization parameters. Model output is indirectly and directly related to the operation of selecting and searching the most optimal model parameters.[Anish Singh Walia, Types of Optim methods.]
+\par
+\noindent In computing the function, and composes the important role played by its minimization or else calling optimization. This process is accounted for by minimization functions that reduce the error value in the main target function. It's just a mathematical function that depends on the internal parameters of the model used. Typically, you can retrieve these parameters when you create a dependency on the $Y(X)$ target value calculation from a set of parameters $X$ that will be used inside the prediction method. In a neural network, there are such concepts of weight $W(X)$ and their bias $(B)$, the role of which is to do calculations inside the neural network with input data, converting, minimizing and pulling them on the output layers. Since the neural network problem to learn to predict better, each iteration calculates what proportion of the error of the estimated answers from the present. And the task at this stage is to learn how to minimize this error. This process of minimization plays an extremely important role in the training of neural networks.Passable or hidden layers that do not include inputs and outputs are very effective in training, as they add a more complex shape, and the training of convex and non-convex shapes is carried out more easily and possible. Nonlinearities, usually not solvable, can be differentiated and brought into a more convenient form. As well as the relationships between all layers are a good work out this algorithm. Due to the rapid development of neural networks, complex and nonlinear problems in the problems began to be solved with the help of deep learning algorithms. The methods of neural networks are unique in that their error on any instance returns to the very beginning of the perceptron diffusing and changing the weight in the direction we need to improve the result.The preparation of the model should be approached very carefully, and take into account the parameters of the model, which effectively affects its construction as a regressor or classifier. The quality of the result and its forecast directly depend on the parameters and their value. To select the same parameters, you need to resort to a variety of versatile methods that will update and make the calculation of the corresponding optimization parameters. Model output is indirectly and directly related to the operation of selecting and searching the most optimal model parameters.
+Optimization methods can be divided into two main categories, according to which the same optimization algorithms operate. To the first category of optimization methods, we deduce \textit{ first-order optimization algorithms}. These are optimization algorithms that use the first-order differential to minimize the loss function $E (x)$. When this loss function is optimized, a gradient differential is used. The first-order derivative, which is calculated from the calculations of the main function, shows how much the function has changed at a certain point. At the same time, the function can decrease and increase at this point. When visualizing this function, we may notice a tangent to the point where the underlying surface loss is calculated.Here emerges the question, what still is this gradient value. If we look at a gradient in a simpler sense, it's just a vector. A vector that includes all possible variations of the generalization of the derivative $(dy/dx)$. In short, the gradient is how much the specific value of $Y(x)$ from the x parameter changes.the Gradient value is calculated by a purely hourly derivative. Also by calculating the gradient that its output function creates a vector field.The calculated gradient value is represented by a Jacobin matrix that shows all partial derivativesю.The difference between the second category of optimization methods, which simply uses a second-order derivative. Also a commonly used name for this species Hessian. This category is very similar, it simply creates a matrix as a vector space that is filled with second-order partial derivatives. The derived function shows not the change of the function, but the change previously calculated by the derivative of the first order. In this case, it is calculated how much the function has warped. And also when visualizing, we can see that it is not a line, more parabola, quadratic surface that touches the line of our loss function [Anish Singh Walia, Types of Optim methods.]
+
+
+
+\vspace{-0.5cm}
+\noindent One of the most common and widely used optimization methods for neural networks is the gradient descent method. But on the other hand, the implementation of this method in libraries for in-depth training is different in some versions and functions, which causes some oddity among researchers.As mentioned earlier, gradient descent is used to minimize our E(X) function, which will be parameterized by a model that uses parameters from X in the form of O. Minimization is based on the aspiration of the same parameters to the anti-gradient.Antigradient is the opposite direction from the main gradient. Speed or as stated differently, the steps are determined by the rate of learning, which shows how to move our value in the direction of anti-gradient. We move along the slope until we reach the local minimum, or sometimes this local minimum is a global minimum.We can separate the gradient descent method by the amount of data that is used to execute the target function. Since the quality and speed of gradient descent change with different amounts of data, it was advisable to divide it into 3 types.[1609.04747][1801.06159][1801.03137][1801.09136][1803.02922]
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{-0.3cm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\noindent \textbf{Batch gradient descent}. Batch gradient descent works with the entire dataset, and it is calculated during each iteration and with each sample data. It is the most classical method, but it is very expensive in terms of time. The parameters of the model $\theta$ change every era with this formula:
+
+
+\begin{equation}
+	\theta_{new} = \theta_{old} - \eta\nabla_\theta_{old}E(\theta)
+\end{equation}
+
+\noindent The difficulty in this process presents us with a dataset that may not fit in our RAM, and the problem in calculating the gradient will not be solved. Also the problem is that models can't learn on the fly with new data. After all, the model works so that going through the entire dataset, the process begins back, and cost more in time and capacity. The process includes a priority calculation errors on all of us selected the sample, then computed the vector turns into a matrix with proizvodnymi of the first order. Next, the calculated matrix uses a Loya update of the main parameters of the neural network or model to approach the minimum point of our target function. The advantage of this method is to calculate the global minimum and the local minimum completely and accurately. The first is computed for convex surfaces, and the second for non-convex surfaces, which is sometimes valuable for researchers.[1609.04747][1801.03137][1801.09136][1803.02922]
+
+\noindent \textbf{Stochastic gradient descent}. This method, unlike the first one, calculates the gradient and updates the parameters for each package on which the model is trained. Our calculation is made between $x_i$ to each of its target $y(x_i)$:
+
+\begin{equation}
+	\theta = \theta- {\eta}{\nabla_\theta}E(\theta;x_i;y(x_i))
+\end{equation}
+
+
+\noindent Because of the batch gradient descent work, which leads to redundancy, the time it takes is expensive, but SGD solves this problem because its gradient computation converges to only one computation in one era. And the instance that is selected for calculation is taken randomly from the dataset. And every time this process repeats itself. Due to the random selection of instances for training, the loss function is very strong and often fluctuates during training, which leads simultaneously to the choice of time for training and to the choice of initial parameters. The difference also lies in the fact that due to a random transition, emissions between local minima are very frequent. There is also a very important role is played by the learning rate, which allows you to navigate between the local minima. After all, when choosing a small learning rate, the transition can be very slow and on the contrary, will worsen the algorithm. And if you select too large, you can jump from the lows and again worsen the algorithm.[1609.04747][1801.03137][1801.09136][1803.02922]
 
 
 
+\noindent \textbf{Mini-batch gradient descent.} This method is special in that it performs a gradient descent among a randomly selected sample, but also selects a certain range in the same sample. This improves the algorithm performance in terms of speed and performance, making it clear that the method works really well.[1801.03137][1801.09136][1803.02922] The formula is written as follows:
+
+
+\begin{equation}
+ \theta = \theta- {\eta}{\nabla_\theta}E(\theta;x^{i:i+n};y^{x_i:x_n}) 
+\end{equation}
+
+\noindent \textbf{Momentum}. Despite its performance, the storage system has a number of disadvantages, which also strongly affect the result and lead to slow growth, which further leaves the trained model in local lows. These transitions between lows and highs can be improved by adding a new value that will affect the gradient transition speed. A value, momentum, was taken to smooth the oscillations and control the speed. The effect of momentum we can notice below:
+
+\begin{equation}
+	\begin{split}
+		\upsilon_t = \gamma\upsilon_{t-1} + \eta\nabla_\theta E(\theta) \\
+		\theta = \theta - \upsilon_t
+	\end{split}
+\end{equation}
+
+
+\noindent The momentum assigned like $\gamma$, and value mostly is 0.9.Speaking in other words, our momentum is a pusher gradient descent.[1609.04747]
+
+
+\noindent \textbf{Nesterov Accelerated Gradient}. This method is explained by the fact that it also allows us to increase the intensity of the change in our gradient descent rate. This is the calculation of the approximate next position of the parameter, which is of course approximated, but without completely updating the parameter, significantly increasing the speed of the algorithm. Since the function changes in the inclined, and allows you to increase the speed, as well as updating each individual parameter of the model[1609.04747].The formula is shown here:
+
+\begin{equation}
+	\begin{split}
+		\upsilon_t = \gamma\upsilon_{t-1} + \eta\nabla_\theta E(\theta - \gamma\upsilon_{t-1}) \\
+		\theta = \theta - \upsilon_t
+	\end{split}
+\end{equation}
+
+\noindent \textbf{Adagrad}. To improve methods that are based on gradient descent, we can adapt them to certain conditions. The first representative of such methods is Adagrad, which adapts its training by performing certain operations in the process. Under these operations, we mean the moments when the surround or a minor update of the gradient corresponding to its significance. Since not all data is perfect, it is usually very sparse and scattered. It has significantly increased the performance of stochastic gradient descent. While using the Adagrad method, we will not update all the parameters of Our o parameter matrix, and for each of them, we will find a separate learning rate, which will be changed at a certain time step t. First of all, we have to calculate the gradient of the target function in a certain period of time:
+
+\begin{equation}
+	g_{t,i} = \nabla_{\theta_t} E(\theta_{t,i})
+\end{equation}
+
+\noindent SGD process update every parameter in our training parameters $\theta_i$ at each time step $t$, then our parameters updated wholly:
+
+\begin{equation}
+\theta_{t+1,i} = \theta_{t,i} - \eta \times g_{t,i}
+\end{equation}
+
+\noindent But Adagrad do something other. This process modify main learning rate $\eta$ for each step at $t$ time, here all parameters inside $\theta$ changed, based on the last calculated parameters:
+
+\begin{equation}
+	\theta_{t+1, i} = \theta_{t,i} - \dfrac{\eta}{\sqrt{G_{t,ii}+\epsilon}}\times g_{t,i}
+\end{equation}
+
+\noindent So a visible advantage Adagrad's is automatically updated and customizable learning rate.But despite all the above advantages, there is a very big drawback of this method, these are positive gradient numbers, which in turn cause the main amount to grow, which causes a slowdown in the speed of learning and obtaining new data, which leads to poor learning with a large number of training.[1609.04747][1801.03137][1801.09136][1803.02922]
+
+\noindent The perfect form of Adagrad is Adadelta, which, instead of accumulating a huge number of gradients, cuts them off and gives a fixed number of exactly the same gradients. This size $W$ is fixed and controlled.Instead of storing all the data that came out of the gradients, it is more efficient to use its mean $E[g^2]_t$ for all decreasing gradient squares, which gives only the mean and the gradient that was calculated at that point:
+ 
+ 
+\begin{equation}
+	E[g^2]_t = \gamma E[g^2]_{t-1} + (1 - \gamma) g^2_t
+\end{equation}
+
+\noindent Next, using momentum, we update the parameters using the update vector $\Delta\Theta_t$, which will be calculated by the gradient $g_{t,i}$ and learning rate $\eta$:
+
+\begin{equation}
+	\begin{split}
+	\Delta\theta_t = - \eta g_{t,i} \\
+	\theta_{t+1} = \theta_t + \Delta\theta_t
+	\end{split}
+\end{equation}
+
+\noindent Next one is updating parameters of Adagrad:
+
+\begin{equation}
+	\Delta\theta_t = - \dfrac{\eta}{\sqrt{G_t+ \epsilon} } \odot g_t
+\end{equation}
+
+
+\noindent So, for improving results, we replace the gradient matrix with our mean matrix. And we can that our formula converts to other RMS function:
+
+\begin{equation}
+	\begin{split}
+			\Delta\theta_t = - \dfrac{\eta}{\sqrt{E[g^2]_t + \epsilon}} \odot g_t \\
+			\Delta\theta_t = - \dfrac{\eta}{RMS[g]_t} g_t
+	\end{split}
+\end{equation}
+
+\noindent Last thing about Adadelta, is that you don't need initial and static learning rate, because this algorithm do it for its own.[1609.04747][1801.03137][1801.09136][1803.02922]
 
 \section{Backpropagation}\label{sec:3.7}
 \vspace{-0.5cm}
