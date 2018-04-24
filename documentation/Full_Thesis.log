@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.4.13)  23 APR 2018 01:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.4.13)  23 APR 2018 19:59
 entering extended mode
 **./Full_Thesis.tex
 (Full_Thesis.tex
@@ -428,7 +428,7 @@ Chapter 3.
 
 LaTeX Warning: Command \i invalid in math mode on input line 56.
 
-[9] [10] [11] [12] [13] [14]) [15] (Full_Thesis.aux)
+[9] [10] [11] [12] [13] [14] [15]) [16] (Full_Thesis.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -456,9 +456,9 @@ Data/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/kamal
 khan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Use
 rs/kamalkhan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pf
 b>
-Output written on Full_Thesis.pdf (21 pages, 156103 bytes).
+Output written on Full_Thesis.pdf (22 pages, 160801 bytes).
 PDF statistics:
- 115 PDF objects out of 1000 (max. 8388607)
+ 118 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
