@@ -194,7 +194,7 @@ Optimization methods can be divided into two main categories, according to which
 
 
 \begin{equation}
-	\theta_{new} = \theta_{old} - \eta\nabla_\theta_{old}E(\theta)
+	\theta = \theta - \eta\nabla_{\theta}E(\theta)
 \end{equation}
 
 \noindent The difficulty in this process presents us with a dataset that may not fit in our RAM, and the problem in calculating the gradient will not be solved. Also the problem is that models can't learn on the fly with new data. After all, the model works so that going through the entire dataset, the process begins back, and cost more in time and capacity. The process includes a priority calculation errors on all of us selected the sample, then computed the vector turns into a matrix with proizvodnymi of the first order. Next, the calculated matrix uses a Loya update of the main parameters of the neural network or model to approach the minimum point of our target function. The advantage of this method is to calculate the global minimum and the local minimum completely and accurately. The first is computed for convex surfaces, and the second for non-convex surfaces, which is sometimes valuable for researchers.[1609.04747][1801.03137][1801.09136][1803.02922]
