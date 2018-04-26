@@ -317,7 +317,24 @@ Neural networks by type of training can be divided into two parts, this is when 
 
 \subsection{Convolutional Neural Networks}\label{sec:3.8.1}
 \vspace{-0.5cm}
-\noindent Soon
+\noindent Convolutional neural networks are a very powerful and productive tool for solving problems in deep and machine learning. Their mathematical content is a very important and practical is justified.Since convolution neural networks are primarily algorithms of supervised learning, you need to write a basic function that will build a hypothesis. To construct a function of the conjecture that will reduce the error function, we will consider in one regression classification formula. This we can do by designating our label one-dimensional size.We know that the prediction algorithm is based on a simple formula $ Y = f(X)$ , in which the function $f$ will always be different depending on the approach and the type of solution. Our task is always to minimize the loss function $E(X)$, which will be the loss $L$ itself, showing how far the predicted value has gone from the real value.Our problem is how to minimize the error that pulls out our function $f$ consisting of a group of all possible conjectures $F$:
+
+
+\begin{equation}
+	\hat{f} = \underset{f\in F}{arg\min}E[L(Y,f(X))]
+\end{equation}
+
+\noindent A function to represent all parameters in the model and data in cases that with the classifier that with the practical regression are the same. This representation of the parameters is carried out by changing and transforming all the parameters from the sample, and then this transformation occurs in the prediction function itself.[1605.09081]  For the classifier and for the regressors, we can present this:
+
+\begin{equation}
+	\begin{split}
+		f(X) = \langle \Phi(X), w\rangle - regression \\
+		f(X) = sign(\langle \Phi(X), w\rangle) -  classification
+	\end{split}
+\end{equation}
+
+\noindent The most powerful and accurate tool for recognition and to determine what is and what is happening in the image are actively used neural networks. They are specifically configured and made to work with images.For this reason, CNN forms its layer of three important values: width, height, and depth. The latter is used to work with color images.\textbf{Convolutional Layer}: These layers are used to address specific issues that MLPs often encounter or fully-connected NN. This solution combats redundancy and noise that classical computer vision techniques could not solve. The difference from other layers is that each neuron in a new layer, it's put together subsets of the previous layer. In short, we compress and weld the squares from the previous neuron, which solves the problem with a huge amount of data, and at the same time does it without losing all the data. The square is sprayed with height and width. Can be called differently as a receptive field that represents a subset of the pixels of the previous layer. The depth is also determined at the very beginning, as we decide to work only with black and white or RGB image. There is also a hyperparameter that corresponds to the number of convolutions we get at the output, it is called - stride. He controls the expense of gap between squares subsets. Mathematical it is clear that there will be fewer neurons at the output than at the input to regulate this process uses a method in which 0 is added to the boundaries. It's called padding. The number of neurons in the output we can calculate by taking away the number of neurons in the input number of receptive field, then adding padding to it, then divide it into stride, then adding to it only the number 1. \textbf{Pooling layer:}the layer which serves to unite as convolutional layers only has the distinctive feature which helps to solve the main problems of NN. The process is similar to convolution, but the difference is that this layer is not parameterized. In this layer there is also no weights or rejection; instead, it simply combines all the neurons in a specific area. The most used method is to take the maximum number of the selected area, as well as methods in which to take the average number. Process on the idea of similar. [1803.02129] 
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -327,8 +344,24 @@ Neural networks by type of training can be divided into two parts, this is when 
 
 \subsection{Recurrent Neural Networks}\label{sec:3.8.2}
 \vspace{-0.5cm}
-\noindent Soon
+\noindent AN that have a link to a recurrent function are called recurrent neural networks that are able to mathematically work with data that have a particular link and have a specific sequence. The essence of this neural network is that hidden layers save information from the past iteration, and work as memory inside the neural network. This structure allows RNNs to store, remember and process complex signals over long periods of time. RNNs can map the input sequence to the output sequence in the current time step and predict the sequence in the next time step.RNN, this as mentioned earlier, is a class of algorithms superior learning, in which a neural loop is connected, which repeats a certain order of time, and which has memory to work with a sequence. RNN is trained with a dataset where there is the concept of "input - purpose". Optimization comes at the expense of minimizing the difference between the real value and the forecast, but the work is in pairs, as well as these values are stored, and the size of the RNN can be significantly small from CNN.
+The neural network has 3 layers: the input layer, which contains all the original neurons. Next are the recurrent hidden layers, which store the past weight and changes. After all, this is the output layer. The entrance is $n$ number of units. These data units look like a sequence of vectors at a certain time $t$ as ${...,x_{t-1},x_t,x_{t+1}}$, where each $x_t$ is from $t$, $x_t = (x_1, x_2, ...,x_N)$ a group of all $X$ units. Next, fully connected input signals are on hidden layers, where their relationship is defined by a matrix of weights $W_{IH}$. Next, the hidden layers create their $M$ hidden units $h_t = (h_1, h_2,...,h_M)$, which are all of them connected recursively. Hidden layers we can define as true neural network memory.Memory $h_t$ in hidden layers is determined by the function's deduction formula from $o_t$, which in turn represents the linear sum of all layers:[1801.01078]
 
+\begin{equation}
+	h_t = f_H(o_t)
+\end{equation}
+
+\begin{equation}
+	o_t = W_{IH}x_t + W_{HH}h_{t-1} + b_h
+\end{equation}
+
+\noindent Further hidden layers create a connection from the output layer through the weights in the $W_{HO}$. And the output layer has its own $P$ number of units $y_t = (y_1, y_2, ..., y_P)$that are calculated by this formula:
+
+\begin{equation}
+	y_t = f_O(W_{HO}h_t + b_o)
+\end{equation}
+
+\noindent Where $f_O$ is the activation function for solving nonlinearity and control numbers in RNN. RNN, in its simplicity, consists of nonlinear equations that simply repeat in a certain order of time. Then, in each interval, the loss function is predicted and deducted. Hidden layers perform a memory function that retains the weights and the rest of the desired and best parameters that were calculated in time series. The peculiarity here is that you can determine the future behavior of the network, and significantly improve the result. The simplicity of RN is also caused by the use of simple nonlinear functions, which create dynamics and good training on data in a certain interval.[1801.01078][1710.03414]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{-0.3cm}
@@ -336,7 +369,7 @@ Neural networks by type of training can be divided into two parts, this is when 
 
 \subsection{Capsules Neural Networks}\label{sec:3.8.3}
 \vspace{-0.5cm}
-\noindent Soon
+\noindent Capsule neural networks have been a new approach to neural networks since October 17. Capsules in NN represent a group of neurons, where their vector, which is responsible for the activity, as well as this vector itself,  represents the parameters of each instance of a particular type of entity, or in other words the pattern. This approach uses the length of the same activity vector to calculate and represent the probability that an instance pattern exists and to represent its parameters. Capsules that are active, calculate specific forecast parameters of an implementation of the capsules, whose levels are more higher. When this prediction occurs, and most of these predictions converge to the same result, the high-level capsule moves to the active capsule level. Usually, after convolutional networks used activation function, which outputs the data to enter in the capsule. The very first capsules serve by simple logic, as multidimensional transformable objects, which are very similar to reverse rendering. This process has not been applied before, which makes it very special.[1710.09829]
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

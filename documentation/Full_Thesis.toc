@@ -25,6 +25,6 @@
 \contentsline {section}{\numberline {3.7.} Backpropagation}{21}
 \contentsline {section}{\numberline {3.8.} Neural Networks}{22}
 \contentsline {subsection}{\numberline {3.8.1.} Convolutional Neural Networks}{23}
-\contentsline {subsection}{\numberline {3.8.2.} Recurrent Neural Networks}{23}
-\contentsline {subsection}{\numberline {3.8.3.} Capsules Neural Networks}{23}
-\contentsline {section}{\numberline {3.9.} Summary}{23}
+\contentsline {subsection}{\numberline {3.8.2.} Recurrent Neural Networks}{24}
+\contentsline {subsection}{\numberline {3.8.3.} Capsules Neural Networks}{26}
+\contentsline {section}{\numberline {3.9.} Summary}{26}
