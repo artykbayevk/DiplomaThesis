@@ -1,6 +1,6 @@
 \contentsline {chapter}{ABSTRACT}{i}
 \contentsline {chapter}{ACKNOWLEDGEMENTS}{ii}
-\contentsline {chapter}{LIST OF SYMBOLS/ABBREVIATIONS}{v}
+\contentsline {chapter}{LIST OF SYMBOLS/ABBREVIATIONS}{iv}
 \contentsline {chapter}{\numberline {1.}INTRODUCTION}{1}
 \contentsline {section}{\numberline {1.1.} Overview}{1}
 \contentsline {section}{\numberline {1.2.} Related Works}{1}
@@ -11,20 +11,27 @@
 \contentsline {chapter}{\numberline {3.}REVIEW OF DEEP LEARNING AND PATTERN RECOGNITION ALGORITHMS}{5}
 \contentsline {section}{\numberline {3.1.} Introduction}{5}
 \contentsline {section}{\numberline {3.2.} Computer Vision and Pattern Recognition}{5}
-\contentsline {section}{\numberline {3.3.} Selective Search}{6}
-\contentsline {section}{\numberline {3.4.} Image Segmentation Methods}{6}
-\contentsline {subsection}{\numberline {3.4.1.} Thresholding}{8}
-\contentsline {subsection}{\numberline {3.4.2.} Clustering Methods}{9}
-\contentsline {subsection}{\numberline {3.4.3.} Edge detection}{10}
-\contentsline {subsection}{\numberline {3.4.4.} Histogram-based methods}{11}
-\contentsline {subsection}{\numberline {3.4.5.} Compression-based methods}{11}
-\contentsline {subsection}{\numberline {3.4.6.} Dual clustering method}{12}
-\contentsline {subsection}{\numberline {3.4.7.} Region-growing methods}{13}
-\contentsline {section}{\numberline {3.5.} Supervised Learning}{13}
-\contentsline {section}{\numberline {3.6.} Optimization}{15}
-\contentsline {section}{\numberline {3.7.} Backpropagation}{21}
-\contentsline {section}{\numberline {3.8.} Neural Networks}{22}
-\contentsline {subsection}{\numberline {3.8.1.} Convolutional Neural Networks}{23}
-\contentsline {subsection}{\numberline {3.8.2.} Recurrent Neural Networks}{24}
-\contentsline {subsection}{\numberline {3.8.3.} Capsules Neural Networks}{26}
-\contentsline {section}{\numberline {3.9.} Summary}{26}
+\contentsline {section}{\numberline {3.3.} Image Segmentation Methods}{6}
+\contentsline {subsection}{\numberline {3.3.1.} Thresholding}{7}
+\contentsline {subsection}{\numberline {3.3.2.} Clustering Methods}{8}
+\contentsline {subsection}{\numberline {3.3.3.} Edge detection}{9}
+\contentsline {subsection}{\numberline {3.3.4.} Histogram-based methods}{10}
+\contentsline {subsection}{\numberline {3.3.5.} Compression-based methods}{11}
+\contentsline {subsection}{\numberline {3.3.6.} Dual clustering method}{12}
+\contentsline {subsection}{\numberline {3.3.7.} Region-growing methods}{12}
+\contentsline {section}{\numberline {3.4.} Supervised Learning}{13}
+\contentsline {section}{\numberline {3.5.} Optimization}{14}
+\contentsline {section}{\numberline {3.6.} Backpropagation}{20}
+\contentsline {section}{\numberline {3.7.} Neural Networks}{21}
+\contentsline {subsection}{\numberline {3.7.1.} Convolutional Neural Networks}{22}
+\contentsline {subsection}{\numberline {3.7.2.} Recurrent Neural Networks}{24}
+\contentsline {subsection}{\numberline {3.7.3.} Capsules Neural Networks}{25}
+\contentsline {section}{\numberline {3.8.} Summary}{25}
+\contentsline {chapter}{\numberline {4.}PROPOSED METHODS AND ALGORITHMS}{26}
+\contentsline {section}{\numberline {4.1.} Introduction}{26}
+\contentsline {section}{\numberline {4.2.} Review of Pipeline}{26}
+\contentsline {subsection}{\numberline {4.2.1.} Object Segmentation Method}{26}
+\contentsline {subsection}{\numberline {4.2.2.} Network architecture and training parameters}{27}
+\contentsline {section}{\numberline {4.3.} Review of Logos Dataset}{29}
+\contentsline {section}{\numberline {4.4.} Concept of Technologies and Frameworks}{29}
+\contentsline {section}{\numberline {4.5.} Summary}{29}

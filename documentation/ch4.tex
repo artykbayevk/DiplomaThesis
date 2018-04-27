@@ -1,6 +1,6 @@
 \section{Introduction}\label{sec:4.1}
 \vspace{-0.5cm}
-\noindent Soon \cite{Duttweiler}.
+\noindent As mentioned earlier, methods for identifying and recognizing logos on the image is quite problematic. In this Chapter, we will tell you how we came to the solution of this problem. As the basis of all the work, I decided to repeat the steps and methods of work with researchers from the DISCo laboratory[1701.02620]. Just changing the segmentation search for image segmentation, I added some layers for CNN, taking as a basis one of the most popular CNN - AlexNet, but to solve the problem and train more different networks, we will use the same CNN based on VGG16 and will try to implement ResNet. This chapter will explain in detail what frameworks and pipeline we have created to solve this problem. Also will tell about the technologies and the main dataset, which will train our CNN. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{-0.3cm}
@@ -11,7 +11,7 @@
 
 \section{Review of Pipeline}\label{sec:4.2}
 \vspace{-0.5cm}
-\noindent Soon
+\noindent The problem with recognition is that we cannot know exactly where our logo will be located, which we want to recognize and find where it is. Before creating the algorithm itself, our task is to create a working dataset that will store the images and their target.The working pipeline, the first step is to get the input of the full image itself, then to carry out segmentation, filter segmented images, then CNN will hold the image through itself, in the end, there is a prediction that will give us a possible class of this logo on the image.To have the performance as high as possible in this pipeline, we use an object clause that is very review-oriented. For this reason, the CNN classifier must be created and trained to take into account that logo offered regions can contain many false positives or only part of the real logos. To solve these problems, we propose here a training structure and investigate the impact on the final efficiency of the recognition of different implementation options. \textbf{HERE WILL BE IMAGE OF MAIN PIPELINE}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{-0.3cm}
@@ -19,7 +19,7 @@
 
 \subsection{Object Segmentation Method}\label{sec:4.2.1}
 \vspace{-0.5cm}
-\noindent Soon
+\noindent Exhaustive search helps to find parts of the image where you want to consider the potential parts of the desired object.Although this model works well with specially selected objects, it has a number of drawbacks that significantly affect the detection of logos.After all, the search for every possible object has the ability to be impossible. To solve this, we can use selective search.To improve the whole process and the data set for testing, we can use a combined method where we will use both methods described above. Since the number of possible objects will be more and less real and possible.Diversity in this task plays an important role, as we can cover more and more possible variants of this logo in the image.Since selective search is more useful to us, it will be helpful to familiarize yourself with its dependencies.The first and most important factor is to cover as many scales as possible because the logo can be small or large. We may not warn that. After all, the situation can be quite different. Also can make problems of objects which have no clear borders, for this reason, it is necessary to look through all options of the sizes of an object.Also, it should be noted that there is no exact and general solution of searches of any objects. It is impossible to make such a general detection system. Well, at the moment of course. For this reason, you should also look at the variety of objects and their contours, which can be very important in training. Speed is an important factor when searching for possible objects in an image. After all, such systems are built to determine the objects on the camera in a short period of time.This method is exclusive in that it is possible to configure this so that it worked by concentrating on the object and not on its borders.[ssForSegmentation]
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -27,25 +27,48 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\subsection{Logo Recognition Training Framework}\label{sec:4.2.2}
+\subsection{Network architecture and training parameters}\label{sec:4.2.2}
 \vspace{-0.5cm}
-\noindent Soon
+\noindent To create a convenient and correct working data loader, you need to collect all the available data, using their ready-made annotation you need to crop each photo with the object, or rather with the logo. After cropping logos, you need to prepare a pair of "logo-class". Since not all logos are perfect squares, many images will have a background that will not be relevant to the logo itself. In most cases, the logos are more perpendicular.This process achieved with ground-truth of logos in images.Methods for solving these problems will be proposed to improve efficiency and achieve a good result.The first step is to try to increase subsidies by creating and generating new data that will simply be created from already having data. Generation is carried out in such a way that when creating a logo object to look from different angles and perspectives, and increasing the size of the data.To bring all images to a more comfortable and uniform color scheme, in which there will be no frequent deviations or excessive noise, you need to try to normalize the contrast and the object itself.Also, a very important idea is to create a class that would mean no logo and would mean the background itself. Due to this, CNN will know about the background and learn how to more accurately and efficiently determine the logos themselves.In the process of testing CNN, a simple image comes to the entrance, where presumably there is a logo of a company. Then the image should be segmented to possibly find any existing objects. The further task is to drive all available segments on CNN. After that, the neural network will give us an answer from its classifier.
 
+\begin{table}[tbp]
+	\centering
+	\caption{CNN Architecture}
+	\label{tab:sample}
+	\begin{tabular}{cl}
+		\toprule
+		$N$ & Layers   \\
+		\midrule
+		1  & Conv 64 filters of $11\times 11$   \\
+		2  & ReLU activation function   \\
+		3  & MaxPooling with stride = 2  \\
+		4  & Conv 192 filters of $5\times 5$ \\
+		5  & ReLU activation function \\
+		6  & MaxPooling with stride = 2 \\
+		7  & Conv 384 filters of $3\times 3$ \\
+		8  & ReLU activation function \\
+		9  & Conv 256 filter of $3\times 3$ \\
+		10 & ReLU activation function \\
+		11 & Conv 256 filter of $3\times 3$ \\
+		12 & ReLU activation function \\
+		13 & MaxPooling with stride 2 \\ 
+		14 & Dropout \\
+		15 & Fully connected,size 4096 \\
+		16 & ReLU activation function \\ 
+		17 & Dropout \\ 
+		18 & Fully connected,size 4096 \\
+		19 & ReLU activation function \\
+		20 & Fully connected,size number of classes \\
+		21 & SoftMax function - classification \\
+		
+		
+		\bottomrule
+	\end{tabular}
+\end{table}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{-0.3cm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\subsection{Logo Recognition Testing Framework}\label{sec:4.2.3}
-\vspace{-0.5cm}
-\noindent Soon
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\vspace{-0.3cm}
-
-
 
 
 \section{Review of Logos Dataset}\label{sec:4.3}
