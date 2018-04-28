@@ -73,7 +73,29 @@
 
 \section{Review of Logos Dataset}\label{sec:4.3}
 \vspace{-0.5cm}
-\noindent Soon
+\noindent Flickr Logo s - 32 dataset is one of the largest and most extensive datasets, which is still publicly available in turn. Classes in it enough for research in this area, their 32 class, also there are samples, where logo there and is used in as a simple background. The dataset is just as unique as it is very convenient to study recognition and definition with real images where logos can appear in different positions and orientations. This dataset is divided into training, validation, and test set.The resulting images have been manually checked to make sure that the particular logo is really shown. The entire dataset is divided into three disjoint subsets $P_1$, $P_2$, and $P_3$, each containing images of all 32 classes. The first section $P_1$-the training set consists of 10 images that have been selected in such a way that they consistently show a single logo under various views with a minimum amount of background clutter. The other two sections $P_2$ (test case) and $P_3$ (test case = query case) contain 30 images per class. Unlike $P_1$, these images contain at least one instance of the logo, but in several cases, multiple instances. 
+
+To facilitate the development of high-precision classifiers is important to assess their sensitivity to images without a logo. Therefore, both sections  $P_2$ and  $P_3$ include an additional 3,000 images downloaded from Flickr with "building", "nature", "people" and " friends" requests. These images are negative images and complement our dataset. A brief summary of the data is given in the table below.[1801.11417]
+
+
+\begin{table}[hbp]
+	\centering
+	\caption{Dataset partitions/Subsets}
+	\label{tab:sample}
+	\begin{tabular}{@{}llll@{}}
+		\toprule
+		Partition & Description & Images & Numbers of Images \\
+		\midrule
+		$P_1$ (training set) & Hand-picked images & 10 per classes  & 320 images \\
+		\multirow{2}{*}{$P_2$ (validation  set)} & At least a single logo in image & 30 per classes & \multirow{2}{*}{3960 images} \\
+												 & Non logo images & 3000  &          \\
+		\multirow{2}{*}{$P_3$ (test  set)} & At least a single logo in image & 30 per classes & \multirow{2}{*}{3960 images} \\
+		& Non logo images & 3000  &          \\
+		\textbf{$P_1,P_2$ and $P_3$} & Three of them disjoint & All classes & \textbf{8240 images} \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{-0.3cm}
@@ -82,8 +104,40 @@
 
 \section{Concept of Technologies and Frameworks}\label{sec:4.3}
 \vspace{-0.5cm}
-\noindent Soon
+\noindent PyTorch is a python package that provides two high-level features:\textbf{Tensor computation (like numpy) with strong GPU acceleration} and \textbf{Deep Neural Networks built on a tape-based autodiff system}.You can reuse your favorite python packages such as numpy, scipy and Cython to extend PyTorch when needed.At a granular level, PyTorch is a library that consists of the following components:
+ \begin{table}[tbp]
+ 	\centering
+ 	\caption{PyTorch components}
+ 	\label{tab:sample}
+ 	\begin{tabular}{cl}
+ 		\toprule
+ 		$Component$ 			& Definition 																			\\ \midrule
+ 		torch  					& a Tensor library like NumPy, with strong GPU support 									\\
+ 		torch.autograd 			& a tape based automatic differentiation library that supports all differentiable Tensor\\ 
+ 		 						& operations in torch 																	\\
+ 		torch.nn  				& a neural networks library deeply integrated with autograd designed 					\\ 
+ 								& for maximum  flexibility 																\\
+ 		torch.optim  			& an optimization package to be used with torch.nn with standard optimization 			\\  
+ 								& methods such as SGD, RMSProp, LBFGS, Adam etc.										\\
+	 	torch.multiprocessing 	& python multiprocessing, but with magical memory sharing of torch Tensors across 		\\ 
+	 							&  processes. Useful for data loading and hogwild training. 							\\
+ 		torch.utils  			& DataLoader, Trainer and other utility functions for convenience 						\\
+ 		torch.legacy  			& legacy code that has been ported over from torch for backward compatibility reasons 	\\
+ 		\bottomrule
+ 	\end{tabular}
+ \end{table}
  
+\noindent Usually one uses PyTorch either as:
+\begin{itemize}
+	\item A replacement for numpy to use the power of GPUs.
+	\item A deep learning research platform that provides maximum flexibility and speed
+\end{itemize}
+
+\noindent PyTorch provides Tensors that can live either on the CPU or the GPU, and accelerate compute by a huge amount.\textbf{Dynamic Neural Networks: Tape based Autograd}. PyTorch has a unique way of building neural networks: using and replaying a tape recorder.Most frameworks such as TensorFlow, Theano, Caffe and CNTK have a static view of the world. One has to build a neural network, and reuse the same structure again and again. Changing the way the network behaves means that one has to start from scratch.With PyTorch, we use a technique called Reverse-mode auto-differentiation, which allows you to change the way your network behaves arbitrarily with zero lag or overhead. Our inspiration comes from several research papers on this topic, as well as current and past work such as autograd, autograd, Chainer, etc.While this technique is not unique to PyTorch, it’s one of the fastest implementations of it to date. You get the best of speed and flexibility for your crazy research.PyTorch is not a Python binding into a monolothic C++ framework. It is built to be deeply integrated into Python. You can use it naturally like you would use numpy / scipy / scikit-learn etc. You can write your new neural network layers in Python itself, using your favorite libraries and use packages such as Cython and Numba. Our goal is to not reinvent the wheel where appropriate.PyTorch is designed to be intuitive, linear in thought and easy to use. When you execute a line of code, it gets executed. There isn’t an asynchronous view of the world. When you drop into a debugger, or receive error messages and stack traces, understanding them is straight-forward. The stack-trace points to exactly where your code was defined. We hope you never spend hours debugging your code because of bad stack traces or asynchronous and opaque execution engines.PyTorch has minimal framework overhead. We integrate acceleration libraries such as Intel MKL and NVIDIA (CuDNN, NCCL) to maximize speed. At the core, it’s CPU and GPU Tensor and Neural Network backends (TH, THC, THNN, THCUNN) are written as independent libraries with a C99 API.
+They are mature and have been tested for years.
+Hence, PyTorch is quite fast – whether you run small or large neural networks.
+The memory usage in PyTorch is extremely efficient compared to Torch or some of the alternatives. We’ve written custom memory allocators for the GPU to make sure that your deep learning models are maximally memory efficient. This enables you to train bigger deep learning models than before.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{-0.3cm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -91,7 +145,7 @@
 
 \section{Summary}\label{sec:4.4}
 \vspace{-0.5cm}
-\noindent Soon
+\noindent In this Chapter, I fully told about the approach to solving this problem. The method that will be used for segmentation is explained, as well as further work with segmented parts of the image. It was told about the architecture of CNN, also described the technology to be used. In the next Chapter, you will see the results of all the work described in this Chapter.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{-0.3cm}

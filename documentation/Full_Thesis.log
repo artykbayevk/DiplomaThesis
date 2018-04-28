@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.4.13)  27 APR 2018 06:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.4.13)  28 APR 2018 17:50
 entering extended mode
 **./Full_Thesis.tex
 (Full_Thesis.tex
@@ -252,6 +252,15 @@ LaTeX Warning: Unused global option(s):
 
 LaTeX Warning: Label `sec:3.4.6' multiply defined.
 
+
+LaTeX Warning: Label `tab:sample' multiply defined.
+
+
+LaTeX Warning: Label `sec:4.3' multiply defined.
+
+
+LaTeX Warning: Label `tab:sample' multiply defined.
+
 )
 \openout1 = `Full_Thesis.aux'.
 
@@ -392,13 +401,19 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 
 ] [2
 
-] (Full_Thesis.toc)
+] (Full_Thesis.toc [3
+
+])
 \tf@toc=\write3
 \openout3 = `Full_Thesis.toc'.
 
- [3
+ [4] (Full_Thesis.lot)
+\tf@lot=\write4
+\openout4 = `Full_Thesis.lot'.
 
-] [4
+ [5
+
+] [6
 
 
 ]
@@ -441,15 +456,36 @@ in-ing.[1609.04747][1801.03137][1801.09136][1803.02922]
 Chapter 4.
 (ch4.tex [26
 
-] [27] [28]) [29] (Full_Thesis.aux)
+] [27] [28]
+Overfull \hbox (21.53802pt too wide) in paragraph at lines 112--128
+ [][] 
+ []
+
+[29]
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no “ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+ [30]) [31] (Full_Thesis.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3036 strings out of 493308
- 43936 string characters out of 3127906
- 115000 words of memory out of 3000000
+ 3039 strings out of 493308
+ 44035 string characters out of 3127906
+ 115046 words of memory out of 3000000
  6508 multiletter control sequences out of 15000+200000
  14078 words of font info for 35 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -469,9 +505,9 @@ Data/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/kamal
 khan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Use
 rs/kamalkhan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pf
 b>
-Output written on Full_Thesis.pdf (34 pages, 212343 bytes).
+Output written on Full_Thesis.pdf (38 pages, 222584 bytes).
 PDF statistics:
- 156 PDF objects out of 1000 (max. 8388607)
+ 171 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
