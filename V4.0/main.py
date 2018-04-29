@@ -2,9 +2,7 @@ import torch
 import pandas as pd
 import torch.nn as nn
 import matplotlib.pyplot as plt
-import torchvision.transforms as transforms
-import numpy as np
-import os
+
 
 from torch.utils.data import Dataset, DataLoader
 from torchvision import transforms, utils
@@ -35,6 +33,7 @@ import torchvision.models as models
 
 import time
 import alexnet
+import vgg16
 from PIL import Image
 
 
@@ -46,7 +45,7 @@ plt.ion()
 DATASET = 1
 
 # 1 or hz
-MODEL = 0
+MODEL = 1
 name_of_file = ''
 
 transform = transforms.Compose([
@@ -132,7 +131,7 @@ trainset = MyDataset(train_data, CROPPED_DATA_DIR, transform)
 testset = MyDataset(test_data, CROPPED_DATA_DIR, transform)
 
 
-batch_size = 100
+batch_size = 1
 
 
 train_loader = torch.utils.data.DataLoader(dataset=trainset,
@@ -147,7 +146,7 @@ print("Train size {} items and test size {} items".format(
 print('Batch size: {}'.format(len(test_loader)))
 
 
-num_epochs = 600
+num_epochs = 300
 learning_rate = 0.001
 momentum = 0.9
 
@@ -155,8 +154,11 @@ n_classes = len(LABELS)
 if MODEL == 0:
     model = alexnet.AlexNet(n_classes)
     name_of_file = 'alexnet.txt'
+elif MODEL == 1:
+    model = vgg16.vgg11()
+    name_of_file = 'vgg16'
 model = model.cuda()
-criterion = nn.CrossEntropyLoss().cuda()
+criterion = nn.CrossEntropyLoss()
 optimizer = torch.optim.SGD(model.parameters(), 0.001, momentum=momentum)
 
 
@@ -214,7 +216,7 @@ for epoch in range(num_epochs):
         output = model(images_var)
         loss = criterion(output, labels_var)
 
-        prec1, prec5 = accuracy(output.data, labels.cuda(), topk=(1, 5))
+        prec1, prec5 = accuracy(output.data.cpu(), labels.cpu(), topk=(1, 5))
         losses.update(loss.data[0], images.size(0))
         top1.update(prec1[0], images.size(0))
         top5.update(prec5[0], images.size(0))
