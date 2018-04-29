@@ -40,7 +40,6 @@
 \contentsline {section}{\numberline {5.1.} Introduction}{32}
 \contentsline {section}{\numberline {5.2.} Logos Dataset Preparing}{32}
 \contentsline {section}{\numberline {5.3.} Checking Image Segmentation and Object Proposal}{33}
-\contentsline {section}{\numberline {5.4.} Experiments on Training CNN}{33}
-\contentsline {section}{\numberline {5.5.} Evaluating CNN Performance for Segmented Images}{33}
-\contentsline {section}{\numberline {5.6.} Application Creating}{33}
-\contentsline {section}{\numberline {5.7.} Summary}{33}
+\contentsline {section}{\numberline {5.4.} Experiments on Training CNN and Evaluating results}{33}
+\contentsline {section}{\numberline {5.5.} Application Creating}{34}
+\contentsline {section}{\numberline {5.6.} Summary}{34}
