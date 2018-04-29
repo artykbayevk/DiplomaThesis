@@ -1,6 +1,6 @@
 \section{Introduction}\label{sec:5.1}
 \vspace{-0.5cm}
-\noindent Soon \cite{Duttweiler}.
+\noindent In this Chapter, we will fully show the results and experiments of our work. Let's show how the dataset will be divided and used for training CNN, as well as show what factors affect the algorithm. Comparative results with other works related to the identification and recognition of logos will be shown. Also, we thoroughly compare with the article, which was taken as the basis of the work.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{-0.3cm}
@@ -8,7 +8,26 @@
 
 \section{Logos Dataset Preparing}\label{sec:5.2}
 \vspace{-0.5cm}
-\noindent Soon
+\noindent Before you start training and segmenting images, you need to prepare the dataset, which will be convenient to work with, as well as to lack options where the logos are not correctly or not fully distributed between eras and packs.Also very important will be the process to remove duplicates, so when training was not overfitting. It was also important to distribute the datasets into several bundles. Another important point is that when dividing the dataset into training, validation and test sets. It is also necessary to distribute all these data correctly so that in one particular iteration of the kidneys and eras there is no oversaturation of the same class. Also, it is important to consider when training for precision and recall. After all, accuracy in some cases can play with us in a very bad joke. Class balancing can sometimes solve this problem, but counting those metrics is also very important.
+
+\begin{table}[hbp]
+	\centering
+	\caption{FlickrLogos-32 content}
+	\label{tab:sample}
+	\begin{tabular}{cl}
+		\toprule
+		Definition		 					&		Images 	\\ \midrule
+		Total images  	 					& 		8240   	\\
+		Images containing logo instances	&		2240   	\\
+		Train+Validation annotations		&		1803	\\
+		Average annotations for class		&		40		\\
+			(Train + Validation)			& 				\\
+		Total annotation					& 		3405	\\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\noindent 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{-0.3cm}
@@ -16,7 +35,7 @@
 
 \section{Checking Image Segmentation and Object Proposal}\label{sec:5.3}
 \vspace{-0.5cm}
-\noindent Soon
+\noindent In this section, we'll talk about the SS method, from the [selectivesearch] article, and how it worked for our data. Since the color gamut of all logos is very different, we tested this method on different color spaces, segment similarity measures, as well as the value that give a threshold for all images to be segmented in the future. Since it is very difficult to find the optimal size for the segmentation method, we have taken a static value that will fit the total size, in which the camera will shoot the area where the logo is supposed to be. This process is more efficient and convenient in terms of developing future applications that will use this method.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{-0.3cm}
@@ -24,7 +43,7 @@
 
 \section{Experiments on Training CNN}\label{sec:5.4}
 \vspace{-0.5cm}
-\noindent Soon
+\noindent CNN training was conducted on all parameters and various variants of the training, which were described above. This is a balancing of classes via eras and iterations on the batches, then the normalization of all batches and adding a new class, in images which do not meet the logos. We explained in detail the benefits of each of these parameters, now show the results in all parameters. Also, these parameters increase the probability of finding the logo when tested on segmented images.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{-0.3cm}
