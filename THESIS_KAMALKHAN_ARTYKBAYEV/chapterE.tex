@@ -1,0 +1,100 @@
+\chapter{Simulation Results}\label{ch:E}
+\section{Introduction}\label{sec:5.1}
+\par In this Chapter, we will fully show the results and experiments of our work. Let's show how the dataset will be divided and used for training CNN, as well as show what factors affect the algorithm. Comparative results with other works related to the identification and recognition of logos will be shown. Also, we thoroughly compare with the article, which was taken as the basis of the work.
+
+
+\section{Logos Dataset Preparing}\label{sec:5.2}
+\par  Before you start training and segmenting images, you need to prepare the dataset, which will be convenient to work with, as well as to lack options where the logos are not correctly or not fully distributed between eras and packs.Also very important will be the process to remove duplicates, so when training was not overfitting. It was also important to distribute the datasets into several bundles. Another important point is that when dividing the dataset into training, validation and test sets. It is also necessary to distribute all these data correctly so that in one particular iteration of the kidneys and eras there is no oversaturation of the same class. Also, it is important to consider when training for precision and recall. After all, accuracy in some cases can play with us in a very bad joke. Class balancing can sometimes solve this problem, but counting those metrics is also very important.
+
+\begin{table}[!hbp]
+	\centering
+	\caption{FlickrLogos-32 content}
+	\label{tab:sample}
+	\begin{tabular}{cl}
+		\toprule
+		Definition		 					&		Images 	\\ \midrule
+		Total images  	 					& 		8240   	\\
+		Images containing logo instances	&		2240   	\\
+		Train+Validation annotations		&		1803	\\
+		Average annotations for class		&		40		\\
+		(Train + Validation)				& 				\\
+		Total annotation					& 		3405	\\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+
+\section{Checking Image Segmentation and Object Proposal}\label{sec:5.3}
+\par In this section, we'll talk about the SS method, from the [selectivesearch] article, and how it worked for our data. Since the color gamut of all logos is very different, we tested this method on different color spaces, segment similarity measures, as well as the value that give a threshold for all images to be segmented in the future. Since it is very difficult to find the optimal size for the segmentation method, we have taken a static value that will fit the total size, in which the camera will shoot the area where the logo is supposed to be. This process is more efficient and convenient in terms of developing future applications that will use this method.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.3cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experiments on Training CNN and Evaluating results}\label{sec:5.4}
+\par CNN training was conducted on all parameters and various variants of the training, which were described above. This is a balancing of classes via eras and iterations on the batches, then the normalization of all batches and adding a new class, in images which do not meet the logos. We explained in detail the benefits of each of these parameters, now show the results in all parameters. Also, these parameters increase the probability of finding the logo when tested on segmented images.Since each parameter, which affects the result in the measure in relation to each other is very different, for this reason, we have introduced a single value over time to fully assess the final result of the trained CNN. Data from the "FlickrLogos-32" dataset were used for full training, validation, and testing. To make it convenient to view all the results of the neural network training, the data obtained will be written in Table-5.2 . There will be shown our CNN with all its versatile parameters that have been described above. All indicators will also be shown to evaluate the algorithm performance. Since we know that accuracy does not always show a useful and effective result for us. In order to solve such a problem, we will show the loss functions, precision top 1 and top 5. Just beyond this the show accuracy. You will also see the results of other works to see the results relative to others.
+
+\begin{table}[tbp]
+	\centering
+	\caption{Results of final classification}
+	\label{tab:sample}
+	\begin{tabular}{lllll|llll}
+		\toprule
+		Config.		 	& BG class 	& WB 	& CB 	& BN 	& Prec. TOP1 	& Prec. TOP5 	& 	Best Loss  	& Acc.	\\ \midrule
+		I 			  	& No 		& No	& No 	& No 	& 0.320			& 0.350 		& 	4.525		& 0.083	\\
+		II 			  	& Yes 		& No	& No 	& No 	& 0.632			& 0.685 		& 	2.522		& 0.657	\\
+		III 			& Yes 		& Yes	& No 	& No 	& 0.845			& 0.886 		& 	0.881		& 0.896	\\
+		IV 				& Yes 		& Yes	& Yes 	& No 	& 0.921			& 0.947 		& 	0.035		& 0.905	\\
+		V 				& Yes		& Yes	& Yes	& Yes	& 0.935			& 0.975			& 	0.009		& 0.968	\\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\begin{table}
+	\centering
+	\caption{Legend to Table 5.2}
+	\begin{tabular}{ll}
+		\toprule
+		Name of config. & Description 				\\ \midrule
+		BG 				& Background class 			\\
+		WB				& With background logo 		\\
+		CB 				& Class balancing in epoch 	\\
+		BN 				& Batch normalization		\\
+		\bottomrule
+	\end{tabular}
+	
+\end{table}
+
+
+\par From the results shown in Table \ref{tab:sample}, we can clearly see that each parameter adds more efficiency in object recognition and neural network training. The table can also consider that even with good accuracy other results may not be very satisfactory. The results from Table \ref{tab:sample} can be interpreted as follows :
+\begin{itemize}
+	\item In configuration $I$ We can see that CNN can not properly and effectively recognize the logo we need because its precision is below the middle. The loss function is also high and inefficient for our work.
+	\item When you add a class where logos are not present(configuration $II$), it is possible to significantly consider what precision is much increase in its value by a third. The loss function also changed and decreased. But even so, this variant of neural network training is not effective for us.
+	\item Looking through the rest of the configuration, we can consider a good result for all indicators, but the latest configuration of $V$ showed the best and the desired result for us. This result shows that with proper class balancing, normalizing batches, adding logo backgrounds, and adding backgrounds as classes helped to achieve a better result.
+\end{itemize}
+
+
+\begin{table}[hbp]
+	\centering
+	\caption{Comparison of the best trained our CNN with other methods in logo recognition}
+	\begin{tabular}{llll}
+		\toprule
+		Methods						& Train Data			& Precision					& 	Accuracy 				\\ \midrule
+		BoW SIFT 					& FL32					& \textbf{0.991}			& 	0.941					\\
+		Romberg						& FL32					& 0.981						& 	0.752					\\
+		Bianco 						& FL32					& 0.909						&	0.876					\\
+		DeepLogo					& FL32					& N/A						&	0.896					\\
+		Deep Learning				& FL32					& 0.968						& 	0.917					\\
+		Ours(config. $V$) 			& FL32					& 0.975						&	\textbf{0.968}			\\
+		\bottomrule
+	\end{tabular}
+	
+\end{table}
+
+
+\section{Application Creating}\label{sec:5.5}
+\par  In order to visualize the results and demonstrate how the algorithm works, we will create an application that will take the image to the input, then segment it, and then it will hold on CNN and make the classification of the image. There are options to create a bot on Telegram or raise a full web application that will implement Pipeline, which was described above.
+
+
+\section{Summary}\label{sec:5.6}
+\par After conducting the results on "FlickrLogos-32" with different configurations and testing on segmented images, we clearly saw the performance of CNN on object recognition. This NN was able to solve the localization problem because in most cases we saw that it would be able to find the logo wherever it was.The main thing is that it is properly segmented by the SS algorithm.

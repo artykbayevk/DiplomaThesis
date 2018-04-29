@@ -1,0 +1,39 @@
+\chapter{Problem Statement and Thesis Organization}\label{ch:B}
+\section{Introduction}\label{sec:2.1}
+\par In this chapter, we will explain the main problems that researchers faced when they recognize and detect logos. And also, briefly explain how you can solve difficulties of this complex process. We will also present you the content of the thesis, which will briefly clarify what will be shown in the following chapters.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.3cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Statement of the Problem}\label{sec:2.2}
+
+\par  Logos are 2-dimensional shapes of varying complexity,with interior and exterior contours that are not necessarily connected. Therefore the recognition process seems to be difficult because of its complexity.For this reason, the logo recognition process is a difficult task.In this problem, you can also highlight the moments when the method works very well with perfectly made images, but when using some images that may be deformed, inverted and blurred, then at such moments the method was simply useless.After all, such methods are usually trained on a perfect images dataset. So, in this case, the model can work with real images.[1-s2.0-S0031320302001280-main]
+
+\par Because of any transformations such as rotation, shift and scaling, as well as the position in which the logo is placed, makes the task of recognition a special case, because the slightest shift can significantly affect the result of recognition, since the classical methods of computer vision are very sensitive to the slightest changes in images.Even lighting and illumination can greatly affect the result, as they strongly affect the inversion of any pixel.Most of the methods cant cope with the recognition of logos because they are very limited in terms of the application and the structure of the algorithm.The variety of logos and their size's requirements makes it very difficult to create a fixed model that will be adapted to this variety.Optimization methods in most models are not very suitable for the case of logo recognition.Complex geometric shapes of logos and the lack of information about the cascade of the logo on the image during the training of the model lead to the fact that the model is underfitting or overfitting.[1-s2.0-S092523121631387X-main]
+
+
+\par Another problem in logo recognition is the limited number of datasets, and collecting your own dataset is very costly and hard work.With a rapid jump in the creation of multimedia technology, the number of logos is growing up very quickly, which makes it a difficult process in the protection of intellectual property, as well as a very interesting and challenging task.[1612.08796] 
+
+\par Also, the problem is complicated by the fact that most of the available and targeted images for experiments are very limited, with a small number of classes and the same type.[1803.11417] 
+
+\par Despite the results of logo recognition models of the most ideal and convenient for the algorithm cases, the recognition of logos from real images is a particularly difficult problem, which can handle not every algorithm. One problem is when the logo is very small and in a distorted state. Also, present the problem of logos that are on the clothes and they just become vague. Still, pose a problem for those cases when the logos of any single company may be very different at different angles.[1511.02462]
+
+\par After reviewing a decent number of methods, I decided to repeat the work of [1701.02620], and divide this problem into 2 main parts. The first is responsible for the detection of logos, or rather approximately different parts of the image. Second, make recognition using deep learning algorithms. In creating sample areas where you can find the logo, I want to use the selective search method, which will be able to divide the images into regions. And then these regions will go through CNN, reaching for softmax, which will classify and give us an answer, what kind of logo it is. But unlike other researchers, I want to try with different types of CNN architectures and try to change the SS, or try other methods in the floodplain distinguishing features of the image. Also for improvement of a result at training, the new class of the background is added. SS is a method that searches for regions of interest in an image that is somehow different from the rest of the image. But in turn, this algorithm finds the false parts of the image that are not the logo. This problem is solved by CNN, which will in most cases refer this part to a class where there is no logo.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Thesis Organization}\label{sec:2.3}
+\par The structure of the thesis is organized as follows:
+
+\begin{itemize}
+	\item  In Chapter 3, a general review of main methods of image segmentation and deep learning algorithms%The chapter begins with the basic proportionate-type adaptive filters followed by $l_1$-norm and $p$-norm based sparse adaptive filters.
+	\vspace{-0.3cm}
+	\item In Chapter 4, the proposed algorithm is presented. A review of the Selective Search algorithm and Convolutional Neural Network model, with softmax and prediction frameworks.
+	\vspace{-0.3cm}
+	\item In Chapter 5, an experimental study is provided in order to compare the performance of the proposed methods for logo recognition and logo detection.
+	\vspace{-0.3cm}
+	\item In Chapter 6, conclusions and a discussion on possibilities for future work are provided.
+\end{itemize}

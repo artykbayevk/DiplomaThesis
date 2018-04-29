@@ -58,7 +58,7 @@
 		II 			  	& Yes 		& No	& No 	& No 	& 0.632			& 0.685 		& 	2.522		& 0.657	\\
 		III 			& Yes 		& Yes	& No 	& No 	& 0.845			& 0.886 		& 	0.881		& 0.896	\\
 		IV 				& Yes 		& Yes	& Yes 	& No 	& 0.921			& 0.947 		& 	0.035		& 0.905	\\
-		V 				& Yes		& Yes	& Yes	& Yes	& 0.935			& 0.975			& 	0.009		& 0.945	\\
+		V 				& Yes		& Yes	& Yes	& Yes	& 0.935			& 0.975			& 	0.009		& 0.968	\\
 		\bottomrule
 	\end{tabular}
 \end{table}
@@ -71,8 +71,8 @@
 		Name of config. & Description 				\\ \midrule
 		BG 				& Background class 			\\
 		WB				& With background logo 		\\
-		CB 				& Class balacing in epoch 	\\
-		BN 				& Batch normalizqation		\\
+		CB 				& Class balancing in epoch 	\\
+		BN 				& Batch normalization		\\
 		\bottomrule
 	\end{tabular}
 	
@@ -80,18 +80,36 @@
 
 
 \noindent From the results shown in Table \ref{tab:sample}, we can clearly see that each parameter adds more efficiency in object recognition and neural network training. The table can also consider that even with good accuracy other results may not be very satisfactory. The results from Table \ref{tab:sample} can be interpreted as follows :
+\begin{itemize}
+	\item In configuration $I$ We can see that CNN can not properly and effectively recognize the logo we need because its precision is below the middle. The loss function is also high and inefficient for our work.
+	\item When you add a class where logos are not present(configuration $II$), it is possible to significantly consider what precision is much increase in its value by a third. The loss function also changed and decreased. But even so, this variant of neural network training is not effective for us.
+	\item Looking through the rest of the configuration, we can consider a good result for all indicators, but the latest configuration of $V$ showed the best and the desired result for us. This result shows that with proper class balancing, normalizing batches, adding logo backgrounds, and adding backgrounds as classes helped to achieve a better result.
+\end{itemize}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\vspace{-0.3cm}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{table}[hbp]
+	\centering
+	\caption{Comparison of the best trained our CNN with other methods in logo recognition}
+	\begin{tabular}{llll}
+		\toprule
+		Methods						& Train Data			& Precision					& 	Accuracy 				\\ \midrule
+		BoW SIFT 					& FL32					& \textbf{0.991}			& 	0.941					\\
+		Romberg						& FL32					& 0.981						& 	0.752					\\
+		Bianco 						& FL32					& 0.909						&	0.876					\\
+		DeepLogo					& FL32					& N/A						&	0.896					\\
+		Deep Learning				& FL32					& 0.968						& 	0.917					\\
+		Ours(config. $V$) 			& FL32					& 0.975						&	\textbf{0.968}			\\
+		\bottomrule
+	\end{tabular}
+	
+\end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{-0.3cm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Application Creating}\label{sec:5.5}
 \vspace{-0.5cm}
-\noindent Soon
+\noindent In order to visualize the results and demonstrate how the algorithm works, we will create an application that will take the image to the input, then segment it, and then it will hold on CNN and make the classification of the image. There are options to create a bot on Telegram or raise a full web application that will implement Pipeline, which was described above.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{-0.3cm}
@@ -99,7 +117,7 @@
 
 \section{Summary}\label{sec:5.6}
 \vspace{-0.5cm}
-\noindent Soon
+\noindent After conducting the results on "FlickrLogos-32" with different configurations and testing on segmented images, we clearly saw the performance of CNN on object recognition. This NN was able to solve the localization problem because in most cases we saw that it would be able to find the logo wherever it was.The main thing is that it is properly segmented by the SS algorithm.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{-0.3cm}

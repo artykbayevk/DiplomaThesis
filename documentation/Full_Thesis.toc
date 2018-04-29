@@ -42,4 +42,6 @@
 \contentsline {section}{\numberline {5.3.} Checking Image Segmentation and Object Proposal}{33}
 \contentsline {section}{\numberline {5.4.} Experiments on Training CNN and Evaluating results}{33}
 \contentsline {section}{\numberline {5.5.} Application Creating}{34}
-\contentsline {section}{\numberline {5.6.} Summary}{34}
+\contentsline {section}{\numberline {5.6.} Summary}{35}
+\contentsline {chapter}{\numberline {6.}CONCLUSIONS AND FUTURE WORK}{36}
+\contentsline {section}{\numberline {6.1.} Conclusion}{36}
