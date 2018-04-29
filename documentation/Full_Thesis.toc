@@ -36,3 +36,11 @@
 \contentsline {section}{\numberline {4.3.} Review of Logos Dataset}{29}
 \contentsline {section}{\numberline {4.4.} Concept of Technologies and Frameworks}{29}
 \contentsline {section}{\numberline {4.5.} Summary}{31}
+\contentsline {chapter}{\numberline {5.}SIMULATION RESULTS}{32}
+\contentsline {section}{\numberline {5.1.} Introduction}{32}
+\contentsline {section}{\numberline {5.2.} Logos Dataset Preparing}{32}
+\contentsline {section}{\numberline {5.3.} Checking Image Segmentation and Object Proposal}{33}
+\contentsline {section}{\numberline {5.4.} Experiments on Training CNN}{33}
+\contentsline {section}{\numberline {5.5.} Evaluating CNN Performance for Segmented Images}{33}
+\contentsline {section}{\numberline {5.6.} Application Creating}{33}
+\contentsline {section}{\numberline {5.7.} Summary}{33}
