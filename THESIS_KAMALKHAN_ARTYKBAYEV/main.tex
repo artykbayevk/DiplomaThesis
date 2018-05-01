@@ -5,6 +5,13 @@
 \usepackage[T2A]{fontenc} 
 \usepackage[utf8]{inputenc} 
 \usepackage[russian,english]{babel}
+\usepackage{comment}
+\usepackage[
+backend=biber,
+style=alphabetic,
+sorting=ynt
+]{biblatex}
+\addbibresource{sample.bib}
 \usepackage{csquotes}
 \usepackage{graphicx,epsfig,times}
 \usepackage{amsmath}
@@ -13,6 +20,8 @@
 \usepackage{color}
 \usepackage{multirow}
 \usepackage{dcolumn}
+%\usepackage{cite}
+
 % usual packages
 \usepackage[left=30mm, right=10mm, top=20mm, bottom=20mm]{geometry}
 \usepackage{indentfirst}
@@ -21,11 +30,7 @@
 \usepackage[nottoc]{tocbibind}
 \usepackage{hyperref} % to add clickable contents menu
 
-\usepackage[
-backend=biber,
-style=alphabetic,
-sorting=ynt
-]{biblatex}
+\usepackage{biblatex}
 \addbibresource{mybib.bib}
 
 \usepackage{blindtext}
@@ -52,6 +57,7 @@ sorting=ynt
     \input{abstract_english}
     \input{abstract_kazakh}
     \input{abstract_russian}
+    \cite{einstein}.
     %\input{symbols}
     \tableofcontents
     %\listoffigures
@@ -65,12 +71,6 @@ sorting=ynt
     \input{chapterE}
     \input{chapterF}
     \printbibliography
-    %\appendix
-    %\input{appendixA}
-    %\input{appendixB}
-	%		\begin{thebibliography}{9}
-	%	\input{references}
-	%	\end{thebibliography}
+ 
 
-   
 \end{document}

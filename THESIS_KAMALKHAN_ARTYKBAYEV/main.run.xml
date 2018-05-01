@@ -52,7 +52,7 @@
     <requires type="static">
       <file>blx-dm.def</file>
       <file>blx-compat.def</file>
-      <file>biblatex.def</file>
+      <file>biblatex_.def</file>
       <file>alphabetic.bbx</file>
       <file>standard.bbx</file>
       <file>alphabetic.cbx</file>
@@ -80,6 +80,7 @@
       <file>main.bcf</file>
     </requires>
     <requires type="editable">
+      <file>sample.bib</file>
       <file>mybib.bib</file>
     </requires>
   </external>
