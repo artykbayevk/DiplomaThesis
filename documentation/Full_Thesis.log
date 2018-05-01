@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.4.13)  29 APR 2018 23:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.4.13)  1 MAY 2018 13:38
 entering extended mode
 **./Full_Thesis.tex
 (Full_Thesis.tex
@@ -270,19 +270,19 @@ LaTeX Warning: Label `tab:sample' multiply defined.
 )
 \openout1 = `Full_Thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 17.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 18.
 
 ("C:\Users\kamalkhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.
 fd"
@@ -399,7 +399,7 @@ G,.JBIG2,.JB2,.eps]
 LaTeX Warning: No \degree given.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 19.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 20.
 [1
 
 {C:/Users/kamalkhan/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
@@ -425,7 +425,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 ]
 Chapter 1.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 111.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 112.
 (ch1.tex [1
 
 ]) [2]
@@ -491,16 +491,29 @@ Chapter 5.
 Chapter 6.
 (ch6.tex) [36
 
-] (Full_Thesis.aux)
+] (references.tex [37
+
+]
+Missing character: There is no ï in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no  in font ptmr7t!
+ [38] [39]
+Missing character: There is no ï in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no  in font ptmr7t!
+Missing character: There is no ï in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no  in font ptmr7t!
+ [40]) [41] (Full_Thesis.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3056 strings out of 493308
- 44289 string characters out of 3127906
- 115163 words of memory out of 3000000
- 6519 multiletter control sequences out of 15000+200000
+ 3119 strings out of 493308
+ 44850 string characters out of 3127906
+ 115141 words of memory out of 3000000
+ 6579 multiletter control sequences out of 15000+200000
  14078 words of font info for 35 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,17n,25p,3919b,244s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -519,9 +532,9 @@ Data/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/kamal
 khan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Use
 rs/kamalkhan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pf
 b>
-Output written on Full_Thesis.pdf (43 pages, 233085 bytes).
+Output written on Full_Thesis.pdf (48 pages, 244792 bytes).
 PDF statistics:
- 187 PDF objects out of 1000 (max. 8388607)
+ 202 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

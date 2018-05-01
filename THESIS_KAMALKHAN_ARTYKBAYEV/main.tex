@@ -6,32 +6,36 @@
 \usepackage[utf8]{inputenc} 
 \usepackage[russian,english]{babel}
 \usepackage{csquotes}
+
+% usual packages
+\usepackage[left=30mm, right=10mm, top=20mm, bottom=20mm]{geometry}
+
+\usepackage{graphicx} % to add figures
+\graphicspath{{figures/}}
+
+\usepackage{hyperref} % to add clickable contents menu
+\usepackage[nottoc]{tocbibind}
+\usepackage{blindtext}
+
 \usepackage{graphicx,epsfig,times}
 \usepackage{amsmath}
-\usepackage{enumerate}
 \usepackage{booktabs}
+\usepackage{enumerate}
+
 \usepackage{color}
 \usepackage{multirow}
 \usepackage{dcolumn}
-% usual packages
-\usepackage[left=30mm, right=10mm, top=20mm, bottom=20mm]{geometry}
-\usepackage{indentfirst}
-\usepackage{graphicx} % to add figures
-\graphicspath{{figures/}}
-\usepackage[nottoc]{tocbibind}
-\usepackage{hyperref} % to add clickable contents menu
-
-
 
 \usepackage[style=numeric]{biblatex}
 \addbibresource{ref.bib}
+
+
+
 
 % the following three definitions are to be changed by student
 \def\myauthor{Kamalkhan Artykbayev} % author
 \def\mycoach{Konstantin Latuta} % coach, adviser etc.
 \def\mytitle{Logo detection and recognition using CNN} % title
-%\def\mydegree{Bachelor in Computer Systems and Software}
-%\def\mydegreecode{5B070400}
 \def\mydegree{Bachelor in Information Systems}
 \def\mydegreecode{5B070300}
 
@@ -61,6 +65,5 @@
     \input{chapterE}
     \input{chapterF}
     \printbibliography[heading=bibintoc,title={References}]
-
    
 \end{document}
