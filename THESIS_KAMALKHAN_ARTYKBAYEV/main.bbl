@@ -19,6 +19,77 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{regionGrowing}{article}{}
+      \name{author}{1}{}{%
+        {{hash=57775cdf9a1ab146612d833691072cc4}{%
+           family={Abdelsamea},
+           familyi={A\bibinitperiod},
+           given={Mohammed\bibnamedelima M.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{57775cdf9a1ab146612d833691072cc4}
+      \strng{fullhash}{57775cdf9a1ab146612d833691072cc4}
+      \strng{bibnamehash}{57775cdf9a1ab146612d833691072cc4}
+      \strng{authorbibnamehash}{57775cdf9a1ab146612d833691072cc4}
+      \strng{authornamehash}{57775cdf9a1ab146612d833691072cc4}
+      \strng{authorfullhash}{57775cdf9a1ab146612d833691072cc4}
+      \field{sortinit}{A}
+      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{An Automatic Seeded Region Growing for 2D Biomedical Image Segmentation}
+      \field{volume}{abs/1412.3958}
+      \field{year}{2014}
+      \verb{eprint}
+      \verb 1412.3958
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1412.3958
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1412.3958
+      \endverb
+    \endentry
+    \entry{1803.02129}{article}{}
+      \name{author}{2}{}{%
+        {{hash=aa5a15f700222adaa7258b75421037e8}{%
+           family={Altenberger},
+           familyi={A\bibinitperiod},
+           given={Felix},
+           giveni={F\bibinitperiod}}}%
+        {{hash=52961bf30e4901cf9b60c52725381e19}{%
+           family={Lenz},
+           familyi={L\bibinitperiod},
+           given={Claus},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{6a7fdfb494c8c1ed2924e57078604cca}
+      \strng{fullhash}{6a7fdfb494c8c1ed2924e57078604cca}
+      \strng{bibnamehash}{6a7fdfb494c8c1ed2924e57078604cca}
+      \strng{authorbibnamehash}{6a7fdfb494c8c1ed2924e57078604cca}
+      \strng{authornamehash}{6a7fdfb494c8c1ed2924e57078604cca}
+      \strng{authorfullhash}{6a7fdfb494c8c1ed2924e57078604cca}
+      \field{sortinit}{A}
+      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{A Non-Technical Survey on Deep Convolutional Neural Network Architectures}
+      \field{volume}{abs/1803.02129}
+      \field{year}{2018}
+      \verb{eprint}
+      \verb 1803.02129
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1803.02129
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1803.02129
+      \endverb
+    \endentry
     \entry{DeepLearningForLogo}{article}{}
       \name{author}{4}{}{%
         {{hash=32e6809f6aca1631188d40d4a26e09ea}{%
@@ -67,6 +138,68 @@
       \verb http://arxiv.org/abs/1701.02620
       \endverb
     \endentry
+    \entry{Bianco}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=32e6809f6aca1631188d40d4a26e09ea}{%
+           family={Bianco},
+           familyi={B\bibinitperiod},
+           given={Simone},
+           giveni={S\bibinitperiod}}}%
+        {{hash=1a673087de033f05410b3a9c5d7aedd1}{%
+           family={Buzzelli},
+           familyi={B\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=0551bd977e0319b4e12e7cc9a6cd7c09}{%
+           family={Mazzini},
+           familyi={M\bibinitperiod},
+           given={Davide},
+           giveni={D\bibinitperiod}}}%
+        {{hash=f8e185bb42326e275d86f84e6b420d0f}{%
+           family={Schettini},
+           familyi={S\bibinitperiod},
+           given={Raimondo},
+           giveni={R\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=2d84c93e1bae3c986fe80c55dbd6224f}{%
+           family={Murino},
+           familyi={M\bibinitperiod},
+           given={Vittorio},
+           giveni={V\bibinitperiod}}}%
+        {{hash=313975ef0fc43d9331837e5351f0f36e}{%
+           family={Puppo},
+           familyi={P\bibinitperiod},
+           given={Enrico},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cham}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{6ca5c72880880b04565684133855b8dc}
+      \strng{fullhash}{04fbe2ef06924d7640be803e2811e65d}
+      \strng{bibnamehash}{6ca5c72880880b04565684133855b8dc}
+      \strng{authorbibnamehash}{6ca5c72880880b04565684133855b8dc}
+      \strng{authornamehash}{6ca5c72880880b04565684133855b8dc}
+      \strng{authorfullhash}{04fbe2ef06924d7640be803e2811e65d}
+      \strng{editorbibnamehash}{40573a08b7a660a247d241577d67ddc6}
+      \strng{editornamehash}{40573a08b7a660a247d241577d67ddc6}
+      \strng{editorfullhash}{40573a08b7a660a247d241577d67ddc6}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this paper we propose a method for logo recognition based on Convolutional Neural Networks, instead of the commonly used keypoint-based approaches. The method involves the selection of candidate subwindows using an unsupervised segmentation algorithm, and the SVM-based classification of such candidate regions using features computed by a CNN. For training the neural network we augment the training set with artificial transformations, while for classification we exploit a query expansion strategy to increase the recall rate. Experiments were performed on a publicly-available dataset that was also corrupted in order to investigate the robustness of the proposed method with respect to blur, noise and lossy compression.}
+      \field{booktitle}{Image Analysis and Processing --- ICIAP 2015}
+      \field{isbn}{978-3-319-23234-8}
+      \field{title}{Logo Recognition Using CNN Features}
+      \field{year}{2015}
+      \field{pages}{438\bibrangedash 448}
+      \range{pages}{11}
+    \endentry
     \entry{noisy}{article}{}
       \name{author}{3}{}{%
         {{hash=de12352bb75d0f2f66d63ab85f0617f6}{%
@@ -102,6 +235,17 @@
       \field{year}{2003}
       \field{pages}{943\bibrangedash 955}
       \range{pages}{13}
+    \endentry
+    \entry{imgSeg}{book}{}
+      \list{publisher}{1}{%
+        {Washington University}%
+      }
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{labeltitlesource}{title}
+      \field{subtitle}{CSE576 Coursebook}
+      \field{title}{Computer Vision}
+      \field{year}{2000}
     \endentry
     \entry{ScalableDetection}{article}{}
       \name{author}{5}{}{%
@@ -155,6 +299,132 @@
       \verb{url}
       \verb http://arxiv.org/abs/1711.09822
       \endverb
+    \endentry
+    \entry{1801.03137}{article}{}
+      \name{author}{3}{}{%
+        {{hash=3ebf1483613fa32fd2310a1840e1479f}{%
+           family={Gitman},
+           familyi={G\bibinitperiod},
+           given={Igor},
+           giveni={I\bibinitperiod}}}%
+        {{hash=d6d39a84c1d3d5a280dd231cd1fd05d0}{%
+           family={Dilipkumar},
+           familyi={D\bibinitperiod},
+           given={Deepak},
+           giveni={D\bibinitperiod}}}%
+        {{hash=94f7daa91879d28492f32297a4c3f945}{%
+           family={Parr},
+           familyi={P\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{e61a8614f7b294338c1f0100867914a5}
+      \strng{fullhash}{e61a8614f7b294338c1f0100867914a5}
+      \strng{bibnamehash}{e61a8614f7b294338c1f0100867914a5}
+      \strng{authorbibnamehash}{e61a8614f7b294338c1f0100867914a5}
+      \strng{authornamehash}{e61a8614f7b294338c1f0100867914a5}
+      \strng{authorfullhash}{e61a8614f7b294338c1f0100867914a5}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{Convergence Analysis of Gradient Descent Algorithms with Proportional Updates}
+      \field{volume}{abs/1801.03137}
+      \field{year}{2018}
+      \verb{eprint}
+      \verb 1801.03137
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1801.03137
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1801.03137
+      \endverb
+    \endentry
+    \entry{improvedBlock}{article}{}
+      \name{author}{2}{}{%
+        {{hash=e7ed789356a78a61f77f8cf87c29fbde}{%
+           family={Gnana\bibnamedelima King},
+           familyi={G\bibinitperiod\bibinitdelim K\bibinitperiod},
+           given={G.\bibnamedelimi R.},
+           giveni={G\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=dc2536ce2abd84a1758eda077d0a7ef9}{%
+           family={Seldev\bibnamedelima Christopher},
+           familyi={S\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Amsterdam, The Netherlands, The Netherlands}%
+      }
+      \list{publisher}{1}{%
+        {IOS Press}%
+      }
+      \strng{namehash}{5eaab2391aad103dd656a5151e75f539}
+      \strng{fullhash}{5eaab2391aad103dd656a5151e75f539}
+      \strng{bibnamehash}{5eaab2391aad103dd656a5151e75f539}
+      \strng{authorbibnamehash}{5eaab2391aad103dd656a5151e75f539}
+      \strng{authornamehash}{5eaab2391aad103dd656a5151e75f539}
+      \strng{authorfullhash}{5eaab2391aad103dd656a5151e75f539}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1064-1246}
+      \field{journaltitle}{J. Intell. Fuzzy Syst.}
+      \field{month}{11}
+      \field{number}{6}
+      \field{title}{Improved Block Based Segmentation Algorithm for Compression of Compound Images}
+      \field{volume}{27}
+      \field{year}{2014}
+      \field{pages}{3213\bibrangedash 3225}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.3233/IFS-141278
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.3233/IFS-141278
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.3233/IFS-141278
+      \endverb
+      \keyw{Compound Image Compression,Haar Wavelet Transformation,Huffman Coding And Advanced Encryption Standard Algorithm}
+    \endentry
+    \entry{gestalImage}{article}{}
+      \name{author}{3}{}{%
+        {{hash=96b20ed74f5c7ad16b102dcd0d1ae3cf}{%
+           family={Guberman},
+           familyi={G\bibinitperiod},
+           given={Shelia},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f60a05352c374b8bf60c3047506707f8}{%
+           family={Maximov},
+           familyi={M\bibinitperiod},
+           given={Vadim},
+           giveni={V\bibinitperiod}}}%
+        {{hash=fb7b5fe885069679dcc41a6ac347f054}{%
+           family={Pashintsev},
+           familyi={P\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{5ce95fee49a517d4723eb3257195b910}
+      \strng{fullhash}{5ce95fee49a517d4723eb3257195b910}
+      \strng{bibnamehash}{5ce95fee49a517d4723eb3257195b910}
+      \strng{authorbibnamehash}{5ce95fee49a517d4723eb3257195b910}
+      \strng{authornamehash}{5ce95fee49a517d4723eb3257195b910}
+      \strng{authorfullhash}{5ce95fee49a517d4723eb3257195b910}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Gestalt Theory}
+      \field{month}{01}
+      \field{title}{Gestalt and Image Understanding}
+      \field{volume}{34}
+      \field{year}{2012}
     \endentry
     \entry{Symbolic}{article}{}
       \name{author}{2}{}{%
@@ -246,6 +516,249 @@
       \field{title}{Large-scale Deep Logo Detection and Brand Recognition with Deep Region-based Convolutional Networks}
       \field{year}{2015}
     \endentry
+    \entry{DeepLogoForTable}{article}{}
+      \name{author}{4}{}{%
+        {{hash=4c071a3745cb87a04fec09432435d8ce}{%
+           family={Iandola},
+           familyi={I\bibinitperiod},
+           given={Forrest\bibnamedelima N.},
+           giveni={F\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=cef9504563d7a1760f0f1f3ff84f1a70}{%
+           family={Shen},
+           familyi={S\bibinitperiod},
+           given={Anting},
+           giveni={A\bibinitperiod}}}%
+        {{hash=243ad7f7a51b82feff9fabcc9e27bc0d}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=994177386e5a63171a7be588e97df7e5}{%
+           family={Keutzer},
+           familyi={K\bibinitperiod},
+           given={Kurt},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{66237b93fa3d0981b02f8d156b425328}
+      \strng{fullhash}{22907e4cba4136bdf64a78a74122b21a}
+      \strng{bibnamehash}{66237b93fa3d0981b02f8d156b425328}
+      \strng{authorbibnamehash}{66237b93fa3d0981b02f8d156b425328}
+      \strng{authornamehash}{66237b93fa3d0981b02f8d156b425328}
+      \strng{authorfullhash}{22907e4cba4136bdf64a78a74122b21a}
+      \field{sortinit}{I}
+      \field{sortinithash}{320bc8fe8101b9376f9f21cd507de0e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{DeepLogo: Hitting Logo Recognition with the Deep Neural Network Hammer}
+      \field{volume}{abs/1510.02131}
+      \field{year}{2015}
+      \verb{eprint}
+      \verb 1510.02131
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1510.02131
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1510.02131
+      \endverb
+    \endentry
+    \entry{back2}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=d70d7be5d9ca1e231b3bed34f17718ec}{%
+           family={Kaur},
+           familyi={K\bibinitperiod},
+           given={Taranjit},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{d70d7be5d9ca1e231b3bed34f17718ec}
+      \strng{fullhash}{d70d7be5d9ca1e231b3bed34f17718ec}
+      \strng{bibnamehash}{d70d7be5d9ca1e231b3bed34f17718ec}
+      \strng{authorbibnamehash}{d70d7be5d9ca1e231b3bed34f17718ec}
+      \strng{authornamehash}{d70d7be5d9ca1e231b3bed34f17718ec}
+      \strng{authorfullhash}{d70d7be5d9ca1e231b3bed34f17718ec}
+      \field{sortinit}{K}
+      \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Implementation of Backpropagation Algorithm: A Neural Net- work Approach for Pattern Recognition}
+      \field{year}{2012}
+    \endentry
+    \entry{sup3}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=28406e86c58c19f2dcec677b46f2f514}{%
+           family={Kotsiantis},
+           familyi={K\bibinitperiod},
+           given={S.\bibnamedelimi B.},
+           giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Amsterdam, The Netherlands, The Netherlands}%
+      }
+      \list{publisher}{1}{%
+        {IOS Press}%
+      }
+      \strng{namehash}{28406e86c58c19f2dcec677b46f2f514}
+      \strng{fullhash}{28406e86c58c19f2dcec677b46f2f514}
+      \strng{bibnamehash}{28406e86c58c19f2dcec677b46f2f514}
+      \strng{authorbibnamehash}{28406e86c58c19f2dcec677b46f2f514}
+      \strng{authornamehash}{28406e86c58c19f2dcec677b46f2f514}
+      \strng{authorfullhash}{28406e86c58c19f2dcec677b46f2f514}
+      \field{sortinit}{K}
+      \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 2007 Conference on Emerging Artificial Intelligence Applications in Computer Engineering: Real Word AI Systems with Applications in eHealth, HCI, Information Retrieval and Pervasive Technologies}
+      \field{isbn}{978-1-58603-780-2}
+      \field{title}{Supervised Machine Learning: A Review of Classification Techniques}
+      \field{year}{2007}
+      \field{pages}{3\bibrangedash 24}
+      \range{pages}{22}
+      \verb{urlraw}
+      \verb http://dl.acm.org/citation.cfm?id=1566770.1566773
+      \endverb
+      \verb{url}
+      \verb http://dl.acm.org/citation.cfm?id=1566770.1566773
+      \endverb
+      \keyw{Classifiers,Data Mining,Intelligent Data Analysis,Learning Algorithms}
+    \endentry
+    \entry{1605.09081}{article}{}
+      \name{author}{1}{}{%
+        {{hash=595c606cbd586b0b424c3aa72f016f64}{%
+           family={{Koushik}},
+           familyi={K\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{595c606cbd586b0b424c3aa72f016f64}
+      \strng{fullhash}{595c606cbd586b0b424c3aa72f016f64}
+      \strng{bibnamehash}{595c606cbd586b0b424c3aa72f016f64}
+      \strng{authorbibnamehash}{595c606cbd586b0b424c3aa72f016f64}
+      \strng{authornamehash}{595c606cbd586b0b424c3aa72f016f64}
+      \strng{authorfullhash}{595c606cbd586b0b424c3aa72f016f64}
+      \field{sortinit}{K}
+      \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{stat.OT}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{ArXiv e-prints}
+      \field{month}{5}
+      \field{title}{{Understanding Convolutional Neural Networks}}
+      \field{year}{2016}
+      \verb{eprint}
+      \verb 1605.09081
+      \endverb
+      \keyw{Statistics - Other Statistics}
+    \endentry
+    \entry{1803.02922}{article}{}
+      \name{author}{1}{}{%
+        {{hash=a217b38ab653fd77e317d2501e5d15f9}{%
+           family={{Mitra}},
+           familyi={M\bibinitperiod},
+           given={P.\bibnamedelimi P},
+           giveni={P\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{a217b38ab653fd77e317d2501e5d15f9}
+      \strng{fullhash}{a217b38ab653fd77e317d2501e5d15f9}
+      \strng{bibnamehash}{a217b38ab653fd77e317d2501e5d15f9}
+      \strng{authorbibnamehash}{a217b38ab653fd77e317d2501e5d15f9}
+      \strng{authornamehash}{a217b38ab653fd77e317d2501e5d15f9}
+      \strng{authorfullhash}{a217b38ab653fd77e317d2501e5d15f9}
+      \field{sortinit}{M}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{stat.ML}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{ArXiv e-prints}
+      \field{month}{3}
+      \field{title}{{Fast Convergence for Stochastic and Distributed Gradient Descent in the Interpolation Limit}}
+      \field{year}{2018}
+      \verb{eprint}
+      \verb 1803.02922
+      \endverb
+      \keyw{Statistics - Machine Learning,Computer Science - Learning}
+    \endentry
+    \entry{EdgeDetection}{article}{}
+      \name{author}{2}{}{%
+        {{hash=9d5acc1f36cd7ec210fadd925e6c086b}{%
+           family={N},
+           familyi={N\bibinitperiod},
+           given={Senthilkumaran},
+           giveni={S\bibinitperiod}}}%
+        {{hash=56e0ef0d42cea4b80b744077cb0c6908}{%
+           family={Rajesh},
+           familyi={R\bibinitperiod},
+           given={Reghunadhan},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{e974a1df115effb5ad149cd848279bb8}
+      \strng{fullhash}{e974a1df115effb5ad149cd848279bb8}
+      \strng{bibnamehash}{e974a1df115effb5ad149cd848279bb8}
+      \strng{authorbibnamehash}{e974a1df115effb5ad149cd848279bb8}
+      \strng{authornamehash}{e974a1df115effb5ad149cd848279bb8}
+      \strng{authorfullhash}{e974a1df115effb5ad149cd848279bb8}
+      \field{sortinit}{N}
+      \field{sortinithash}{f7242c3ed3dc50029fca1be76c497c7c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{INFORMATION PAPER International Journal of Recent Trends in Engineering}
+      \field{month}{11}
+      \field{title}{Edge Detection Techniques for Image Segmentation - A Survey of Soft Computing Approaches}
+      \field{volume}{1}
+      \field{year}{2007}
+    \endentry
+    \entry{1801.06159}{article}{}
+      \name{author}{5}{}{%
+        {{hash=d6d792fd61714a466f1af233d7580db7}{%
+           family={{Nguyen}},
+           familyi={N\bibinitperiod},
+           given={L.\bibnamedelimi M.},
+           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=b30e53c5cdf924c8eb3d18a5702ae7f3}{%
+           family={{Nguyen}},
+           familyi={N\bibinitperiod},
+           given={N.\bibnamedelimi H.},
+           giveni={N\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=15368cbe0c643336eb1b93ef03a911da}{%
+           family={{Phan}},
+           familyi={P\bibinitperiod},
+           given={D.\bibnamedelimi T.},
+           giveni={D\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=9d5710b7a005293a8728189ede515b84}{%
+           family={{Kalagnanam}},
+           familyi={K\bibinitperiod},
+           given={J.\bibnamedelimi R.},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=74db25734d52e9a5dbf5936cc62f994b}{%
+           family={{Scheinberg}},
+           familyi={S\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{6dae3679e9dc152e17084a33aadf399e}
+      \strng{fullhash}{a6877f29e7082a3776b09d1c385db1ec}
+      \strng{bibnamehash}{6dae3679e9dc152e17084a33aadf399e}
+      \strng{authorbibnamehash}{6dae3679e9dc152e17084a33aadf399e}
+      \strng{authornamehash}{6dae3679e9dc152e17084a33aadf399e}
+      \strng{authorfullhash}{a6877f29e7082a3776b09d1c385db1ec}
+      \field{sortinit}{N}
+      \field{sortinithash}{f7242c3ed3dc50029fca1be76c497c7c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{stat.ML}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{ArXiv e-prints}
+      \field{month}{1}
+      \field{title}{{When Does Stochastic Gradient Algorithm Work Well?}}
+      \field{year}{2018}
+      \verb{eprint}
+      \verb 1801.06159
+      \endverb
+      \keyw{Statistics - Machine Learning,Computer Science - Learning,Mathematics - Optimization and Control}
+    \endentry
     \entry{AutomaticGraph}{article}{}
       \name{author}{4}{}{%
         {{hash=b50f7c39534ea6cad34e706af8bea455}{%
@@ -294,6 +807,370 @@
       \verb http://arxiv.org/abs/1604.06083
       \endverb
     \endentry
+    \entry{SegObjRecUsingEdgeDetection}{article}{}
+      \name{author}{4}{}{%
+        {{hash=e20cbfd9ea2762e428c6c053c88dd816}{%
+           family={Ramadevi},
+           familyi={R\bibinitperiod},
+           given={Y},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=5e054a9a6e55eaf850d87c5d86fb9931}{%
+           family={Sridevi},
+           familyi={S\bibinitperiod},
+           given={T},
+           giveni={T\bibinitperiod}}}%
+        {{hash=68d4ed84670680411aa52e1cd37eab85}{%
+           family={Poornima},
+           familyi={P\bibinitperiod},
+           given={B},
+           giveni={B\bibinitperiod}}}%
+        {{hash=97cae9feb71548c71a517dfcb2235875}{%
+           family={Kalyani},
+           familyi={K\bibinitperiod},
+           given={B},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{7616f297b64d2454a23e4709d5e98c10}
+      \strng{fullhash}{b3c8c171de7a66424ca6ca5a6b2b6e45}
+      \strng{bibnamehash}{7616f297b64d2454a23e4709d5e98c10}
+      \strng{authorbibnamehash}{7616f297b64d2454a23e4709d5e98c10}
+      \strng{authornamehash}{7616f297b64d2454a23e4709d5e98c10}
+      \strng{authorfullhash}{b3c8c171de7a66424ca6ca5a6b2b6e45}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{International Journal of Computer Science and Information Technology}
+      \field{month}{12}
+      \field{title}{Segmentation And Object Recognition Using Edge Detection Techniques}
+      \field{volume}{2}
+      \field{year}{2010}
+      \field{pages}{153\bibrangedash 161}
+      \range{pages}{9}
+    \endentry
+    \entry{1801.09136}{article}{}
+      \name{author}{2}{}{%
+        {{hash=364e910274f07dbcc94875567dd1999f}{%
+           family={{Ravaut}},
+           familyi={R\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=3c0c31a87c3184af83dc4c7e80aa2a8b}{%
+           family={{Gorti}},
+           familyi={G\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{fe8903670bd30f7d1ddbdabd6e73d4ec}
+      \strng{fullhash}{fe8903670bd30f7d1ddbdabd6e73d4ec}
+      \strng{bibnamehash}{fe8903670bd30f7d1ddbdabd6e73d4ec}
+      \strng{authorbibnamehash}{fe8903670bd30f7d1ddbdabd6e73d4ec}
+      \strng{authornamehash}{fe8903670bd30f7d1ddbdabd6e73d4ec}
+      \strng{authorfullhash}{fe8903670bd30f7d1ddbdabd6e73d4ec}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{stat.ML}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{ArXiv e-prints}
+      \field{month}{1}
+      \field{title}{{Gradient descent revisited via an adaptive online learning rate}}
+      \field{year}{2018}
+      \verb{eprint}
+      \verb 1801.09136
+      \endverb
+      \keyw{Statistics - Machine Learning}
+    \endentry
+    \entry{BoWSIFT}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=306f40509883ea7bbf10ded15e519dc2}{%
+           family={Romberg},
+           familyi={R\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=42799a7004bdddef8e2efeda20abcc68}{%
+           family={Lienhart},
+           familyi={L\bibinitperiod},
+           given={Rainer},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Dallas, Texas, USA}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{ad4affedf8745ef0d8c670c60dc300b6}
+      \strng{fullhash}{ad4affedf8745ef0d8c670c60dc300b6}
+      \strng{bibnamehash}{ad4affedf8745ef0d8c670c60dc300b6}
+      \strng{authorbibnamehash}{ad4affedf8745ef0d8c670c60dc300b6}
+      \strng{authornamehash}{ad4affedf8745ef0d8c670c60dc300b6}
+      \strng{authorfullhash}{ad4affedf8745ef0d8c670c60dc300b6}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 3rd ACM Conference on International Conference on Multimedia Retrieval}
+      \field{isbn}{978-1-4503-2033-7}
+      \field{series}{ICMR '13}
+      \field{title}{Bundle Min-hashing for Logo Recognition}
+      \field{year}{2013}
+      \field{pages}{113\bibrangedash 120}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1145/2461466.2461486
+      \endverb
+      \verb{urlraw}
+      \verb http://doi.acm.org/10.1145/2461466.2461486
+      \endverb
+      \verb{url}
+      \verb http://doi.acm.org/10.1145/2461466.2461486
+      \endverb
+      \keyw{bundle min-hashing,feature bundling,logo recognition,min-hash,spatial re-ranking}
+    \endentry
+    \entry{1609.04747}{article}{}
+      \name{author}{1}{}{%
+        {{hash=b468248a20d75c52ee742f4592c2569f}{%
+           family={Ruder},
+           familyi={R\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{b468248a20d75c52ee742f4592c2569f}
+      \strng{fullhash}{b468248a20d75c52ee742f4592c2569f}
+      \strng{bibnamehash}{b468248a20d75c52ee742f4592c2569f}
+      \strng{authorbibnamehash}{b468248a20d75c52ee742f4592c2569f}
+      \strng{authornamehash}{b468248a20d75c52ee742f4592c2569f}
+      \strng{authorfullhash}{b468248a20d75c52ee742f4592c2569f}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{An overview of gradient descent optimization algorithms}
+      \field{volume}{abs/1609.04747}
+      \field{year}{2016}
+      \verb{eprint}
+      \verb 1609.04747
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1609.04747
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1609.04747
+      \endverb
+    \endentry
+    \entry{1710.09829}{article}{}
+      \name{author}{3}{}{%
+        {{hash=137de0452d6e4f4b19de5c8dd52bbaab}{%
+           family={Sabour},
+           familyi={S\bibinitperiod},
+           given={Sara},
+           giveni={S\bibinitperiod}}}%
+        {{hash=0716520d731d472f7c2f8bd6236fc77e}{%
+           family={Frosst},
+           familyi={F\bibinitperiod},
+           given={Nicholas},
+           giveni={N\bibinitperiod}}}%
+        {{hash=881b7655f3886f90a9400902a521acdb}{%
+           family={Hinton},
+           familyi={H\bibinitperiod},
+           given={Geoffrey\bibnamedelima E.},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{e7aa072b22829f9ed2082e259619a8bb}
+      \strng{fullhash}{e7aa072b22829f9ed2082e259619a8bb}
+      \strng{bibnamehash}{e7aa072b22829f9ed2082e259619a8bb}
+      \strng{authorbibnamehash}{e7aa072b22829f9ed2082e259619a8bb}
+      \strng{authornamehash}{e7aa072b22829f9ed2082e259619a8bb}
+      \strng{authorfullhash}{e7aa072b22829f9ed2082e259619a8bb}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{Dynamic Routing Between Capsules}
+      \field{volume}{abs/1710.09829}
+      \field{year}{2017}
+      \verb{eprint}
+      \verb 1710.09829
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1710.09829
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1710.09829
+      \endverb
+    \endentry
+    \entry{1801.01078}{article}{}
+      \name{author}{6}{}{%
+        {{hash=b98ef06c73ef67a80883249bc42cc0d0}{%
+           family={Salehinejad},
+           familyi={S\bibinitperiod},
+           given={Hojjat},
+           giveni={H\bibinitperiod}}}%
+        {{hash=866731d59150fe1af696a0832bfdb2a3}{%
+           family={Baarbe},
+           familyi={B\bibinitperiod},
+           given={Julianne},
+           giveni={J\bibinitperiod}}}%
+        {{hash=77036fa143af3371bee4a7e3a64f7c77}{%
+           family={Sankar},
+           familyi={S\bibinitperiod},
+           given={Sharan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=13a4bc2ddbb46c230daf5ed4d1b0e50f}{%
+           family={Barfett},
+           familyi={B\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod}}}%
+        {{hash=69c340627be0e379e167b30ee6056f05}{%
+           family={Colak},
+           familyi={C\bibinitperiod},
+           given={Errol},
+           giveni={E\bibinitperiod}}}%
+        {{hash=c03775e7602bb409dc1101476d2b6ecc}{%
+           family={Valaee},
+           familyi={V\bibinitperiod},
+           given={Shahrokh},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{ed53a526f69b39b3f47c4bff3c0d8aee}
+      \strng{fullhash}{b54a28d7a931cf03be8c699d95cc43cc}
+      \strng{bibnamehash}{ed53a526f69b39b3f47c4bff3c0d8aee}
+      \strng{authorbibnamehash}{ed53a526f69b39b3f47c4bff3c0d8aee}
+      \strng{authornamehash}{ed53a526f69b39b3f47c4bff3c0d8aee}
+      \strng{authorfullhash}{b54a28d7a931cf03be8c699d95cc43cc}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{Recent Advances in Recurrent Neural Networks}
+      \field{volume}{abs/1801.01078}
+      \field{year}{2018}
+      \verb{eprint}
+      \verb 1801.01078
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1801.01078
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1801.01078
+      \endverb
+    \endentry
+    \entry{ssForSegmentation}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=f68daaf02afe9dec5c72ee8e07405823}{%
+           family={Sande},
+           familyi={S\bibinitperiod},
+           given={K.\bibnamedelimi E.\bibnamedelimi A.},
+           giveni={K\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim A\bibinitperiod},
+           prefix={van\bibnamedelima de},
+           prefixi={v\bibinitperiod\bibinitdelim d\bibinitperiod}}}%
+        {{hash=46ddb4852557b8c5388fcda08217b70e}{%
+           family={Uijlings},
+           familyi={U\bibinitperiod},
+           given={J.\bibnamedelimi R.\bibnamedelimi R.},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=a2a9ea1da4a6a852107c40411d6ed842}{%
+           family={Gevers},
+           familyi={G\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=d8001aad7a938ba198b26d4dee4786f6}{%
+           family={Smeulders},
+           familyi={S\bibinitperiod},
+           given={A.\bibnamedelimi W.\bibnamedelimi M.},
+           giveni={A\bibinitperiod\bibinitdelim W\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{7ed3da09d9ee5bf54c0949028859a2f6}
+      \strng{fullhash}{689bbe0551e5e8ba6a1035aba9f26c17}
+      \strng{bibnamehash}{7ed3da09d9ee5bf54c0949028859a2f6}
+      \strng{authorbibnamehash}{7ed3da09d9ee5bf54c0949028859a2f6}
+      \strng{authornamehash}{7ed3da09d9ee5bf54c0949028859a2f6}
+      \strng{authorfullhash}{689bbe0551e5e8ba6a1035aba9f26c17}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE International Conference on Computer Vision}
+      \field{title}{Segmentation As Selective Search for Object Recognition}
+      \field{year}{2011}
+      \verb{file}
+      \verb https://ivi.fnwi.uva.nl/isis/publications/2011/vandeSandeICCV2011/vandeSandeICCV2011.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ivi.fnwi.uva.nl/isis/publications/2011/vandeSandeICCV2011
+      \endverb
+      \verb{url}
+      \verb https://ivi.fnwi.uva.nl/isis/publications/2011/vandeSandeICCV2011
+      \endverb
+    \endentry
+    \entry{sup2}{article}{}
+      \name{author}{2}{}{%
+        {{hash=295de89c6650ff835c5c8e16ccfad63a}{%
+           family={Sathya},
+           familyi={S\bibinitperiod},
+           given={R},
+           giveni={R\bibinitperiod}}}%
+        {{hash=93adf4d83f2395621c3b62311865a966}{%
+           family={Abraham},
+           familyi={A\bibinitperiod},
+           given={Annamma},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{419e3ce04be4778d42cbafac45f5769c}
+      \strng{fullhash}{419e3ce04be4778d42cbafac45f5769c}
+      \strng{bibnamehash}{419e3ce04be4778d42cbafac45f5769c}
+      \strng{authorbibnamehash}{419e3ce04be4778d42cbafac45f5769c}
+      \strng{authornamehash}{419e3ce04be4778d42cbafac45f5769c}
+      \strng{authorfullhash}{419e3ce04be4778d42cbafac45f5769c}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{International Journal of Advanced Research in Artificial Intelligence}
+      \field{month}{02}
+      \field{title}{Comparison of Supervised and Unsupervised Learning Algorithms for Pattern Classification}
+      \field{volume}{2}
+      \field{year}{2013}
+    \endentry
+    \entry{neuralNetworks}{article}{}
+      \name{author}{2}{}{%
+        {{hash=82c0eb86accd9fba6087651620496d65}{%
+           family={Sharma},
+           familyi={S\bibinitperiod},
+           given={Shaveta},
+           giveni={S\bibinitperiod}}}%
+        {{hash=b75d66c2bcf142b8fa6c73ece01f9bb2}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={Parminder},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{fcf55a5608aed4cdb233ef12669701ab}
+      \strng{fullhash}{fcf55a5608aed4cdb233ef12669701ab}
+      \strng{bibnamehash}{fcf55a5608aed4cdb233ef12669701ab}
+      \strng{authorbibnamehash}{fcf55a5608aed4cdb233ef12669701ab}
+      \strng{authornamehash}{fcf55a5608aed4cdb233ef12669701ab}
+      \strng{authorfullhash}{fcf55a5608aed4cdb233ef12669701ab}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Engineering Trends and Technology (IJETT)}
+      \field{month}{12}
+      \field{title}{Speech Emotion Recognition using GFCC and BPNN}
+      \field{volume}{18}
+      \field{year}{2014}
+      \field{pages}{321\bibrangedash 322}
+      \range{pages}{2}
+    \endentry
     \entry{Scalable}{article}{}
       \name{author}{3}{}{%
         {{hash=a065ef007fd6cf6ff58a87a5374fa664}{%
@@ -332,6 +1209,31 @@
       \verb 1803.11417
       \endverb
       \keyw{Computer Science - Computer Vision and Pattern Recognition}
+    \endentry
+    \entry{CVPR}{book}{}
+      \name{author}{1}{}{%
+        {{hash=f2e556c93256e7d70895d67702e14f1a}{%
+           family={Szeliski},
+           familyi={S\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag London}%
+      }
+      \strng{namehash}{f2e556c93256e7d70895d67702e14f1a}
+      \strng{fullhash}{f2e556c93256e7d70895d67702e14f1a}
+      \strng{bibnamehash}{f2e556c93256e7d70895d67702e14f1a}
+      \strng{authorbibnamehash}{f2e556c93256e7d70895d67702e14f1a}
+      \strng{authornamehash}{f2e556c93256e7d70895d67702e14f1a}
+      \strng{authorfullhash}{f2e556c93256e7d70895d67702e14f1a}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{subtitle}{Algorithms and Applications}
+      \field{title}{Computer Vision}
+      \field{year}{2011}
     \endentry
     \entry{explot}{article}{}
       \name{author}{2}{}{%
@@ -381,6 +1283,173 @@
       \verb https://doi.org/10.1016/j.neucom.2016.08.110
       \endverb
       \keyw{Distinctive topological constraint,Feature selection,Local feature matching,Logo image recognition}
+    \endentry
+    \entry{PyTorch}{online}{}
+      \name{author}{1}{}{%
+        {{hash=7f4d8f24ad5abdac6cb3c5ec33500ccc}{%
+           family={team},
+           familyi={t\bibinitperiod},
+           given={PyTorch},
+           giveni={P\bibinitperiod},
+           prefix={core},
+           prefixi={c\bibinitperiod}}}%
+      }
+      \strng{namehash}{7f4d8f24ad5abdac6cb3c5ec33500ccc}
+      \strng{fullhash}{7f4d8f24ad5abdac6cb3c5ec33500ccc}
+      \strng{bibnamehash}{7f4d8f24ad5abdac6cb3c5ec33500ccc}
+      \strng{authorbibnamehash}{7f4d8f24ad5abdac6cb3c5ec33500ccc}
+      \strng{authornamehash}{7f4d8f24ad5abdac6cb3c5ec33500ccc}
+      \strng{authorfullhash}{7f4d8f24ad5abdac6cb3c5ec33500ccc}
+      \field{sortinit}{t}
+      \field{sortinithash}{6f7aff9db9dcfeb7f95fd5bbd2f78df9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{About} PyTorch}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://pytorch.org/about/
+      \endverb
+      \verb{url}
+      \verb https://pytorch.org/about/
+      \endverb
+    \endentry
+    \entry{reviewOfSegmentationBasedCompression}{article}{}
+      \name{author}{2}{}{%
+        {{hash=c69e966834b3d0878962721e9984fea9}{%
+           family={Thayammal},
+           familyi={T\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=b36b3887ea1465bcae076f070e12ca1d}{%
+           family={Selvathi},
+           familyi={S\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{6f08c84c666a47bdb8baffe2eff54226}
+      \strng{fullhash}{6f08c84c666a47bdb8baffe2eff54226}
+      \strng{bibnamehash}{6f08c84c666a47bdb8baffe2eff54226}
+      \strng{authorbibnamehash}{6f08c84c666a47bdb8baffe2eff54226}
+      \strng{authornamehash}{6f08c84c666a47bdb8baffe2eff54226}
+      \strng{authorfullhash}{6f08c84c666a47bdb8baffe2eff54226}
+      \field{sortinit}{T}
+      \field{sortinithash}{6f7aff9db9dcfeb7f95fd5bbd2f78df9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Engineering Science and Technology Review}
+      \field{title}{A Review On Segmentation Based Image Compression Techniques}
+      \field{volume}{6}
+      \field{year}{2013}
+      \field{pages}{134\bibrangedash 140}
+      \range{pages}{7}
+    \endentry
+    \entry{typesOfOptimMethods}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=d1937b816c85cde60407ff874a8bc46a}{%
+           family={Walia},
+           familyi={W\bibinitperiod},
+           given={Anish\bibnamedelima Singh},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=04fea131e3c9a54bb2602cc083326b09}{%
+           family={towardsdatascience.com},
+           familyi={t\bibinitperiod}}}%
+      }
+      \strng{namehash}{d1937b816c85cde60407ff874a8bc46a}
+      \strng{fullhash}{d1937b816c85cde60407ff874a8bc46a}
+      \strng{bibnamehash}{d1937b816c85cde60407ff874a8bc46a}
+      \strng{authorbibnamehash}{d1937b816c85cde60407ff874a8bc46a}
+      \strng{authornamehash}{d1937b816c85cde60407ff874a8bc46a}
+      \strng{authorfullhash}{d1937b816c85cde60407ff874a8bc46a}
+      \strng{editorbibnamehash}{04fea131e3c9a54bb2602cc083326b09}
+      \strng{editornamehash}{04fea131e3c9a54bb2602cc083326b09}
+      \strng{editorfullhash}{04fea131e3c9a54bb2602cc083326b09}
+      \field{sortinit}{W}
+      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{6}
+      \field{note}{[Online; posted 10-June-2017]}
+      \field{title}{Types of Optimization Algorithms used in Neural Networks and Ways to Optimize Gradient Descent}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://towardsdatascience.com/types-of-optimization-algorithms-used-in-neural-networks-and-ways-to-optimize-gradient-95ae5d39529f
+      \endverb
+      \verb{url}
+      \verb https://towardsdatascience.com/types-of-optimization-algorithms-used-in-neural-networks-and-ways-to-optimize-gradient-95ae5d39529f
+      \endverb
+    \endentry
+    \entry{1710.03414}{article}{}
+      \name{author}{1}{}{%
+        {{hash=4a40030a8958ade2f3a33730c17e338f}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Chao{-}Ming},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{4a40030a8958ade2f3a33730c17e338f}
+      \strng{fullhash}{4a40030a8958ade2f3a33730c17e338f}
+      \strng{bibnamehash}{4a40030a8958ade2f3a33730c17e338f}
+      \strng{authorbibnamehash}{4a40030a8958ade2f3a33730c17e338f}
+      \strng{authornamehash}{4a40030a8958ade2f3a33730c17e338f}
+      \strng{authorfullhash}{4a40030a8958ade2f3a33730c17e338f}
+      \field{sortinit}{W}
+      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{Network of Recurrent Neural Networks}
+      \field{volume}{abs/1710.03414}
+      \field{year}{2017}
+      \verb{eprint}
+      \verb 1710.03414
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1710.03414
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1710.03414
+      \endverb
+    \endentry
+    \entry{ImageSegmentAlgOverview}{article}{}
+      \name{author}{2}{}{%
+        {{hash=3128ed85e57733f05d5b839024e94819}{%
+           family={Yuheng},
+           familyi={Y\bibinitperiod},
+           given={Song},
+           giveni={S\bibinitperiod}}}%
+        {{hash=b48b6d1856cc247ce01cad9c6d9130c5}{%
+           family={Hao},
+           familyi={H\bibinitperiod},
+           given={Yan},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{13d2742081cbd34ff27635c18285f874}
+      \strng{fullhash}{13d2742081cbd34ff27635c18285f874}
+      \strng{bibnamehash}{13d2742081cbd34ff27635c18285f874}
+      \strng{authorbibnamehash}{13d2742081cbd34ff27635c18285f874}
+      \strng{authornamehash}{13d2742081cbd34ff27635c18285f874}
+      \strng{authorfullhash}{13d2742081cbd34ff27635c18285f874}
+      \field{sortinit}{Y}
+      \field{sortinithash}{b8d711a035f7be9840c721c82920477e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{Image Segmentation Algorithms Overview}
+      \field{volume}{abs/1707.02051}
+      \field{year}{2017}
+      \verb{eprint}
+      \verb 1707.02051
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1707.02051
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1707.02051
+      \endverb
     \endentry
   \enddatalist
 \endrefsection

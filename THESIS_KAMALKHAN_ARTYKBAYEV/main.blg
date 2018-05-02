@@ -1,15 +1,18 @@
 [0] Config.pm:302> INFO - This is Biber 2.9
 [0] Config.pm:305> INFO - Logfile is 'main.blg'
-[28] biber-MSWIN64:313> INFO - === 
-[56] Biber.pm:371> INFO - Reading 'main.bcf'
-[138] Biber.pm:857> INFO - Found 8 citekeys in bib section 0
-[151] Biber.pm:3981> INFO - Processing section 0
-[165] Biber.pm:4154> INFO - Looking for bibtex format file 'ref.bib' for section 0
-[168] bibtex.pm:1479> INFO - LaTeX decoding ...
-[182] bibtex.pm:1305> INFO - Found BibTeX data source 'ref.bib'
-[245] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[245] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[245] Biber.pm:3809> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[245] Biber.pm:3815> INFO - No sort tailoring available for locale 'en-US'
-[258] bbl.pm:617> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[262] bbl.pm:720> INFO - Output to main.bbl
+[34] biber-MSWIN64:313> INFO - === 
+[70] Biber.pm:371> INFO - Reading 'main.bcf'
+[173] Biber.pm:857> INFO - Found 37 citekeys in bib section 0
+[195] Biber.pm:3981> INFO - Processing section 0
+[215] Biber.pm:4154> INFO - Looking for bibtex format file 'ref.bib' for section 0
+[225] bibtex.pm:1479> INFO - LaTeX decoding ...
+[292] bibtex.pm:1305> INFO - Found BibTeX data source 'ref.bib'
+[420] Utils.pm:169> WARN - month field 'June' in entry 'typesOfOptimMethods' is not an integer - this will probably not sort properly.
+[455] Utils.pm:169> WARN - month field 'December' in entry 'neuralNetworks' is not an integer - this will probably not sort properly.
+[557] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[557] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[557] Biber.pm:3809> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[557] Biber.pm:3815> INFO - No sort tailoring available for locale 'en-US'
+[605] bbl.pm:617> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[620] bbl.pm:720> INFO - Output to main.bbl
+[625] Biber.pm:110> INFO - WARNINGS: 2
