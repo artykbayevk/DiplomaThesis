@@ -76,7 +76,7 @@ To facilitate the development of high-precision classifiers is important to asse
 
 
 \section{Concept of Technologies and Frameworks}\label{sec:4.4}
-\par PyTorch is a python package that provides two high-level features:\textbf{Tensor computation (like numpy) with strong GPU acceleration} and \textbf{Deep Neural Networks built on a tape-based autodiff system}.You can reuse your favorite python packages such as numpy, scipy and Cython to extend PyTorch when needed.At a granular level, PyTorch is a library that consists of the following components:
+\par PyTorch is a unique library for the Python programming language. The peculiarity and uniqueness of this package are that it has a very simple and intuitive implementation of high-tech methods and algorithms for neural networks and deep learning. Also in this package, it is possible to work with n-dimensional numpy matrices as tensors. There is also a possibility to work with different programming. High-load systems can run on the GPU. The implementation is extremely simple for juniors.You can reuse your favorite python packages such as numpy, scipy and Cython to extend PyTorch when needed.At a granular level, PyTorch is a library that consists of the following components:
 \begin{table}[tbp]
 	\centering
 	\caption{PyTorch components}
@@ -86,29 +86,21 @@ To facilitate the development of high-precision classifiers is important to asse
 		$Component$ 			& Definition 																			\\ \midrule
 		torch  					& a Tensor library like NumPy, with strong GPU support 									\\
 		torch.autograd 			& a tape based automatic differentiation library that supports 							\\ 
-								& all differentiable Tensor operations in torch 										\\
+		& all differentiable Tensor operations in torch 										\\
 		torch.nn  				& a neural networks library deeply integrated with 					 					\\
-								& autograd designed for maximum  flexibility 											\\
+		& autograd designed for maximum  flexibility 											\\
 		torch.optim  			& an optimization package to be used with torch.nn with standard 						\\  
-								& optimization  methods such as SGD, RMSProp, LBFGS, Adam etc.							\\
+		& optimization  methods such as SGD, RMSProp, LBFGS, Adam etc.							\\
 		torch.multiprocessing 	& python multiprocessing, but with magical memory sharing of torch  		`			\\ 
-								& Tensors across processes. Useful for data loading and hogwild training. 				\\
+		& Tensors across processes. Useful for data loading and hogwild training. 				\\
 		torch.utils  			& DataLoader, Trainer and other utility functions for convenience 						\\
 		torch.legacy  			& legacy code that has been ported over from torch for backward compatibility reasons 	\\
 		\bottomrule
 	\end{tabular}
 \end{table}
 
-\noindent Usually one uses PyTorch either as:
-\begin{itemize}
-	\item A replacement for numpy to use the power of GPUs.
-	\item A deep learning research platform that provides maximum flexibility and speed
-\end{itemize}
 
-\par PyTorch provides Tensors that can live either on the CPU or the GPU, and accelerate compute by a huge amount.\textbf{Dynamic Neural Networks: Tape based Autograd}. PyTorch has a unique way of building neural networks: using and replaying a tape recorder.Most frameworks such as TensorFlow, Theano, Caffe and CNTK have a static view of the world. One has to build a neural network, and reuse the same structure again and again. Changing the way the network behaves means that one has to start from scratch.With PyTorch, we use a technique called Reverse-mode auto-differentiation, which allows you to change the way your network behaves arbitrarily with zero lag or overhead. Our inspiration comes from several research papers on this topic, as well as current and past work such as autograd, autograd, Chainer, etc.While this technique is not unique to PyTorch, it’s one of the fastest implementations of it to date. You get the best of speed and flexibility for your crazy research.PyTorch is not a Python binding into a monolothic C++ framework. It is built to be deeply integrated into Python. You can use it naturally like you would use numpy / scipy / scikit-learn etc. You can write your new neural network layers in Python itself, using your favorite libraries and use packages such as Cython and Numba. Our goal is to not reinvent the wheel where appropriate.PyTorch is designed to be intuitive, linear in thought and easy to use. When you execute a line of code, it gets executed. There isn’t an asynchronous view of the world. When you drop into a debugger, or receive error messages and stack traces, understanding them is straight-forward. The stack-trace points to exactly where your code was defined. We hope you never spend hours debugging your code because of bad stack traces or asynchronous and opaque execution engines.PyTorch has minimal framework overhead. We integrate acceleration libraries such as Intel MKL and NVIDIA (CuDNN, NCCL) to maximize speed. At the core, it’s CPU and GPU Tensor and Neural Network backends (TH, THC, THNN, THCUNN) are written as independent libraries with a C99 API.
-They are mature and have been tested for years.
-Hence, PyTorch is quite fast – whether you run small or large neural networks.
-The memory usage in PyTorch is extremely efficient compared to Torch or some of the alternatives. We’ve written custom memory allocators for the GPU to make sure that your deep learning models are maximally memory efficient. This enables you to train bigger deep learning models than before.
+\par High-load systems that can run on the GPU and CPU at the same time can show a very heavy configuration, which is usually very difficult to solve directly, and that solves PyTorch its convenient architecture.A wide range and spectrum of functions that are very often used in mathematics, CS and other Sciences. Research in mathematics and deep learning widely uses a huge set of features to implement certain operations in optimization and calculations. Another feature of PyTorch is its dynamics, which is very useful when working with memory in neural networks and calculations for optimization functions. PyTorch is also unique in that differential programming is real and automatic.
 
 
 \section{Summary}\label{sec:4.5}

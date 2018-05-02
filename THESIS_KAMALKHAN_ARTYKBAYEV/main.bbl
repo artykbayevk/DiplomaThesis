@@ -1,0 +1,388 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{DeepLearningForLogo}{article}{}
+      \name{author}{4}{}{%
+        {{hash=32e6809f6aca1631188d40d4a26e09ea}{%
+           family={Bianco},
+           familyi={B\bibinitperiod},
+           given={Simone},
+           giveni={S\bibinitperiod}}}%
+        {{hash=1a673087de033f05410b3a9c5d7aedd1}{%
+           family={Buzzelli},
+           familyi={B\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=0551bd977e0319b4e12e7cc9a6cd7c09}{%
+           family={Mazzini},
+           familyi={M\bibinitperiod},
+           given={Davide},
+           giveni={D\bibinitperiod}}}%
+        {{hash=f8e185bb42326e275d86f84e6b420d0f}{%
+           family={Schettini},
+           familyi={S\bibinitperiod},
+           given={Raimondo},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{6ca5c72880880b04565684133855b8dc}
+      \strng{fullhash}{04fbe2ef06924d7640be803e2811e65d}
+      \strng{bibnamehash}{6ca5c72880880b04565684133855b8dc}
+      \strng{authorbibnamehash}{6ca5c72880880b04565684133855b8dc}
+      \strng{authornamehash}{6ca5c72880880b04565684133855b8dc}
+      \strng{authorfullhash}{04fbe2ef06924d7640be803e2811e65d}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{Deep Learning for Logo Recognition}
+      \field{volume}{abs/1701.02620}
+      \field{year}{2017}
+      \verb{eprint}
+      \verb 1701.02620
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1701.02620
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1701.02620
+      \endverb
+    \endentry
+    \entry{noisy}{article}{}
+      \name{author}{3}{}{%
+        {{hash=de12352bb75d0f2f66d63ab85f0617f6}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Jingying},
+           giveni={J\bibinitperiod}}}%
+        {{hash=e94efb4adbd12e5bd1d8e62b9fe2505e}{%
+           family={K.\bibnamedelimi Leung},
+           familyi={K\bibinitperiod\bibinitdelim L\bibinitperiod},
+           given={Maylor},
+           giveni={M\bibinitperiod}}}%
+        {{hash=a84d0bee3fcd749da61fcf3a78172c20}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Yongsheng},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{505e0664dc2b1d4a6bb883468fa24e99}
+      \strng{fullhash}{505e0664dc2b1d4a6bb883468fa24e99}
+      \strng{bibnamehash}{505e0664dc2b1d4a6bb883468fa24e99}
+      \strng{authorbibnamehash}{505e0664dc2b1d4a6bb883468fa24e99}
+      \strng{authornamehash}{505e0664dc2b1d4a6bb883468fa24e99}
+      \strng{authorfullhash}{505e0664dc2b1d4a6bb883468fa24e99}
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Pattern Recognition}
+      \field{month}{04}
+      \field{title}{Noisy Logo Recognition Using Line Segment Hausdorff Distance}
+      \field{volume}{36}
+      \field{year}{2003}
+      \field{pages}{943\bibrangedash 955}
+      \range{pages}{13}
+    \endentry
+    \entry{ScalableDetection}{article}{}
+      \name{author}{5}{}{%
+        {{hash=3e587a10d57e2b5c2f7501b31d9eef7e}{%
+           family={Garg},
+           familyi={G\bibinitperiod},
+           given={Aayush},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b35a69b43e96205f8f8d8713c09082de}{%
+           family={Will},
+           familyi={W\bibinitperiod},
+           given={Thilo},
+           giveni={T\bibinitperiod}}}%
+        {{hash=a2f9b9b1267bc00b8c2d7ac141a590d2}{%
+           family={Darling},
+           familyi={D\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
+        {{hash=fab9e58c2fd10d55473f4d3be5626bdf}{%
+           family={Richert},
+           familyi={R\bibinitperiod},
+           given={Willi},
+           giveni={W\bibinitperiod}}}%
+        {{hash=5c8ba9febdd1b40813ab5a971cc6e878}{%
+           family={Marschner},
+           familyi={M\bibinitperiod},
+           given={Clemens},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{8e4bf116e1e7cd2b6b6ea67c74a2daa3}
+      \strng{fullhash}{f73885dc3f66388fa459f6a69e76a116}
+      \strng{bibnamehash}{8e4bf116e1e7cd2b6b6ea67c74a2daa3}
+      \strng{authorbibnamehash}{8e4bf116e1e7cd2b6b6ea67c74a2daa3}
+      \strng{authornamehash}{8e4bf116e1e7cd2b6b6ea67c74a2daa3}
+      \strng{authorfullhash}{f73885dc3f66388fa459f6a69e76a116}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{Scalable Object Detection for Stylized Objects}
+      \field{volume}{abs/1711.09822}
+      \field{year}{2017}
+      \verb{eprint}
+      \verb 1711.09822
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1711.09822
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1711.09822
+      \endverb
+    \endentry
+    \entry{Symbolic}{article}{}
+      \name{author}{2}{}{%
+        {{hash=5a7459bd1fee43e0636f0703a39d0810}{%
+           family={Guru},
+           familyi={G\bibinitperiod},
+           given={D.\bibnamedelimi S.},
+           giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=058e412259da1c43575edcfce4a139fa}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={N.\bibnamedelimi Vinay},
+           giveni={N\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \strng{namehash}{c372e5d274aa9ccffa59ba56e3cad811}
+      \strng{fullhash}{c372e5d274aa9ccffa59ba56e3cad811}
+      \strng{bibnamehash}{c372e5d274aa9ccffa59ba56e3cad811}
+      \strng{authorbibnamehash}{c372e5d274aa9ccffa59ba56e3cad811}
+      \strng{authornamehash}{c372e5d274aa9ccffa59ba56e3cad811}
+      \strng{authorfullhash}{c372e5d274aa9ccffa59ba56e3cad811}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{Symbolic Representation and Classification of Logos}
+      \field{volume}{abs/1612.08796}
+      \field{year}{2016}
+      \verb{eprint}
+      \verb 1612.08796
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1612.08796
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1612.08796
+      \endverb
+    \endentry
+    \entry{LOGONET}{inproceedings}{}
+      \name{author}{7}{}{%
+        {{hash=42b9f493c28bc84ea752909e770def2b}{%
+           family={HOI},
+           familyi={H\bibinitperiod},
+           given={Steven\bibnamedelima C.H.},
+           giveni={S\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=171ecfc410ecca664ca88a86880ac1be}{%
+           family={WU},
+           familyi={W\bibinitperiod},
+           given={Xiongwei},
+           giveni={X\bibinitperiod}}}%
+        {{hash=c66df7e123dd6c389db356cfeb07a955}{%
+           family={LIU},
+           familyi={L\bibinitperiod},
+           given={Hantang},
+           giveni={H\bibinitperiod}}}%
+        {{hash=5054d8715f6746af9ed28c566f168046}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Yue},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=1f704d97e2916b77036ef18987b762b2}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Huiqiong},
+           giveni={H\bibinitperiod}}}%
+        {{hash=72ab53e5e7f15e5fe9fe5182d1f9b2f9}{%
+           family={Xue},
+           familyi={X\bibinitperiod},
+           given={Hui},
+           giveni={H\bibinitperiod}}}%
+        {{hash=33d49ceda32feca0867fd357debb0b46}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Qiang},
+           giveni={Q\bibinitperiod}}}%
+      }
+      \strng{namehash}{df8ae3cbc772ce7606c6a7e7d53f5720}
+      \strng{fullhash}{1cacfef8f733bd2c2ad82cdaf1c27d38}
+      \strng{bibnamehash}{df8ae3cbc772ce7606c6a7e7d53f5720}
+      \strng{authorbibnamehash}{df8ae3cbc772ce7606c6a7e7d53f5720}
+      \strng{authornamehash}{df8ae3cbc772ce7606c6a7e7d53f5720}
+      \strng{authorfullhash}{1cacfef8f733bd2c2ad82cdaf1c27d38}
+      \field{sortinit}{H}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{arXiv}
+      \field{title}{Large-scale Deep Logo Detection and Brand Recognition with Deep Region-based Convolutional Networks}
+      \field{year}{2015}
+    \endentry
+    \entry{AutomaticGraph}{article}{}
+      \name{author}{4}{}{%
+        {{hash=b50f7c39534ea6cad34e706af8bea455}{%
+           family={Oliveira},
+           familyi={O\bibinitperiod},
+           given={Gon{ç}alo},
+           giveni={G\bibinitperiod}}}%
+        {{hash=c65f42476e51f086d0dca8a75dcc6368}{%
+           family={Fraz{ã}o},
+           familyi={F\bibinitperiod},
+           given={Xavier},
+           giveni={X\bibinitperiod}}}%
+        {{hash=f82efcd57ae5cd6038072c677f15c1c3}{%
+           family={Pimentel},
+           familyi={P\bibinitperiod},
+           given={Andr{é}},
+           giveni={A\bibinitperiod}}}%
+        {{hash=bdf9720d37df3229f9a4a58c44700c0a}{%
+           family={Ribeiro},
+           familyi={R\bibinitperiod},
+           given={Bernardete},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{8e0557a463ab494861207ad75763c0c6}
+      \strng{fullhash}{87a477439b84b02d1d3c08173e1d51f6}
+      \strng{bibnamehash}{8e0557a463ab494861207ad75763c0c6}
+      \strng{authorbibnamehash}{8e0557a463ab494861207ad75763c0c6}
+      \strng{authornamehash}{8e0557a463ab494861207ad75763c0c6}
+      \strng{authorfullhash}{87a477439b84b02d1d3c08173e1d51f6}
+      \field{sortinit}{O}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{Automatic Graphic Logo Detection via Fast Region-based Convolutional Networks}
+      \field{volume}{abs/1604.06083}
+      \field{year}{2016}
+      \verb{eprint}
+      \verb 1604.06083
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1604.06083
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1604.06083
+      \endverb
+    \endentry
+    \entry{Scalable}{article}{}
+      \name{author}{3}{}{%
+        {{hash=a065ef007fd6cf6ff58a87a5374fa664}{%
+           family={{Su}},
+           familyi={S\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=4d29bbe1e1f6e282e93f07a3b7ef28a8}{%
+           family={{Gong}},
+           familyi={G\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=1a39c766e8ad694cb6ae0cfce36a29d9}{%
+           family={{Zhu}},
+           familyi={Z\bibinitperiod},
+           given={X.},
+           giveni={X\bibinitperiod}}}%
+      }
+      \strng{namehash}{df0ed66b292f14d18a4f34c36140c906}
+      \strng{fullhash}{df0ed66b292f14d18a4f34c36140c906}
+      \strng{bibnamehash}{df0ed66b292f14d18a4f34c36140c906}
+      \strng{authorbibnamehash}{df0ed66b292f14d18a4f34c36140c906}
+      \strng{authornamehash}{df0ed66b292f14d18a4f34c36140c906}
+      \strng{authorfullhash}{df0ed66b292f14d18a4f34c36140c906}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CV}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{ArXiv e-prints}
+      \field{month}{3}
+      \field{title}{{Scalable Deep Learning Logo Detection}}
+      \field{year}{2018}
+      \verb{eprint}
+      \verb 1803.11417
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition}
+    \endentry
+    \entry{explot}{article}{}
+      \name{author}{2}{}{%
+        {{hash=2a471f0a29d47bc3dd3a26267aa54417}{%
+           family={Tang},
+           familyi={T\bibinitperiod},
+           given={Panpan},
+           giveni={P\bibinitperiod}}}%
+        {{hash=08eb1675afc04e72127d587ab05e8d4c}{%
+           family={Peng},
+           familyi={P\bibinitperiod},
+           given={Yuxin},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Amsterdam, The Netherlands, The Netherlands}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier Science Publishers B. V.}%
+      }
+      \strng{namehash}{329a6ed7ef09e0837ca262c6d7c19c99}
+      \strng{fullhash}{329a6ed7ef09e0837ca262c6d7c19c99}
+      \strng{bibnamehash}{329a6ed7ef09e0837ca262c6d7c19c99}
+      \strng{authorbibnamehash}{329a6ed7ef09e0837ca262c6d7c19c99}
+      \strng{authornamehash}{329a6ed7ef09e0837ca262c6d7c19c99}
+      \strng{authorfullhash}{329a6ed7ef09e0837ca262c6d7c19c99}
+      \field{sortinit}{T}
+      \field{sortinithash}{6f7aff9db9dcfeb7f95fd5bbd2f78df9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0925-2312}
+      \field{journaltitle}{Neurocomput.}
+      \field{month}{5}
+      \field{number}{C}
+      \field{title}{Exploiting Distinctive Topological Constraint of Local Feature Matching for Logo Image Recognition}
+      \field{volume}{236}
+      \field{year}{2017}
+      \field{pages}{113\bibrangedash 122}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1016/j.neucom.2016.08.110
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.neucom.2016.08.110
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.neucom.2016.08.110
+      \endverb
+      \keyw{Distinctive topological constraint,Feature selection,Local feature matching,Logo image recognition}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
