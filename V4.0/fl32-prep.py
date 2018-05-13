@@ -17,7 +17,7 @@ CROPPED_ANNOTATION = '/fs/vulcan-scratch/kamalsdu/diploma_data/fl32/crop_annotat
 TRAIN_SET = '../annotations/trainset32.txt'
 TEST_SET = '../annotations/testset32.txt'
 
-path = '../data/fl32/classes/masks'
+path = '/fs/vulcan-scratch/kamalsdu/diploma_data/fl32/classes/masks'
 f1 = open(ORIGINAL_ANNOTATION,'w')
 for root, dirs, files in os.walk(path):
     if(len(files)!=0):
