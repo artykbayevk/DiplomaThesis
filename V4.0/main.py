@@ -68,10 +68,10 @@ if DATASET == 0:
 
 
 elif DATASET == 1:
-    ORIGINAL_DATA_DIR = '../data/fl32/originals'
-    CROPPED_DATA_DIR = '../data/fl32/images'
-    ORIGINAL_ANNOTATION = '../data/fl32/annotation.txt'
-    CROPPED_ANNOTATION = '../data/fl32/crop_annotation.txt'
+    ORIGINAL_DATA_DIR = '/fs/vulcan-scratch/kamalsdu/diploma_data/fl32/originals'
+    CROPPED_DATA_DIR = '/fs/vulcan-scratch/kamalsdu/diploma_data/fl32/images'
+    ORIGINAL_ANNOTATION = '/fs/vulcan-scratch/kamalsdu/diploma_data/fl32/annotation.txt'
+    CROPPED_ANNOTATION = '/fs/vulcan-scratch/kamalsdu/diploma_data/fl32/crop_annotation.txt'
 
     TRAIN_SET = '../annotations/trainset32.txt'
     TEST_SET = '../annotations/testset32.txt'
@@ -131,7 +131,7 @@ trainset = MyDataset(train_data, CROPPED_DATA_DIR, transform)
 testset = MyDataset(test_data, CROPPED_DATA_DIR, transform)
 
 
-batch_size = 1
+batch_size = 200
 
 
 train_loader = torch.utils.data.DataLoader(dataset=trainset,
@@ -146,8 +146,8 @@ print("Train size {} items and test size {} items".format(
 print('Batch size: {}'.format(len(test_loader)))
 
 
-num_epochs = 300
-learning_rate = 0.001
+num_epochs = 1000
+learning_rate = 0.0001
 momentum = 0.9
 
 n_classes = len(LABELS)
@@ -155,11 +155,11 @@ if MODEL == 0:
     model = alexnet.AlexNet(n_classes)
     name_of_file = 'alexnet.txt'
 elif MODEL == 1:
-    model = vgg16.vgg11()
-    name_of_file = 'vgg16'
+    model = vgg16.vgg16()
+    name_of_file = 'vgg16-main'
 model = model.cuda()
 criterion = nn.CrossEntropyLoss()
-optimizer = torch.optim.SGD(model.parameters(), 0.001, momentum=momentum)
+optimizer = torch.optim.SGD(model.parameters(), 0.0001, momentum=momentum)
 
 
 class AverageMeter(object):
@@ -234,7 +234,7 @@ for epoch in range(num_epochs):
             f.write(str(epoch))
             print(text)
         if (epoch+1) % 50 == 0:
-            torch.save(model.state_dict(), 'alexnet-ep-{}.pt'.format(epoch+1))
+            torch.save(model.state_dict(), 'vgg16-ep-{}.pt'.format(epoch+1))
 
   #   batch_time_eval = AverageMeter()
   #   losses_eval = AverageMeter()
