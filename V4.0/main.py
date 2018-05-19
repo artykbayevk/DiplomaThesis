@@ -33,7 +33,7 @@ import torchvision.models as models
 
 import time
 import alexnet
-import vgg16
+import vgg
 from PIL import Image
 
 
@@ -146,8 +146,8 @@ print("Train size {} items and test size {} items".format(
 print('Batch size: {}'.format(len(test_loader)))
 
 
-num_epochs = 1000
-learning_rate = 0.0001
+num_epochs = 3000
+learning_rate = 0.001
 momentum = 0.9
 
 n_classes = len(LABELS)
@@ -155,11 +155,11 @@ if MODEL == 0:
     model = alexnet.AlexNet(n_classes)
     name_of_file = 'alexnet.txt'
 elif MODEL == 1:
-    model = vgg16.vgg16()
-    name_of_file = 'vgg16-main'
+    model = vgg.vgg19()
+    name_of_file = 'vgg19-main-3000ep'+str(learning_rate)+'.txt'
 model = model.cuda()
 criterion = nn.CrossEntropyLoss()
-optimizer = torch.optim.SGD(model.parameters(), 0.0001, momentum=momentum)
+optimizer = torch.optim.SGD(model.parameters(),learning_rate, momentum=momentum)
 
 
 class AverageMeter(object):
@@ -234,7 +234,7 @@ for epoch in range(num_epochs):
             f.write(str(epoch))
             print(text)
         if (epoch+1) % 50 == 0:
-            torch.save(model.state_dict(), 'vgg16-ep-{}.pt'.format(epoch+1))
+            torch.save(model.state_dict(), '/fs/vulcan-scratch/kamalsdu/diploma_models/vgg19-0001-3000-ep-{}.pt'.format(epoch+1))
 
   #   batch_time_eval = AverageMeter()
   #   losses_eval = AverageMeter()

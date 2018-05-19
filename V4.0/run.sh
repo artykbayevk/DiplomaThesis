@@ -2,9 +2,9 @@
 
 #SBATCH
 #SBATCH --job-name=vgg16
-#SBATCH --time=1-00:00:00
+#SBATCH --time=3-00:00:00
 #SBATCH --partition=dpart
-#SBATCH --nodelist=vulcan05
+#SBATCH --nodelist=vulcan02
 #SBATCH --qos=default
 #SBATCH --cpus-per-task=4
 #SBATCH --gres=gpu:p6000:1
