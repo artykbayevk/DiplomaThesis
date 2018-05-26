@@ -42,7 +42,7 @@ warnings.filterwarnings("ignore")
 plt.ion()
 
 # 1 or 0
-DATASET = 1
+DATASET = 2
 
 # 1 or hz
 MODEL = 1
@@ -77,7 +77,13 @@ elif DATASET == 1:
     TEST_SET = '../annotations/testset32.txt'
     LABELS = ['ferrari', 'ups', 'cocacola', 'guiness', 'adidas', 'aldi', 'texaco', 'nvidia', 'rittersport', 'paulaner', 'dhl', 'bmw', 'fosters', 'milka', 'starbucks', 'pepsi',
               'singha', 'apple', 'fedex', 'carlsberg', 'hp', 'chimay', 'google', 'tsingtao', 'corona', 'ford', 'esso', 'shell', 'stellaartois', 'becks', 'heineken', 'erdinger', 'nologo']
-elif DATASET = 2:    
+elif DATASET = 2:
+    TRAIN_CROPPED_DATA_DIR = '/fs/vulcan-scratch/kamalsdu/diploma_data/fl47/train/images'
+    TEST_CROPPED_DATA_DIR = '/fs/vulcan-scratch/kamalsdu/diploma_data/fl47/test/images'
+    CROPPED_ANNOTATION = '/fs/vulcan-scratch/kamalsdu/diploma_data/fl32/crop_annotation.txt'
+
+    TRAIN_SET = '../annotations/trainset47.txt'
+    TEST_SET = '../annotations/testset47.txt'
     labels = ['HP', 'adidas_symbol', 'adidas_text', 'aldi', 'apple', 'becks_symbol', 'becks_text', 'bmw', 'carlsberg_symbol', 'carlsberg_text', 'chimay_symbol', 'chimay_text', 'cocacola', 'corona_symbol',
               'corona_text', 'dhl', 'erdinger_symbol', 'erdinger_text', 'esso_symbol', 'esso_text', 'fedex', 'ferrari', 'ford', 'fosters_symbol', 'fosters_text', 'google', 'guinness_symbol', 'guinness_text', 'heineken', 'milka', 'nvidia_symbol', 'nvidia_text', 'paulaner_symbol', 'paulaner_text',
               'pepsi_symbol', 'pepsi_text', 'rittersport', 'shell', 'singha_symbol', 'singha_text', 'starbucks', 'stellaartois_symbol', 'stellaartois_text', 'texaco', 'tsingtao_symbol', 'tsingtao_text', 'ups','nologo']
@@ -150,7 +156,7 @@ print("Train size {} items and test size {} items".format(
 print('Batch size: {}'.format(len(test_loader)))
 
 
-num_epochs = 3000
+num_epochs = 5000
 learning_rate = 0.001
 momentum = 0.9
 
@@ -160,7 +166,7 @@ if MODEL == 0:
     name_of_file = 'alexnet.txt'
 elif MODEL == 1:
     model = vgg.vgg19()
-    name_of_file = 'vgg19-main-3000ep'+str(learning_rate)+'.txt'
+    name_of_file = 'fl47-vgg19-main-3000ep'+str(learning_rate)+'.txt'
 model = model.cuda()
 criterion = nn.CrossEntropyLoss()
 optimizer = torch.optim.SGD(model.parameters(),learning_rate, momentum=momentum)
@@ -238,7 +244,7 @@ for epoch in range(num_epochs):
             f.write(str(epoch))
             print(text)
         if (epoch+1) % 50 == 0:
-            torch.save(model.state_dict(), '/fs/vulcan-scratch/kamalsdu/diploma_models/vgg19-0001-3000-ep-{}.pt'.format(epoch+1))
+            torch.save(model.state_dict(), '/fs/vulcan-scratch/kamalsdu/diploma_models/fl47-vgg19-0001-3000-ep-{}.pt'.format(epoch+1))
 
   #   batch_time_eval = AverageMeter()
   #   losses_eval = AverageMeter()

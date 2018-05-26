@@ -23,7 +23,7 @@ model_urls = {
 
 class VGG(nn.Module):
 
-    def __init__(self, features, num_classes=33, init_weights=True):
+    def __init__(self, features, num_classes=48, init_weights=True):
         super(VGG, self).__init__()
         self.features = features
         self.classifier = nn.Sequential(
@@ -193,4 +193,3 @@ def vgg19_bn(pretrained=False, **kwargs):
     if pretrained:
         model.load_state_dict(model_zoo.load_url(model_urls['vgg19_bn']))
     return model
-

@@ -1,7 +1,7 @@
 #!/bin/bash -l
 
 #SBATCH
-#SBATCH --job-name=vgg16
+#SBATCH --job-name=vgg19
 #SBATCH --time=3-00:00:00
 #SBATCH --partition=dpart
 #SBATCH --nodelist=vulcan02
@@ -14,7 +14,7 @@
 
 #module add cuda/8.0.44 cudnn/v5.1
 
-python main.py
+python fl47main.py
 
 #/fs/vulcan-scratch/kamalsdu/caffe/build/tools/caffe train -solver solver.prototxt
 
