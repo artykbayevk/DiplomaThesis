@@ -77,6 +77,10 @@ elif DATASET == 1:
     TEST_SET = '../annotations/testset32.txt'
     LABELS = ['ferrari', 'ups', 'cocacola', 'guiness', 'adidas', 'aldi', 'texaco', 'nvidia', 'rittersport', 'paulaner', 'dhl', 'bmw', 'fosters', 'milka', 'starbucks', 'pepsi',
               'singha', 'apple', 'fedex', 'carlsberg', 'hp', 'chimay', 'google', 'tsingtao', 'corona', 'ford', 'esso', 'shell', 'stellaartois', 'becks', 'heineken', 'erdinger', 'nologo']
+elif DATASET = 2:
+    labels = ['HP', 'adidas_symbol', 'adidas_text', 'aldi', 'apple', 'becks_symbol', 'becks_text', 'bmw', 'carlsberg_symbol', 'carlsberg_text', 'chimay_symbol', 'chimay_text', 'cocacola', 'corona_symbol',
+              'corona_text', 'dhl', 'erdinger_symbol', 'erdinger_text', 'esso_symbol', 'esso_text', 'fedex', 'ferrari', 'ford', 'fosters_symbol', 'fosters_text', 'google', 'guinness_symbol', 'guinness_text', 'heineken', 'milka', 'nvidia_symbol', 'nvidia_text', 'paulaner_symbol', 'paulaner_text',
+              'pepsi_symbol', 'pepsi_text', 'rittersport', 'shell', 'singha_symbol', 'singha_text', 'starbucks', 'stellaartois_symbol', 'stellaartois_text', 'texaco', 'tsingtao_symbol', 'tsingtao_text', 'ups','nologo']
 else:
     pass
 
